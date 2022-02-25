@@ -1,18 +1,33 @@
 [
   
   {
-    "title": "Hello World",
-    "url": "/posts/hello-world/",
-    "categories": "Bienvenida",
-    "tags": "HelloWorld, T3_6_9, 2022, NOOB",
-    "date": "2022-01-20 04:57:00 -0300",
+    "title": "Recursos de Ciberseguridad",
+    "url": "/posts/recursos-ciberseguridad/",
+    "categories": "Ciberseguridad",
+    "tags": "Ciberseguridad, 2022, T3sla",
+    "date": "2022-02-22 23:31:00 -0300",
     
 
 
 
 
 
-    "snippet": "Hola a todos este es mi primer post, trataré de explicar de que tratara este blog.¿Qué encontrarás en este blog?  Hacking y diferentes plataformas de ciberseguridad.  El lenguaje de programación C.  Algunas teorías que tengo.  Una que otra cosa que no sea relacionado con los temas del blog.  Apuntes.  Recursos.  Formula 1.  Karting.  Videojuegos.  Anime.¿Qué me dio por crear un blog?La verdad tengo unas ganas enormes de crear contenido y darme de cierta forma a conocer.Además, siento que escribiendo reforzaré mis conocimientos y aprenderé.  No soy ningún experto solo soy un entusiasta que busca tratar de crear contenido, aprender y mejorar para algún día llegar a trabajar como un Pentester o Programador. Cualquier feedback es bienvenido usted es libre de expresarse como quiera."
+    "snippet": "Bienvenidos/asEste post tratará de los mejores canales, blogs y apuntes de Ciberseguridad (a mi parecer, claro- que no son todos, pero son algunos que me ayudan mucho, no están ordenados en plan cuál es- mejor, todos tienen contenido de calidad y sus creadores se esfuerzan).TheHackerWay  Quizás muchos conocen este blog.  Cuenta con bastante post, para leer.  En este blog encontrarás diferentes técnicas de Hacking.  Desde Post explotación en sistemas operativos (SO) Windows y GNU/LINUX, diferentes- herramientas para Red Team y mucho más.      ¿Quién es el autor?   Daniel Echeverri (adastra).  S4vitar  Muchos conocerán este canal.  Encontrarás desde. Noticias de Ciberseguridad, consejos, writeups de máquinas de plataformas como HackTheBox, scripting en Bash y mucho más.  Demasiados videos para ver, disfruta 😊.  Marcelo Vázquez (s4vitar). Dejo su trabajo para dedicarse plenamente a la creación de contenido. También s4vitar, cuenta con un blog donde sube artículos interesantes. Dale un vistazo ≥ https://s4vitar.github.io/. ¿Estamos?Víctor García (Takito1812)  Siento que este canal, debería ser más conocido, ya que su contenido es bueno, explica bastante bien y se nota el esfuerzo que hay detrás.  Encontrarás, desde Writeups de máquinas de plataformas como HackThebox, TryHackMe. Una, guía de preparación para la certificación OSCP de Offensive Security.  Takito es una persona que admiro mucho y se nota que pilota del tema.          Takito,  también cuenta con una comunidad, blog que es CybexSec, Cybex-Discord.      Securiters  Comenzaron, hace relativamente poco.  Encontrarás, desde Entrevistas, Resoluciones de máquinas de plataformas como- HackTheBox, TryHackMe, diferentes paths de aprendizaje y mucho más.  Buenos videos para ver 😊.          Securiters, se conforma por:              Marta-Twitter        Carol-Twitter Securiters, es más de usar Twitch. Securiters, también cuenta con un Blog.            CronUp  Demasiados posts, para leer (Claro, yo no me he leído todo 😁).  Los artículos que he leído, son bastante detallados y bien explicados. Claro no tan técnicos, para que personas que no están tan metidos en este mundo, sea fácil dé entender (algunos mas que otros).  Encontrarás, investigaciones sobre malware, noticias y más.          CronUP, es una empresa de Ciberseguridad Chilena.      DeepHacking  Unos artículos guapísimos.  Encontrarás, desde explicaciones detalladas sobre vulnerabilidades en aplicaciones web como SQLI (SQL injection). Writeups de laboratorios de PortSwigger, reviews de- certificaciones y más.  Muy bueno este blog 😊.          ¿Quién es el autor? Sikumy. También tiene estos fabulosos apuntes, dale una vuelta ≥ Hacking Notes.      sha-16  Encontrarás, desde Writeups de máquinas de plataformas como HackThebox y TryHackMe. Review de la certificación eJPT, diferentes tutoriales, explica técnicas y más.  Síguelo en -&amp;gt; Twitch  Descubrí su canal, hace un tiempo y me gusto su contenido 😁.          También cuenta con un Blog.      s1kr10s  Encontrarás, desde vulnerabilidades que ha encontrado, Writeups de retos de reversing y más.  s1kr10s, es alguien que admiro demasiado y lo encuentro muy pro.  Para los que le gusta el reversing y entender las cosas a bajo nivel.          También, tiene un blog, con muy buen contenido.      Mario Guglia  Encontrarás, desde Writeups de máquinas de plataformas como HackTheBox y TryHackMe. AD (Active Directory) y artículos interesantes.  Dale una vuelta 😀.  He tenido el placer de hablar con él, me ha ayudado y no dudará en echarte un cable 😉.          🔥💣      Jotinero  Un buen canal 😊.  Encontrarás, desde OSINT, ataques a redes inalámbricas, consejos y  más.  También, es una persona que admiro y un amigo.          Disfruten 😊.      Paulo Colomés  Encontrarás, desde un curso donde enseña algunas técnicas de hacking a redes LAN, configuraciones, conceptos de networking y más.  Sin duda un gran profesional y explica demasiado bien.  Perfecto para los que le gusta networking, ¡Que esperas!          🔥      HackPlayers  Encontrarás, desde Writeups, técnicas, PoCs (Prueba de concepto) y más.  Dale una vuelta 😉.  Son los organizadores de la h-c0n.          Desarrollan herramientas como: evil-winrm.      IronHackers  Encontrarás, desde Writeups de plataformas como HackTheBox, Atenea, Vulnhub.Tutoriales, notas y más.  Entra, que te gustara.          También, tienen canal de YouTube.       FinHasta aquí el post de hoy, posiblemente haga una serie de esto. Gracias por leer. Cualquier feedback es bienvenido, me pueden contactar por Twitter, Telegram y se pueden unir- a Moison-Telegram."
+  },
+  
+  {
+    "title": "Hola Mundo",
+    "url": "/posts/hola-mundo/",
+    "categories": "Bienvenida",
+    "tags": "HolaMundo, 2022, T3sla, NOOB",
+    "date": "2022-02-22 14:55:00 -0300",
+    
+
+
+
+
+
+    "snippet": "Hola a todos este es mi primer post, trataré de explicar de que tratara este blog.¿Qué encontrarás en este blog?  Hacking.  Diferentes plataformas de Ciberseguridad.  El lenguaje de programación C.  Una que otra cosa que no sea relacionado con los temas del blog.  Apuntes.  Recursos.  Formula 1.  Videojuegos.  Anime.¿Qué me dio por crear un blog?La verdad tengo unas ganas enormes de crear contenido y darme de cierta forma a conocer. Además, siento que escribiendo reforzaré mis conocimientos y aprenderé.  No soy ningún experto, solo un entusiasta que busca tratar de crear contenido, aprender y mejorar, para algún día llegar a trabajar como un Pentester o Programador.Cualquier feedback es bienvenido usted es libre de expresarse como quiera."
   }
   
 ]

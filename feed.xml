@@ -1,35 +1,76 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
-  <title>T3_6_9</title>
-  <subtitle>Blog T3_6_9</subtitle>
-  <updated>2022-02-11T01:51:32-03:00</updated>
+  <id>/</id>
+  <title>T3sla</title>
+  <subtitle>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</subtitle>
+  <updated>2022-02-24T23:12:35-03:00</updated>
   <author>
-    <name>T3_6_9</name>
-    <uri>http://localhost:4000/</uri>
+    <name>T3sla</name>
+    <uri>/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
+    href="/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator>
-  <rights> © 2022 T3_6_9 </rights>
+  <rights> © 2022 T3sla </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://localhost:4000/posts/hello-world/" rel="alternate" type="text/html" title="Hello World" />
-    <published>2022-01-20T04:57:00-03:00</published>
+    <title>Recursos de Ciberseguridad</title>
+    <link href="/posts/recursos-ciberseguridad/" rel="alternate" type="text/html" title="Recursos de Ciberseguridad" />
+    <published>2022-02-22T23:31:00-03:00</published>
   
-    <updated>2022-01-20T04:57:00-03:00</updated>
+    <updated>2022-02-22T23:31:00-03:00</updated>
   
-    <id>http://localhost:4000/posts/hello-world/</id>
-    <content src="http://localhost:4000/posts/hello-world/" />
+    <id>/posts/recursos-ciberseguridad/</id>
+    <content src="/posts/recursos-ciberseguridad/" />
     <author>
-      <name>T3_6_9</name>
+      <name>T3sla</name>
+    </author>
+
+  
+    
+    <category term="Ciberseguridad" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Bienvenidos/as
+Este post tratará de los mejores canales, blogs y apuntes de Ciberseguridad (a mi parecer, claro- que no son todos, pero son algunos que me ayudan mucho, no están ordenados en plan cuál es- mejor, todos tienen contenido de calidad y sus creadores se esfuerzan).
+
+TheHackerWay
+
+  Quizás muchos conocen este blog.
+  Cuenta con bastante post, para leer.
+  En este blog encontrarás dife...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Hola Mundo</title>
+    <link href="/posts/hola-mundo/" rel="alternate" type="text/html" title="Hola Mundo" />
+    <published>2022-02-22T14:55:00-03:00</published>
+  
+    <updated>2022-02-22T14:55:00-03:00</updated>
+  
+    <id>/posts/hola-mundo/</id>
+    <content src="/posts/hola-mundo/" />
+    <author>
+      <name>T3sla</name>
     </author>
 
   
@@ -51,19 +92,19 @@
 ¿Qué encontrarás en este blog?
 
 
-  Hacking y diferentes plataformas de ciberseguridad.
+  Hacking.
+  Diferentes plataformas de Ciberseguridad.
   El lenguaje de programación C.
-  Algunas teorías que tengo.
   Una que otra cosa que no sea relacionado con los temas del blog.
   Apuntes.
   Recursos.
   Formula 1.
-  Karting.
   Videojuegos.
   Anime.
 
 
-¿Qué me dio por crear un...
+¿Qué me dio por crear un blog?
+La verdad tengo unas ganas enorm...
     </summary>
   
 
