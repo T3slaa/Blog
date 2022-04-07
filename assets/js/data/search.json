@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Descargar videos de Udemy",
+    "url": "/posts/descargar-videos-de-udemy/",
+    "categories": "Tutorial",
+    "tags": "T3sla, Udemy, Tutorial, 2022",
+    "date": "2022-04-07 09:25:00 -0400",
+    
+
+
+
+
+
+    "snippet": "Bienvenidos/aEste artículo (post) tratará de como descargar los videos de Udemy.HerramientasHerramientas que vamos a emplear.  Navegador Web, en mi caso usaré el navegador web Google Chrome.También puedes utilizar otro navegador web como Mozilla Firefox entre otros…  Wget para descargar el fichero mp4.  Dev Tools (Inspeccionar elemento). Abrir las Dev ToolsTenemos diferentes formas de abrir las Dev Tools. Veamos cuáles son:      La más normal es presionando los tres puntos que hay en la esquina superior derecha.Luego se despliega el menú y hay que presionar en más herramientas y luego en Herramientas para Desarrolladores    La segunda forma seria presionando la tecla F12.  La tercera forma seria haciendo click derecho.   Por último seria usando la combinación de teclas CTRL + SHIFT + I Y tendríamos las Dev Tools (Inspeccionar elemento).Dicho esto pasamos a la acción.DemoLo primero es seleccionar el curso que queremos descargar, yo lo haré con dos cursos para el demo (Gratis y de pago).Este curso es gratis y está inhabilitada la característica de descargar la clase, pero con este pequeño truco podremos (:Inspeccionemos elementoHacemos click derecho aquí:Y nos muestra todo el HTML5 de la aplicación web de Udemy.Como vemos en la siguiente captura de pantalla tenemos la fuente (atributo src; source)  de la etiqueta videoAbrimos el link en una nueva pestaña (tab) y descargamos a través de wget.Aquí cambio el nombre y habilito un servidor HTTP por el puerto 8080 para poder visualizar el video de una forma más cómodaY listo tendríamos el video descargado una manera bastante simple, pero efectiva (;Ahora lo haré con un curso de pago, para que vean que aplica a todos los cursos, sean gratis o de pago.Listo es cosa de repetir los pasosFinBueno, eso ha sido el post de hoy, espero que les sea útil.No he visto este método para descargar los videos de Udemy- pero de seguro alguno ya lo sabía.Cualquier feedback es bienvenido me pueden contactar- por Twitter y Telegram"
+  },
+  
+  {
     "title": "Recursos de Ciberseguridad",
     "url": "/posts/recursos-ciberseguridad/",
     "categories": "Ciberseguridad",
