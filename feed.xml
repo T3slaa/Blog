@@ -4,7 +4,7 @@
   <id>/</id>
   <title>T3sla</title>
   <subtitle>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</subtitle>
-  <updated>2022-04-07T19:09:13-04:00</updated>
+  <updated>2022-05-21T19:14:38-04:00</updated>
   <author>
     <name>T3sla</name>
     <uri>/</uri>
@@ -17,6 +17,51 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Pandora HackTheBox</title>
+    <link href="/posts/pandora-hackthebox/" rel="alternate" type="text/html" title="Pandora HackTheBox" />
+    <published>2022-05-18T19:51:00-04:00</published>
+  
+    <updated>2022-05-18T19:51:00-04:00</updated>
+  
+    <id>/posts/pandora-hackthebox/</id>
+    <content src="/posts/pandora-hackthebox/" />
+    <author>
+      <name>T3sla</name>
+    </author>
+
+  
+    
+    <category term="HTB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Bienvenidos/a
+Este artículo tratará la resolución de la máquina Pandora de la plataforma de Ciberseguridad HackTheBox.
+
+
+Información sobre la máquina
+
+Bueno, esta máquina tiene una dificultad fácil, pero digo desde ya que no es una máquina fácil, ja, ja. Muy divertida y aprendí bastantes cosas en su momento. Sin duda mi máquina favorita &amp;lt;3.
+Matrix
+
+
+  SQLI (Sql Injection)
+  SNMP (Protocolo s...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
