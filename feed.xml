@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
+  <id>/</id>
   <title>T3sla</title>
   <subtitle>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</subtitle>
-  <updated>2022-06-03T22:05:44-04:00</updated>
+  <updated>2022-07-06T15:54:09-04:00</updated>
   <author>
     <name>T3sla</name>
-    <uri>http://localhost:4000/</uri>
+    <uri>/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
+    href="/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator>
   <rights> © 2022 T3sla </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -20,14 +20,75 @@
 
   
   <entry>
+    <title>RouterSpace HackTheBox</title>
+    <link href="/posts/routerspace-hackthebox/" rel="alternate" type="text/html" title="RouterSpace HackTheBox" />
+    <published>2022-06-27T00:04:00-04:00</published>
+  
+    <updated>2022-06-27T00:04:00-04:00</updated>
+  
+    <id>/posts/routerspace-hackthebox/</id>
+    <content src="/posts/routerspace-hackthebox/" />
+    <author>
+      <name>T3sla</name>
+    </author>
+
+  
+    
+    <category term="HTB" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Bienvenidos
+Este artículo tratará la resolución de la máquina RouterSpace de HackTheBox.
+
+
+Información sobre la máquina
+
+Matrix
+
+
+  APK
+  IPv6
+  SSH
+  Authorized Keys
+  Key-Gen
+  API
+  Proxy
+  RCE
+
+
+
+Reconocimiento
+Nmap (TCP)
+nmap -sS -p- --open -n -v -T5 -Pn 10.10.11.148
+nmap -sS -p 80,22 -n -Pn -T5 -sCV 10.10.11.148 -o content/nmap
+
+
+
+Nmap no logra obtener ninguna versión de los servicios exp...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>Pandora HackTheBox</title>
-    <link href="http://localhost:4000/posts/pandora-hackthebox/" rel="alternate" type="text/html" title="Pandora HackTheBox" />
+    <link href="/posts/pandora-hackthebox/" rel="alternate" type="text/html" title="Pandora HackTheBox" />
     <published>2022-05-18T19:51:00-04:00</published>
   
     <updated>2022-05-18T19:51:00-04:00</updated>
   
-    <id>http://localhost:4000/posts/pandora-hackthebox/</id>
-    <content src="http://localhost:4000/posts/pandora-hackthebox/" />
+    <id>/posts/pandora-hackthebox/</id>
+    <content src="/posts/pandora-hackthebox/" />
     <author>
       <name>T3sla</name>
     </author>
@@ -66,13 +127,13 @@ Matrix
   
   <entry>
     <title>Descargar videos de Udemy</title>
-    <link href="http://localhost:4000/posts/descargar-videos-de-udemy/" rel="alternate" type="text/html" title="Descargar videos de Udemy" />
+    <link href="/posts/descargar-videos-de-udemy/" rel="alternate" type="text/html" title="Descargar videos de Udemy" />
     <published>2022-04-07T09:25:00-04:00</published>
   
     <updated>2022-04-07T09:25:00-04:00</updated>
   
-    <id>http://localhost:4000/posts/descargar-videos-de-udemy/</id>
-    <content src="http://localhost:4000/posts/descargar-videos-de-udemy/" />
+    <id>/posts/descargar-videos-de-udemy/</id>
+    <content src="/posts/descargar-videos-de-udemy/" />
     <author>
       <name>T3sla</name>
     </author>
@@ -113,13 +174,13 @@ Tenemos diferentes formas...
   
   <entry>
     <title>Recursos de Ciberseguridad</title>
-    <link href="http://localhost:4000/posts/recursos-ciberseguridad/" rel="alternate" type="text/html" title="Recursos de Ciberseguridad" />
+    <link href="/posts/recursos-ciberseguridad/" rel="alternate" type="text/html" title="Recursos de Ciberseguridad" />
     <published>2022-02-22T23:31:00-03:00</published>
   
     <updated>2022-02-22T23:31:00-03:00</updated>
   
-    <id>http://localhost:4000/posts/recursos-ciberseguridad/</id>
-    <content src="http://localhost:4000/posts/recursos-ciberseguridad/" />
+    <id>/posts/recursos-ciberseguridad/</id>
+    <content src="/posts/recursos-ciberseguridad/" />
     <author>
       <name>T3sla</name>
     </author>
@@ -154,13 +215,13 @@ TheHackerWay
   
   <entry>
     <title>Hola Mundo</title>
-    <link href="http://localhost:4000/posts/hola-mundo/" rel="alternate" type="text/html" title="Hola Mundo" />
+    <link href="/posts/hola-mundo/" rel="alternate" type="text/html" title="Hola Mundo" />
     <published>2022-02-22T14:55:00-03:00</published>
   
     <updated>2022-02-22T14:55:00-03:00</updated>
   
-    <id>http://localhost:4000/posts/hola-mundo/</id>
-    <content src="http://localhost:4000/posts/hola-mundo/" />
+    <id>/posts/hola-mundo/</id>
+    <content src="/posts/hola-mundo/" />
     <author>
       <name>T3sla</name>
     </author>
