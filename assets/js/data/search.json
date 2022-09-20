@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Términos Ciberseguridad",
+    "url": "/posts/terminosciberseguridad/",
+    "categories": "Ciberseguridad",
+    "tags": "2022, T3sla, Ciberseguridad",
+    "date": "2022-09-19 21:16:00 -0300",
+    
+
+
+
+
+
+    "snippet": "Bienvenidos, el artículo de hoy tratará sobre términos utilizados en InfoSec.Más bien es una recopilación de términos/conceptos, entre otros.Pues si, alguna vez escuchaste o leíste alguna palabra y no tenías idea de lo que significaba este artículo, es perfecto para ti. 😉La idea de esto es como tener un diccionario, simplemente tener un lugar donde almacenar todos los términos/conceptos/palabras.  Comencemos.1. IoCIndicador de compromiso.  Imagina que un investigador de seguridad encontró un software malicioso que está infectando diferentes equipos, entonces lo que hace el investigador de seguridad es compartir los indicadores de compromiso (IoCs) que serian los nombres de archivo, el hash que identifica al archivo, ya sea SHA-256, MD5, etc.En simples palabras, eso sería o sirve como un indicador de compromiso. Si deseas profundizar más acerca de esto.Dejo los siguientes enlaces;  IoC-CronUP  IoC-WikipediA2. SOCCentro de operaciones de seguridad.  Digamos que es un grupo de personas que se encarga de monitorizar la red, ya sea analizando el tráfico de red, registros, entre otros.Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;  SOC-ORACLE  SOC-WikipediA3. AVAntivirus.  Simplemente, un antivirus es una solución de seguridad relativamente sofisticada, la cual tiene como fin proteger a un usuario del software malicioso.Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;  AV-WikipediA  AV-eset4. MalwareSoftware malicioso.  El malware es todo lo que se conoce como software malicioso, es decir que los Virus, Troyanos, Spyware, Ransomware, etc. Es un tipo de malware.Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;  Malware-Oracle  Malware-WikipediA5. RaasRansomware as a Service  Generalmente, los ciberdelincuentes utilizan este medio para obtener ingresos económicos a través del servicio de ransomware como servicio, es decir, te “alquilan” un ransomware para que tú puedas realizar tus campañas maliciosas sin necesidad de que tengas grandes conocimientos técnicos.Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;  Raas-welivesecurity  Raas-Cloudflare6. RATRemote Administration Tool (Herramienta de administración remota).  Generalmente, es un software que tiene un fin ético, pero habitualmente se utiliza dicho software de manera maliciosa.Si deseas profundizar más acerca de esto. Dejo el siguiente enlace;  RAT-WikipediA7. CSIRTEquipo de respuesta ante incidentes de seguridad informática.  Generalmente, este tipo de equipos los suelen tener «entidades Gubernamentales», Empresas, Gobiernos y alguno que otro más.Como su nombre indica, responden a este tipo de incidentes.Dejaré el siguiente enlace de:  CSIRT-Chile8. FirewallCortaFuegos.  Es una «solución de seguridad» que generalmente gestiona el tráfico de red e impide algún tipo de acceso/comunicación a un equipo en una red.Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;  Cisco-Firewall  Mcaffe-Firewall9. IDSSistema de detección de intrusos.  Es una «solución/sistema de seguridad» que genera una alerta en el caso de que un sistema o equipo haya sido comprometido.Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;  IDS-Incibe  IDS-WikipediA10. FUDTotalmente indetectable.  Generalmente, es software malicioso que tiene el fin de ser indetectables hacia los diferentes motores de AV.Hay diferentes «técnicas» que se emplean para conseguir esto, como la ofuscación, entre otras.FinEste ha sido el artículo de hoy, espero les haya gustado.Trate de poner las fuentes más confiables para los enlaces (Wikipedia es un caso aparte 🤣) y al momento de dar ejemplos o definición intente dar una respuesta bajo mis conocimientos y así no es un copia y pega.Cualquier error lo pueden comunicar a través de las siguientes vías, de igual manera la retroalimentación;TwitterTelegramInstagramE-mailSaludos. ✌"
+  },
+  
+  {
     "title": "RouterSpace HackTheBox",
     "url": "/posts/routerspace-hackthebox/",
     "categories": "HTB",

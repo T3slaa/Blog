@@ -4,7 +4,7 @@
   <id>/</id>
   <title>T3sla</title>
   <subtitle>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</subtitle>
-  <updated>2022-07-06T15:54:09-04:00</updated>
+  <updated>2022-09-20T02:16:03-03:00</updated>
   <author>
     <name>T3sla</name>
     <uri>/</uri>
@@ -17,6 +17,43 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Términos Ciberseguridad</title>
+    <link href="/posts/terminosciberseguridad/" rel="alternate" type="text/html" title="Términos Ciberseguridad" />
+    <published>2022-09-19T21:16:00-03:00</published>
+  
+    <updated>2022-09-19T21:16:00-03:00</updated>
+  
+    <id>/posts/terminosciberseguridad/</id>
+    <content src="/posts/terminosciberseguridad/" />
+    <author>
+      <name>T3sla</name>
+    </author>
+
+  
+    
+    <category term="Ciberseguridad" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Bienvenidos, el artículo de hoy tratará sobre términos utilizados en InfoSec.
+Más bien es una recopilación de términos/conceptos, entre otros.
+Pues si, alguna vez escuchaste o leíste alguna palabra y no tenías idea de lo que significaba este artículo, es perfecto para ti. 😉
+La idea de esto es como tener un diccionario, simplemente tener un lugar donde almacenar todos los términos/conceptos/pala...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -207,57 +244,6 @@ TheHackerWay
   Quizás muchos conocen este blog.
   Cuenta con bastante post, para leer.
   En este blog encontrarás dife...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Hola Mundo</title>
-    <link href="/posts/hola-mundo/" rel="alternate" type="text/html" title="Hola Mundo" />
-    <published>2022-02-22T14:55:00-03:00</published>
-  
-    <updated>2022-02-22T14:55:00-03:00</updated>
-  
-    <id>/posts/hola-mundo/</id>
-    <content src="/posts/hola-mundo/" />
-    <author>
-      <name>T3sla</name>
-    </author>
-
-  
-    
-    <category term="Bienvenida" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Hola a todos este es mi primer post, trataré de explicar de que tratara este blog.
-
-¿Qué encontrarás en este blog?
-
-
-  Hacking.
-  Diferentes plataformas de Ciberseguridad.
-  El lenguaje de programación C.
-  Una que otra cosa que no sea relacionado con los temas del blog.
-  Apuntes.
-  Recursos.
-  Formula 1.
-  Videojuegos.
-  Anime.
-
-
-¿Qué me dio por crear un blog?
-La verdad tengo unas ganas enorm...
     </summary>
   
 
