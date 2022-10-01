@@ -4,7 +4,7 @@
   <id>/</id>
   <title>T3sla</title>
   <subtitle>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</subtitle>
-  <updated>2022-09-20T02:16:03-03:00</updated>
+  <updated>2022-09-30T21:35:24-03:00</updated>
   <author>
     <name>T3sla</name>
     <uri>/</uri>
@@ -17,6 +17,51 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Términos Ciberseguridad (PT. 2)</title>
+    <link href="/posts/t%C3%A9rminos-ciberseguridad-2/" rel="alternate" type="text/html" title="Términos Ciberseguridad (PT. 2)" />
+    <published>2022-09-23T20:12:00-03:00</published>
+  
+    <updated>2022-09-23T20:12:00-03:00</updated>
+  
+    <id>/posts/t%C3%A9rminos-ciberseguridad-2/</id>
+    <content src="/posts/t%C3%A9rminos-ciberseguridad-2/" />
+    <author>
+      <name>T3sla</name>
+    </author>
+
+  
+    
+    <category term="Ciberseguridad" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Bienvenidos a la segunda parte de términos que se utilizan en InfoSec.
+Debido al gran apoyo y buenos comentarios que recibí de parte de varias personas, adelante este artículo. 😊 
+Empecemos.
+
+
+1. IPS
+Sistema de prevención de intrusos.
+
+  Es una «solución de seguridad» como su nombre indica, que previene algún tipo de intrusión proveniente de algún actor de amenaza, ya sea en un equipo o red.
+
+
+...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -203,47 +248,6 @@ También puedes utilizar otro navegador web como Mozilla Firefox entre otros…
 
 Abrir las Dev Tools
 Tenemos diferentes formas...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Recursos de Ciberseguridad</title>
-    <link href="/posts/recursos-ciberseguridad/" rel="alternate" type="text/html" title="Recursos de Ciberseguridad" />
-    <published>2022-02-22T23:31:00-03:00</published>
-  
-    <updated>2022-02-22T23:31:00-03:00</updated>
-  
-    <id>/posts/recursos-ciberseguridad/</id>
-    <content src="/posts/recursos-ciberseguridad/" />
-    <author>
-      <name>T3sla</name>
-    </author>
-
-  
-    
-    <category term="Ciberseguridad" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Bienvenidos/as
-Este post tratará de los mejores canales, blogs y apuntes de Ciberseguridad (a mi parecer, claro- que no son todos, pero son algunos que me ayudan mucho, no están ordenados en plan cuál es- mejor, todos tienen contenido de calidad y sus creadores se esfuerzan).
-
-TheHackerWay
-
-  Quizás muchos conocen este blog.
-  Cuenta con bastante post, para leer.
-  En este blog encontrarás dife...
     </summary>
   
 
