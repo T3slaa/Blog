@@ -4,7 +4,7 @@
   <id>/</id>
   <title>T3sla</title>
   <subtitle>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</subtitle>
-  <updated>2022-09-30T21:35:24-03:00</updated>
+  <updated>2022-10-20T03:33:09-03:00</updated>
   <author>
     <name>T3sla</name>
     <uri>/</uri>
@@ -17,6 +17,47 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>¿Quién será?</title>
+    <link href="/posts/qui%C3%A9n-ser%C3%A1/" rel="alternate" type="text/html" title="¿Quién será?" />
+    <published>2022-10-19T15:14:00-03:00</published>
+  
+    <updated>2022-10-19T15:14:00-03:00</updated>
+  
+    <id>/posts/qui%C3%A9n-ser%C3%A1/</id>
+    <content src="/posts/qui%C3%A9n-ser%C3%A1/" />
+    <author>
+      <name>T3sla</name>
+    </author>
+
+  
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Bienvenidos, el artículo de hoy trata de como “descubrí a la persona que estaba detrás de un número”.
+Más que nada, una especie de writeup sobre investigar un número de teléfono, herramientas y tal, -quizás les sea útil y puedan aprender algo nuevo.
+
+
+
+
+Contexto
+El otro día estaba tranquilo viendo unos videos en TikTok y de la nada recibo una llamada entrante de un número desconocido, lo cual p...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -201,53 +242,6 @@ Matrix
 
   SQLI (Sql Injection)
   SNMP (Protocolo s...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Descargar videos de Udemy</title>
-    <link href="/posts/descargar-videos-de-udemy/" rel="alternate" type="text/html" title="Descargar videos de Udemy" />
-    <published>2022-04-07T09:25:00-04:00</published>
-  
-    <updated>2022-04-07T09:25:00-04:00</updated>
-  
-    <id>/posts/descargar-videos-de-udemy/</id>
-    <content src="/posts/descargar-videos-de-udemy/" />
-    <author>
-      <name>T3sla</name>
-    </author>
-
-  
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Bienvenidos/a
-Este artículo (post) tratará de como descargar los videos de Udemy.
-Herramientas
-Herramientas que vamos a emplear.
-
-  Navegador Web, en mi caso usaré el navegador web Google Chrome.
-También puedes utilizar otro navegador web como Mozilla Firefox entre otros…
-  Wget para descargar el fichero mp4.
-  Dev Tools (Inspeccionar elemento). 
-
-
-
-Abrir las Dev Tools
-Tenemos diferentes formas...
     </summary>
   
 

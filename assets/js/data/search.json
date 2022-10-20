@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "¿Quién será?",
+    "url": "/posts/qui%C3%A9n-ser%C3%A1/",
+    "categories": "Tutorial",
+    "tags": "2022, T3sla, OSINT, Writeup",
+    "date": "2022-10-19 15:14:00 -0300",
+    
+
+
+
+
+
+    "snippet": "Bienvenidos, el artículo de hoy trata de como “descubrí a la persona que estaba detrás de un número”.Más que nada, una especie de writeup sobre investigar un número de teléfono, herramientas y tal, -quizás les sea útil y puedan aprender algo nuevo.ContextoEl otro día estaba tranquilo viendo unos videos en TikTok y de la nada recibo una llamada entrante de un número desconocido, lo cual procedo a contestar.Todo bien, en ese momento, habla una mujer preguntando por “Alfredo”; respondo diciendo equivocada y corto.A los 5 - 10 segundos de haber finalizado la llamada vuelve a llamar comunicándome lo siguiente «que es mi vecina del condominio llamándome por ruidos molestos y debo pagar una multa a la siguiente cuenta» (pienso en mi cabeza ¿y está de que va?).Respondo lo siguiente «Oh, qué buena broma, pero no cuela, adiós», dice algo, pero no recuerdo qué, luego de eso no llamo más (algo así fue de igual manera, estoy omitiendo ciertos datos).Luego paso el tiempo y dije, “investigaré el número a ver qué logro encontrar”.AcciónLuego de esa pequeña introducción pasemos a la acción1. Agregar a contactos.Agregamos a contactos con el fin de descubrir si tiene una cuenta de WhatsApp y así poder visualizar su foto de perfil.Es el caso, pero no tiene foto (seguramente ajustes de privacidad).2. Obtener más informaciónUsamos TrueCaller y así recopilar más información como la compañía, nombre del propietario del número, entre otras cositas.Consigo nombre, apellido, compañía y e-mail.3. E-mail filtrado.Como obtuve el e-mail a través de TrueCaller procedo a realizar una búsqueda en haveibeenpwned.Genial está filtrado el e-mail, podría buscar la DB del leak y así obtener alguna credencial, pero no es el caso.4. Número FBQuise saber si el número estaba vinculado a una cuenta de Facebook.Genial.5. FB-LeakLo otro que hice fue buscar el número en un leak de Facebook que corresponde al año 2019 si no estoy mal.Obtenemos el identificador del perfil.6. FB IDA través de esta URL y modificando el valor del parámetro “id” asignamos el ID obtenido a anteriormente.facebook.com/profile.php?id=IDListo, podemos visualizar el perfil sin ningún problema.7. RutificadorCon los datos recopilados podemos hacer uso del rutificador y así obtener el RUT (DNI).Vale teniendo esto, podemos hacer muchas cosas.FinNos damos cuenta lo relativamente fácil que es obtener información de alguien con solo el número y la mala “protección” de datos que existe en Chile por parte de terceros, como las compañías de teléfono.Cualquier error lo pueden comunicar a través de las siguientes vías, de igual manera la retroalimentación;Twitter,Telegram.Si deseas apoyarme de manera económica te dejo el siguiente enlace. "
+  },
+  
+  {
     "title": "Términos Ciberseguridad (PT. 2)",
     "url": "/posts/t%C3%A9rminos-ciberseguridad-2/",
     "categories": "Ciberseguridad",
