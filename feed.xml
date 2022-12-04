@@ -5,9 +5,158 @@
         <description>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</description>
         <link>/</link>
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 05 Nov 2022 17:26:51 -0300</pubDate>
-        <lastBuildDate>Sat, 05 Nov 2022 17:26:51 -0300</lastBuildDate>
+        <pubDate>Sun, 04 Dec 2022 20:21:53 -0300</pubDate>
+        <lastBuildDate>Sun, 04 Dec 2022 20:21:53 -0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Recursos de Ciberseguridad (PT. 2)</title>
+                <description>&lt;p&gt;Bienvenidos a la segunda parte de recursos de ciberseguridad donde comparto diferentes creadores de contenido.
+&lt;br /&gt;&lt;br /&gt;
+Recuerda que no está ordenado del mejor al peor, todos tienen contenido valioso y sus creadores se esfuerzan.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;xct&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@xct_de/&quot;&gt;XCT&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Enfocado a Writeups de la plataforma de ciberseguridad &lt;a href=&quot;https://hackthebox.com/&quot;&gt;HackTheBox&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Canal en Inglés.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/xct.png&quot; alt=&quot;xct&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:15px;&quot;&gt; También cuenta con un blog llamado: &lt;a href=&quot;https://www.vulndev.io/&quot;&gt;VulnDev&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/recursosciber2/vulndev.png&quot; alt=&quot;xct vulndev&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;ippsec&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@ippsec/&quot;&gt;IppSec&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Enfocado a Writeups de HacktheBox canal bastante activo y los videos que he visto son bastantes claros.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Canal en Inglés.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/ippsec.png&quot; alt=&quot;IppSec&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size: 15px;&quot;&gt;Cuenta con un &lt;a href=&quot;https://ippsec.rocks/?#&quot;&gt;motor de búsqueda&lt;/a&gt; en el cual puedes filtrar por máquinas, vulnerabilidades, técnicas, etc.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/recursosciber2/ippsec2.png&quot; alt=&quot;IppSec web&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;liveoverflow&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@LiveOverflow/&quot;&gt;LiveOverflow&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Contenido bastante variado, encontrarás writeups de CTF, tutoriales, explicaciones detalladas, Bug Bounty, Minecraft y mucho más.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Canal en Inglés&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/liveoverflow.png&quot; alt=&quot;LiveOverflow&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size: 15px;&quot;&gt;&lt;a href=&quot;https://liveoverflow.com/&quot;&gt;Web&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/recursosciber2/livecom.png&quot; alt=&quot;LiveOverflow Web&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;john-hammond&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@_JohnHammond/&quot;&gt;John Hammond&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Encontrarás writeups, reviews de certificaciones, análisis de malware y mucho más.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Canal en inglés&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/johnhammond.png&quot; alt=&quot;John Hammond&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;medusa&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@Medusa0xf&quot;&gt;Medusa&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Descubrí este canal hace muy poco y tiene muy buen contenido, desde writeups, pentesting dirigido a API, herramientas de hacking y más.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Canal en inglés&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/medusa.png&quot; alt=&quot;medusa&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size: 15px;&quot;&gt;Dejo el &lt;a href=&quot;https://medium.com/@Medusa0xf&quot;&gt;blog&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/recursosciber2/medusablog.png&quot; alt=&quot;Medusa Blog&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;exploitland&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@ExploitLand/&quot;&gt;ExploitLand&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Un canal muy recomendado, tiene un excelente contenido.
+Desde hacking a aplicaciones móviles hasta escalacion de privilegios en AWS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/exploitland.png&quot; alt=&quot;ExploitLand&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:15px;&quot;&gt;Dejo la &lt;a href=&quot;https://exploitland.com&quot;&gt;web&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/recursosciber2/exploitlandcom.png&quot; alt=&quot;ExploitLand&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;open-hack-box&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@openhackbox3855&quot;&gt;Open Hack Box&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Si deseas ver writeups de HackTheBox con un enfoque diferente, sin duda este canal es para ti.
+Muy relajante.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/openhackbox.png&quot; alt=&quot;open hack box&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;stderr&quot;&gt;&lt;a href=&quot;https://stderr.cl/&quot;&gt;Stderr&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A pesar de tener solamente un artículo, es un blog que promete mucho y el artículo de repositorios git expuestos está muy bien detallado.
+Tuve la oportunidad de conocer al autor del blog y es una persona genial.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/stderr.png&quot; alt=&quot;Stderr&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;y4nbow&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@y4nbow627&quot;&gt;Y4nbow&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Un canal genial, encontrarás desde writeups hasta implementar un ACL.
+He tenido el placer de intercambiar palabras con Y4nbow es una persona buena onda y amable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/Y4nbow.png&quot; alt=&quot;Y4nbow&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;dplastico&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@dplastico&quot;&gt;Dplastico&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Un canal espectacular para los amantes del bajo nivel que mejor que con el patrón del PWN.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/dplastico.png&quot; alt=&quot;dplastico&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;walxom-network&quot;&gt;&lt;a href=&quot;https://walxom.net/&quot;&gt;Walxom Network&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Un blog bastante bueno en él encontrarás técnicas que se emplean al momento de escalar privilegios en sistemas operativos GNU/LINUX.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/walxom.png&quot; alt=&quot;walxom&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;pentesting-things&quot;&gt;&lt;a href=&quot;https://pentesthings.tech&quot;&gt;Pentesting Things&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Un blog fabuloso, sin duda muy buen contenido.
+Encontrarás fundamentos de Bluetooth, técnicas de pivoting hasta montar un mini laboratorio de pivoting.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber2/pentest.png&quot; alt=&quot;pentesting things&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Espero te haya gustado, en esta ocasión he añadido más creadores de contenido.
+Recuerda que las reacciones y comentarios están más abajo.&lt;br /&gt;
+También puedes comunicarte a través de las siguientes vías: &lt;a href=&quot;https://twitter.com/T3_6_9&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Agregar que si quieres realizar alguna donación lo puedes hacer a través del siguiente botón: 
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Muchas gracias por leer nos vemos en el próximo artículo. 👋&lt;/p&gt;
+</description>
+                <pubDate>Sat, 03 Dec 2022 22:38:00 -0300</pubDate>
+                <link>/recursos-de-ciberseguridad-pt-2</link>
+                <guid isPermaLink="true">/recursos-de-ciberseguridad-pt-2</guid>
+                
+                <category>Ciberseguridad</category>
+                
+                <category>T3sla</category>
+                
+                <category>2022</category>
+                
+                
+            </item>
         
             <item>
                 <title>¿Quién será?</title>
