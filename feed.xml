@@ -5,9 +5,482 @@
         <description>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</description>
         <link>/</link>
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 12 Dec 2022 06:08:17 -0300</pubDate>
-        <lastBuildDate>Mon, 12 Dec 2022 06:08:17 -0300</lastBuildDate>
+        <pubDate>Sun, 18 Dec 2022 03:35:27 -0300</pubDate>
+        <lastBuildDate>Sun, 18 Dec 2022 03:35:27 -0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Ada Challenge 2022</title>
+                <description>&lt;p&gt;Buenas a todos, el artículo de hoy trata sobre la resolución de algunos retos de Ada (los que pude resolver más que nada y los activos que quedan porque estoy haciendo el writeup tarde).&lt;/p&gt;
+
+&lt;p&gt;Logre quedar en cuarta posición, participe en solitario ); y obtuve en varios retos &lt;strong&gt;First Blood&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sin más que agregar comencemos.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/aMbu7C0HstA&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/banner2.jpeg&quot; alt=&quot;Ada&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;contexto&quot;&gt;Contexto&lt;/h2&gt;
+&lt;p&gt;La plataforma utilizada es CTFd y estas son las categorías para los diferentes retos:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Machine&lt;/li&gt;
+  &lt;li&gt;Networking&lt;/li&gt;
+  &lt;li&gt;WEB&lt;/li&gt;
+  &lt;li&gt;Entrada&lt;/li&gt;
+  &lt;li&gt;Forensics&lt;/li&gt;
+  &lt;li&gt;Estenografía&lt;/li&gt;
+  &lt;li&gt;Criptografía&lt;/li&gt;
+  &lt;li&gt;Code&lt;/li&gt;
+  &lt;li&gt;Misceláneo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;entrada&quot;&gt;Entrada&lt;/h2&gt;
+&lt;p&gt;Son los retos de bienvenida que explican el tipo de flag que encontraras.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/entrada.png&quot; alt=&quot;entrada&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/entrada2.png&quot; alt=&quot;entrada2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/entrada3.png&quot; alt=&quot;entrada3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/decode.png&quot; alt=&quot;decode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/entrada4.png&quot; alt=&quot;entrada4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nos dan una captura de paquetes que debemos analizar y buscar el enlace al grupo de Telegram.&lt;/p&gt;
+
+&lt;p&gt;Haciendo uso del comando &lt;code&gt;strings&lt;/code&gt; logramos encontrar el enlace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/tg.png&quot; alt=&quot;tg&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;networking&quot;&gt;Networking&lt;/h1&gt;
+
+&lt;h3 id=&quot;running-1&quot;&gt;Running 1&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/running1.png&quot; alt=&quot;running1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nos piden obtener contraseña del usuario local.&lt;/p&gt;
+
+&lt;p&gt;Obtenemos lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/running2.png&quot; alt=&quot;secret&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Alguno se la hará familiar este formato. (Cisco Routers)&lt;/p&gt;
+
+&lt;p&gt;También podemos respaldar esto con la captura de paquetes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/cisco-pcap.png&quot; alt=&quot;cisco-pcap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/running3.png&quot; alt=&quot;runnin3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/running4.png&quot; alt=&quot;running4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{L0v3lac3}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;mac&quot;&gt;MAC&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/mac.png&quot; alt=&quot;mac&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/mac2.png&quot; alt=&quot;mac2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{08:00:27:22:46:4f}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;running-2&quot;&gt;Running-2&lt;/h3&gt;
+&lt;p&gt;Retomamos con el fichero.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/running-2.png&quot; alt=&quot;running-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/running-2secret.png&quot; alt=&quot;running-2secret&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/running-2crack.png&quot; alt=&quot;running-2crack&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/running-2plain.png&quot; alt=&quot;running-2plain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{cisco12345}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;gerente&quot;&gt;Gerente&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/gerente.png&quot; alt=&quot;gerente&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Descargamos la captura de paquetes y analizamos.&lt;/p&gt;
+
+&lt;p&gt;Tenemos el siguiente punto clave: &lt;strong&gt;«credenciales»&lt;/strong&gt; seguramente a través del protocolo &lt;strong&gt;HTTP&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/gerente2.png&quot; alt=&quot;gerente2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/gerente3.png&quot; alt=&quot;gerente3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/gerente4.png&quot; alt=&quot;gerente4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{PasswordUltraSegur4}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;evidencia&quot;&gt;Evidencia&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/evidencia.png&quot; alt=&quot;evidencia&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Descargamos el ZIP.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/evidencia2.png&quot; alt=&quot;evidencia&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size: 15px;&quot;&gt;No es necesario clonar el repositorio. 😉&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Está protegido con contraseña.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/evidencia3.png&quot; alt=&quot;evidencia3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Haciendo uso de zip2john y posteriormente crackeando el hash con john.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/evidencia4.png&quot; alt=&quot;evidencia4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/evidencia5.png&quot; alt=&quot;evidencia5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/evidencia6.png&quot; alt=&quot;evidencia6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{39b74b2fb057e8c78a2ba6639cf3d58ae91685e6ac13b57b70d2afb158cf742d}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;web&quot;&gt;Web&lt;/h1&gt;
+
+&lt;h3 id=&quot;owasp-1&quot;&gt;OWASP-1&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1.png&quot; alt=&quot;OWASP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al ingresar obtenemos lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1dvwa.png&quot; alt=&quot;owasp-1dvwa&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos buscar las credenciales por defecto.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;admin - password&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1creds.png&quot; alt=&quot;owasp creds&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1os.png&quot; alt=&quot;owasp os&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1flag.png&quot; alt=&quot;owasp flag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{1145c7a9a054af69b172dd9dd8ee3854}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;owasp-1-root&quot;&gt;OWASP-1 Root&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1root.png&quot; alt=&quot;owasp 1 root&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Debemos escalar privilegios.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1root2.png&quot; alt=&quot;owasp 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1root3.png&quot; alt=&quot;owasp 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1root4.png&quot; alt=&quot;owasp 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1root5.png&quot; alt=&quot;owasp 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-1root6.png&quot; alt=&quot;owasp 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{d0faba5185bdc00758c31b61e68bc071}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;owasp-2&quot;&gt;OWASP-2&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-2.png&quot; alt=&quot;owasp-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al ingresar obtenemos lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-2creds.png&quot; alt=&quot;owasp-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-2os.png&quot; alt=&quot;owasp-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-2home.png&quot; alt=&quot;owasp-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/owasp-2flag.png&quot; alt=&quot;owasp-2 flag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{6914f867db4cbff5b58896df8a491311}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;vuln-1-user&quot;&gt;Vuln-1-user&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/vuln-user1.png&quot; alt=&quot;vuln-1-user&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al ingresar obtenemos lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/vuln-1.png&quot; alt=&quot;vuln&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/vuln-2.png&quot; alt=&quot;vuln 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/vuln-3.png&quot; alt=&quot;vuln 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/vuln-4.png&quot; alt=&quot;vuln 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/vuln-flag.png&quot; alt=&quot;vuln-flag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{UnA-VulN-4p4ch3}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size: 15px;&quot;&gt;Algo que me di cuenta recién y no en el momento del CTF fue mirar el código fuente y probar la wordlist de contraseñas.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/ada/vuln-hydra.png&quot; alt=&quot;vuln-hydra&quot; /&gt;
+&lt;img src=&quot;/images/ada/vuln-ssh.png&quot; alt=&quot;vuln-ssh&quot; /&gt;
+&lt;img src=&quot;/images/ada/vuln-ssh1.png&quot; alt=&quot;vuln-ssh1&quot; /&gt;&lt;/p&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo /usr/bin/vi &amp;amp;&amp;amp; :set shell=/bin/bash &amp;amp;&amp;amp; :shell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/ada/vuln-root.png&quot; alt=&quot;root&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{Fl4g-r00T}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;forensics&quot;&gt;Forensics&lt;/h1&gt;
+
+&lt;h3 id=&quot;ada-prisionera&quot;&gt;Ada prisionera&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/adapri.png&quot; alt=&quot;adapri&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Descargamos la imagen.&lt;/p&gt;
+
+&lt;p&gt;Con un simple strings obtenemos el flag.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/adapriflas.png&quot; alt=&quot;adapriflas&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ADA{W3lcomeToFor3nsics}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;metaada&quot;&gt;MetaAda&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/metadata.png&quot; alt=&quot;metadata&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Por el nombre podemos intuir que hacer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/metadata2.png&quot; alt=&quot;metadata2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;También podemos obtener el flag a través de strings.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/metadata3.png&quot; alt=&quot;metadata&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ADA{R3visandoM3tadatos}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;lobo-con-piel-de-cordero&quot;&gt;lobo con piel de cordero&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/piel.png&quot; alt=&quot;piel&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/piel2.png&quot; alt=&quot;piel2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/piel3.png&quot; alt=&quot;piel3&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ADA{M3jor3mos3lFuturo}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tarjetas-perforadas&quot;&gt;tarjetas perforadas?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/tarjetas.png&quot; alt=&quot;tarjetas&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/tarjetas2.png&quot; alt=&quot;tarjetas&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Utilizando hashes.com.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/tarjetas3.png&quot; alt=&quot;tarjetas&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ADA{T3cnologia8bits}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;wifi&quot;&gt;WiFi&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/wifi.png&quot; alt=&quot;wifi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sin duda mi reto favorito del CTF, palabras claves resaltadas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/wifi2.png&quot; alt=&quot;wifi2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cifrado
+&lt;img src=&quot;/images/ada/wifi3.png&quot; alt=&quot;wifi3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/wifi4.png&quot; alt=&quot;wifi4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/wifi5.png&quot; alt=&quot;wifi5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/wifi6.png&quot; alt=&quot;wifi6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/wifi7.png&quot; alt=&quot;wifi7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{demo1234}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;esteganografia&quot;&gt;Esteganografia&lt;/h1&gt;
+
+&lt;h3 id=&quot;la-imagen-de-ada&quot;&gt;La imagen de Ada&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/laimagen.png&quot; alt=&quot;laimagen&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/laimagen2.png&quot; alt=&quot;laimagen2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/laimagen3.png&quot; alt=&quot;laimagen3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/laimagen4.png&quot; alt=&quot;laimagen4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{ecd70632ba7448615b1e1ed01f724053}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;misceláneo&quot;&gt;Misceláneo&lt;/h1&gt;
+
+&lt;h3 id=&quot;ada-ufo&quot;&gt;ADA UFO&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/ufo.png&quot; alt=&quot;ufo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/ufo2.png&quot; alt=&quot;ufo2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/ufo3.png&quot; alt=&quot;ufo3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ADA{3ST4M0S_C0N_UT3D3S}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;criptografia&quot;&gt;Criptografia&lt;/h1&gt;
+
+&lt;h3 id=&quot;1987&quot;&gt;1987&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/1987.png&quot; alt=&quot;1987&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Uis el Brainfuck&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/19872.png&quot; alt=&quot;19872&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/19873.png&quot; alt=&quot;19873&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{Violeta}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;el-padre&quot;&gt;El Padre&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/elpadre.png&quot; alt=&quot;elpadre&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/elpadre1.png&quot; alt=&quot;elpadre1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{Turing}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;libertad&quot;&gt;Libertad&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/libertad.png&quot; alt=&quot;libertad&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/libertad2.png&quot; alt=&quot;libertad 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/libertad3.png&quot; alt=&quot;libertad3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{1929}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;el-poeta&quot;&gt;El poeta&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/elpoeta.png&quot; alt=&quot;elpoeta&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/elpoeta2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/elpoeta3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{Pablo Neruda}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;que-tal-esta-ada&quot;&gt;Que tal esta Ada?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/quetal.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/quetal2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flag:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ada{t0d0-0kk!}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;data&quot;&gt;data&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ada/ctf.png&quot; alt=&quot;ctf&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/ctf-score.png&quot; alt=&quot;score&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/resolves.png&quot; alt=&quot;retos&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ada/resolves2.png&quot; alt=&quot;retos 2&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Espero te haya gustado.&lt;/p&gt;
+
+&lt;p&gt;Después de participar en el CTF, me di cuenta de varias cosas en los retos Web, pero bueno…&lt;/p&gt;
+
+&lt;p&gt;Disculpa si hay algún error o no interiorizo mucho, pero hice bastante apurado este artículo, por el tema de que inhabiliten el acceso al CTF.&lt;/p&gt;
+
+&lt;p&gt;Fue una competencia bastante entretenida, pero algunos retos siento que tuvieron que estar en otra categoría.&lt;/p&gt;
+
+&lt;p&gt;Además de resolver algunos retos adicionales, también me dediqué a obtener el flag de estos. Sin embargo, el flag era invalido  y, por desgracia, no pregunté por el por qué y perdí esos puntos.&lt;/p&gt;
+
+&lt;p&gt;Las reacciones y comentarios están más abajo, pero también puedes comunicarte conmigo a través de las siguientes vías: &lt;a href=&quot;https://t.me/T3_6_9&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/T3_6_9&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Saludos. 👋&lt;/p&gt;
+</description>
+                <pubDate>Sat, 17 Dec 2022 20:09:00 -0300</pubDate>
+                <link>/ada-challenge</link>
+                <guid isPermaLink="true">/ada-challenge</guid>
+                
+                <category>Writeup</category>
+                
+                <category>CTF</category>
+                
+                <category>T3sla</category>
+                
+                <category>2022</category>
+                
+                
+            </item>
         
             <item>
                 <title>De Mecánica a Software</title>
@@ -1781,52 +2254,6 @@ Dale un vistazo ≥ &lt;a href=&quot;https://s4vitar.github.io/&quot;&gt;s4vitar
                 
                 
                 <category>Ciberseguridad</category>
-                
-            </item>
-        
-            <item>
-                <title>Hola Mundo</title>
-                <description>&lt;p&gt;Bienvenidos en el artículo de hoy, daré un poco de contexto sobre este blog.&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;qué-encontrarás-en-este-blog&quot;&gt;¿Qué encontrarás en este blog?&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Hacking.&lt;/li&gt;
-  &lt;li&gt;Writeups de diferentes plataformas de ciberseguridad.&lt;/li&gt;
-  &lt;li&gt;Programación.&lt;/li&gt;
-  &lt;li&gt;Tutoriales.&lt;/li&gt;
-  &lt;li&gt;Recursos/apuntes.&lt;/li&gt;
-  &lt;li&gt;F1 (Formula uno).&lt;/li&gt;
-  &lt;li&gt;Videojuegos.&lt;/li&gt;
-  &lt;li&gt;Anime.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;qué-me-dio-por-crear-un-blog&quot;&gt;¿Qué me dio por crear un blog?&lt;/h3&gt;
-&lt;p&gt;La verdad tengo unas ganas enormes de crear contenido y darme de “cierta” forma a conocer. Además, siento que &lt;strong&gt;escribiendo&lt;/strong&gt; reforzaré mis &lt;strong&gt;conocimientos&lt;/strong&gt; y &lt;strong&gt;aprenderé&lt;/strong&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:15px;&quot;&gt;No soy ningún experto, solo un entusiasta que busca tratar de crear contenido, aprender y mejorar, para algún día llegar a trabajar como un Pentester o Programador. Cualquier feedback es bienvenido usted es libre de expresarse como quiera.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;fin&quot;&gt;Fin&lt;/h2&gt;
-&lt;p&gt;Este ha sido el artículo de hoy, espero disfrutes del contenido que hago y aprendas algo nuevo.
-Saludos, nos vemos en el próximo artículo.&lt;/p&gt;
-</description>
-                <pubDate>Fri, 28 Oct 2022 23:21:00 -0300</pubDate>
-                <link>/hola-mundo</link>
-                <guid isPermaLink="true">/hola-mundo</guid>
-                
-                <category>HolaMundo</category>
-                
-                <category>2022</category>
-                
-                <category>T3sla</category>
-                
-                <category>Noob</category>
-                
-                
-                <category>Bienvenida</category>
                 
             </item>
         
