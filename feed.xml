@@ -5,9 +5,789 @@
         <description>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</description>
         <link>/</link>
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 18 Dec 2022 03:35:27 -0300</pubDate>
-        <lastBuildDate>Sun, 18 Dec 2022 03:35:27 -0300</lastBuildDate>
+        <pubDate>Sat, 31 Dec 2022 23:44:55 -0300</pubDate>
+        <lastBuildDate>Sat, 31 Dec 2022 23:44:55 -0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>CTF Navidad 2022</title>
+                <description>&lt;p&gt;Bienvenidos, el artículo de hoy es la resolución “oficial” de los retos del CTF Navidad 2022.&lt;/p&gt;
+
+&lt;p&gt;Primero agradecer a los que participaron y el buen recibimiento que tuvo el mini evento (algunos me quieren funar por terminar el CTF en la madrugada jaja).&lt;/p&gt;
+
+&lt;p&gt;También quiero agradecer a mi amigo &lt;a href=&quot;https://twitter.com/kyb3rcipher&quot;&gt;Kyb3r&lt;/a&gt;, ya que me ayudo con la configuración de los dockers para la plataforma y algunos retos. 😊😎&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;contexto&quot;&gt;Contexto&lt;/h2&gt;
+&lt;p&gt;Todo comienza un día antes de Navidad donde le digo a Kyb3r que quiero hacer un CTF, compro el VPS, le entrego las credenciales y comienza la aventura.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/24.png&quot; alt=&quot;Antes de Navidad&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pero como toda aventura, tiene sus percances, lidiamos con bastantes problemas de dependencias, ya que el T3sla optó por un Ubuntu bastante viejo jaja, pero bueno…&lt;/p&gt;
+
+&lt;p&gt;Teníamos CTFd ya corriendo y seleccionamos el siguiente &lt;a href=&quot;https://github.com/hmrserver/CTFd-theme-pixo&quot;&gt;theme&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/theme.png&quot; alt=&quot;CTF theme&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Luego que teníamos todo montando y algunos retos venía el momento de dar a conocer el evento, compartí por Telegram, Instagram, Discord y demás.&lt;/p&gt;
+
+&lt;p&gt;Pasaba el tiempo y nadie se registraba en ese momento, estuve algo triste.&lt;/p&gt;
+
+&lt;p&gt;Hasta que empezó a llegar gente. 😁&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;categorías&quot;&gt;Categorías.&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;REVERSING&lt;/li&gt;
+  &lt;li&gt;NETWORKING&lt;/li&gt;
+  &lt;li&gt;CRYPTO&lt;/li&gt;
+  &lt;li&gt;WEB&lt;/li&gt;
+  &lt;li&gt;MISC&lt;/li&gt;
+  &lt;li&gt;OSINT&lt;/li&gt;
+  &lt;li&gt;STEGO&lt;/li&gt;
+  &lt;li&gt;REGALO&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Formato del FLAG:
+FL{dataflag}&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;web&quot;&gt;WEB&lt;/h1&gt;
+
+&lt;h4 id=&quot;web-1&quot;&gt;Web 1&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web1.png&quot; alt=&quot;web 1&quot; /&gt;
+Ingresamos y nos dirige al Blog de T3sla.
+No encontramos nada interesante, pero si miramos el código fuente.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web1sourcecode.png&quot; alt=&quot;Source Code&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{5.7.8}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;web-2&quot;&gt;Web 2&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web2.png&quot; alt=&quot;Web 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web2idk.png&quot; alt=&quot;web2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web2code.png&quot; alt=&quot;web2 code&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web2notfound.png&quot; alt=&quot;web2 not found&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web2style.png&quot; alt=&quot;web2style&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{css_master}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;web-3&quot;&gt;Web 3&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web3.png&quot; alt=&quot;web3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web3page.png&quot; alt=&quot;web3page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web3sourcecode.png&quot; alt=&quot;web3 code&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos ver el evento onclick que llama a la función &lt;strong&gt;leak()&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Este reto lo podemos resolver de tres formas:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web3javascript.png&quot; alt=&quot;web3 uno&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web3clic.png&quot; alt=&quot;web3 clic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web3callfunction.png&quot; alt=&quot;web3 callfunction&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{C0nsol3}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;web-4&quot;&gt;Web 4&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web4.png&quot; alt=&quot;web4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web4page.png&quot; alt=&quot;web4page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web4wordlists.png&quot; alt=&quot;web4wordlists&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web4wordlists2.png&quot; alt=&quot;web4wordlists2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Por deducción identificamos la contraseña correcta.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web4user.png&quot; alt=&quot;web4user&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Credenciales:
+admin - Na@vidad12&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/web4dashboard.png&quot; alt=&quot;web4dashboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{WP_pwn3d}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;reversing&quot;&gt;Reversing&lt;/h1&gt;
+
+&lt;h4 id=&quot;reversing-1&quot;&gt;Reversing 1&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/reversing.png&quot; alt=&quot;reversing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nos dan un binario el cual vamos a analizar con &lt;a href=&quot;https://ghidra-sre.org/&quot;&gt;Ghidra&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/ghidra.png&quot; alt=&quot;Ghidra&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/ghidraimport.png&quot; alt=&quot;ghidra import&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/ghidramain.png&quot; alt=&quot;ghidra main&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/ghidravars.png&quot; alt=&quot;ghidra var&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/ghidrahex.png&quot; alt=&quot;ghidra hex&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/ghidraconver.png&quot; alt=&quot;ghidra conver&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/ghidraplain.png&quot; alt=&quot;ghidra plain&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{reversig}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;networking&quot;&gt;NETWORKING&lt;/h1&gt;
+
+&lt;h4 id=&quot;networking-1&quot;&gt;Networking 1&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking1.png&quot; alt=&quot;TXT&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dig TXT t3sla.tk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/txt.png&quot; alt=&quot;txt&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{registr0_txt}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;networking-2&quot;&gt;Networking 2&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking2.png&quot; alt=&quot; networking 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nos dan un fichero .txt el cual contiene unas trazas ICMP seguramente capturadas con TCPDump.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking2icmp.png&quot; alt=&quot;networking 2 ICMP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking2decode.png&quot; alt=&quot;networking2decode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{icmp_data}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;networking-3&quot;&gt;Networking 3&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking3.png&quot; alt=&quot;networking 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es un registro del Apache. Podríamos filtrar por las extensiones más comunes y el código de estado 404.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking3filtrando.png&quot; alt=&quot;filtrando&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al revisar los ficheros con la extensión .html logramos identificar lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking3html.png&quot; alt=&quot;networking3 file&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{zqxjmAdBqsDYae}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;networking-4&quot;&gt;Networking 4&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking4.png&quot; alt=&quot;Networking 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mismo registro para el reto.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking4nikto.png&quot; alt=&quot;networking4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{nikto}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;networking-5&quot;&gt;Networking 5&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking5.png&quot; alt=&quot;networking5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking5sqlmap.png&quot; alt=&quot;networking5 sqlmap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{sqlmap}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;networking-6&quot;&gt;Networking 6&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking6.png&quot; alt=&quot;networking6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Este reto era bastante tedioso 😂, ya que tenías que buscar bien, y unos regalitos para perder el tiempo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking6lfi.png&quot; alt=&quot;networking6 lfi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking6cve.png&quot; alt=&quot;networking6 cve&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{cve-2018-13379}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;networking-7&quot;&gt;Networking 7&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking7.png&quot; alt=&quot;Networking 7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking7webshell.png&quot; alt=&quot;Networking 7 webshell&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{sh3ll.phtml}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;networking-8&quot;&gt;Networking 8&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/networking8.png&quot; alt=&quot;networking 8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/dirbuster.png&quot; alt=&quot;dirbuster&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{DirBuster}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;osint&quot;&gt;OSINT&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint1.png&quot; alt=&quot;osint1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ingresamos al perfil y buscamos &lt;strong&gt;«Keyba»&lt;/strong&gt; obtenemos el siguiente resultado:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osintkeybase.png&quot; alt=&quot;keybase&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://keybase.io/t3_6_9&quot;&gt;T3_6_9 Keybase&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osintdevices.png&quot; alt=&quot;osintdevices&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recordemos lo siguiente:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Devices&lt;/li&gt;
+  &lt;li&gt;Paper&lt;/li&gt;
+  &lt;li&gt;public_name[0];&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Del tres podemos intuir que &lt;strong&gt;public_name&lt;/strong&gt; es un array y que [0] es la posición.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osintpaper.png&quot; alt=&quot;osintpaper&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{laptop}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;osint-2&quot;&gt;OSINT 2&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint2.png&quot; alt=&quot;osint2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint2flag.png&quot; alt=&quot;osint2flag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{G00D_T3legr@m}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;osint-3&quot;&gt;OSINT 3&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint3.png&quot; alt=&quot;osint3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint3inv.png&quot; alt=&quot;osint3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint3ioc.png&quot; alt=&quot;osint3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bueno, acá la mayoría de «indicadores de compromiso» pertenecen a un ejecutable, pero como dice la descripción del reto, hay uno que destaca.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/iocreal.png&quot; alt=&quot;iocreal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{c481329f643ab66850409fb477c02247}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;osint-4&quot;&gt;OSINT 4&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint4.png&quot; alt=&quot;osint4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint4aka.png&quot; alt=&quot;osint4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{Raccoon}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;osint-5&quot;&gt;OSINT 5&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint5.png&quot; alt=&quot;Osint 5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Aquí podemos saber el nombre de T3sla de las siguientes formas:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Blog.&lt;/li&gt;
+  &lt;li&gt;Un simple dork.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint5blog.png&quot; alt=&quot;osint5blog&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint5dork.png&quot; alt=&quot;osint5dork&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{Matías}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;osint-6&quot;&gt;OSINT 6&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint6.png&quot; alt=&quot;osint6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint6image.png&quot; alt=&quot;osint6 image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Aquí podemos usar Google Images, Yandex Images, etc. Pero con TinEye tenemos el mismo resultado y con menos resultados.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint6campanil.png&quot; alt=&quot;osint6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Y para verificar simplemente buscamos Campanil UdeC.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/UdeC.png&quot; alt=&quot;UdeC&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{Campanil}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;osint-7&quot;&gt;OSINT 7&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint7.png&quot; alt=&quot;osint7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint7image.png&quot; alt=&quot;osint7image&quot; /&gt;
+Imagen&lt;/p&gt;
+
+&lt;p&gt;Aquí podríamos buscar el nombre del negocio + CL o utilizar Google Images.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint7google.png&quot; alt=&quot;osint7google&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{598}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;osint-8&quot;&gt;OSINT 8&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint8.png&quot; alt=&quot;osint8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint8rio.png&quot; alt=&quot;osint8rio&quot; /&gt;
+Imagen&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint8googleimages.png&quot; alt=&quot;osint8googleimages&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint8riobiobio.png&quot; alt=&quot;osint8riobiobio&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{Biobio}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;osint-9&quot;&gt;OSINT 9&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint9.png&quot; alt=&quot;osint9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hay varios servicios en los cuales podemos ver si un e-mail está filtrado.
+Por dar unos cuantos;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://monitor.firefox.com/&quot;&gt;Firefox Monitor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://haveibeenpwned.com/&quot;&gt;have i been pwned?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cybernews.com/personal-data-leak-check/&quot;&gt;Cybernews Personal data leak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/osint9leak.png&quot; alt=&quot;osint9leak&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{366}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;mr-robot&quot;&gt;Mr Robot&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/mrrobot.png&quot; alt=&quot;mr robot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos interpretar lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;Ciberataque&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/mrcto.png&quot; alt=&quot;CTO&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/terrygoogle.png&quot; alt=&quot;terry&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/terrycolby.png&quot; alt=&quot;terry colby&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/terryip.png&quot; alt=&quot;terry ip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{218.108.149.373}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;mr-robot-2&quot;&gt;Mr Robot 2&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/mrrobot2.png&quot; alt=&quot;mr robot2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/gateway.png&quot; alt=&quot;gateway&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{23.234.45.1}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;mr-robot-3&quot;&gt;Mr Robot 3&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/mrrobot3.png&quot; alt=&quot;Mr robot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Camino largo:&lt;/p&gt;
+
+&lt;p&gt;Michael Mr Robot (Google)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/michael.png&quot; alt=&quot;Mr robot Michael&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/smokingpage.png&quot; alt=&quot;smoking&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{no}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size:15px;&quot;&gt;Bonus: &lt;img src=&quot;/images/ctfnavidad/tg.png&quot; /&gt; &lt;a href=&quot;https://youtu.be/ZXXA97I8fAA&quot;&gt;Video&lt;/a&gt; Enviado al Grupo de Telegram.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;mr-robot-4&quot;&gt;Mr Robot 4&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/mrrobot4.png&quot; alt=&quot;mrrobot4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/fernandovera.png&quot; alt=&quot;fernando vera&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{221}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;mr-robot-5&quot;&gt;Mr Robot 5&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/mrrobot5.png&quot; alt=&quot;mr robot5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/evidence.png&quot; alt=&quot;evidence&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{0511}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;mr-robot-6&quot;&gt;Mr Robot 6&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/mrrobot6.png&quot; alt=&quot;mr robot 6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/privatekey.png&quot; alt=&quot;privatekey&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{/var/lib/uscs30/temp}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Estos han sido los retos de OSINT.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;misc&quot;&gt;MISC&lt;/h1&gt;
+
+&lt;h4 id=&quot;misc-1&quot;&gt;Misc 1&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/misc.png&quot; alt=&quot;misc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/decode.png&quot; alt=&quot;decode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{L0cur@}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;misc-2&quot;&gt;Misc 2&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/misc2.png&quot; alt=&quot;misc 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/unzip.png&quot; alt=&quot;unzip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/misc2token.png&quot; alt=&quot;misctoken&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/gitlog.png&quot; alt=&quot;gitlog&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/gitflag.png&quot; alt=&quot;gitflag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{git_ramas}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;misc-3&quot;&gt;Misc 3&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/misc3.png&quot; alt=&quot;misc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/misc3hash.png&quot; alt=&quot;misc3hash&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/misc3pass.png&quot; alt=&quot;misc3pass&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{zip_passw0rd}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Estos fueron los retos de MISC.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;crypto&quot;&gt;CRYPTO&lt;/h1&gt;
+
+&lt;h4 id=&quot;crypto-1&quot;&gt;CRYPTO 1&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto1.png&quot; alt=&quot;crypto&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto1flag.png&quot; alt=&quot;crypto1flag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{Cryp_eas1}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-2&quot;&gt;CRYPTO 2&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto2.png&quot; alt=&quot;crypto 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto2flag.png&quot; alt=&quot;crypto2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{Holamundo}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-3&quot;&gt;CRYPTO 3&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto3.png&quot; alt=&quot;crypto3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Aquí podemos probar por ctfname como password, pero no entrega ningún resultado.
+&lt;img src=&quot;/images/ctfnavidad/crypto3flag.png&quot; alt=&quot;crypto3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Solo debemos dar el formato correcto al FLAG y listo.&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{crypto_3kill}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-4&quot;&gt;CRYPTO 4&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto4.png&quot; alt=&quot;crypto4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/cif.png&quot; alt=&quot;cif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Muchos se sorprenderán con lo sencillo que era (Sí, lo inventé como a las 3 AM).
+Algunos me dijeron que me había fumado para este reto jaja.&lt;/p&gt;
+
+&lt;p&gt;Tenemos números del 2 al 8.&lt;/p&gt;
+
+&lt;p&gt;El formato del flag que ahora mismo seria FL{} y luego 678, por lo cual esto se ve de la siguiente forma FL(DEF_?).
+Luego la siguiente operación 3^2 = 9 y si nos damos cuenta las letras van por orden del abecedario, por lo cual 9 = G.&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{DEF_G}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-5&quot;&gt;CRYPTO 5&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto5flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{c3sar_ama@z1ng}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-6&quot;&gt;CRYPTO 6&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto6.png&quot; alt=&quot;crypto6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto6flag.png&quot; alt=&quot;crypto6flag&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{b1nary}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-7&quot;&gt;CRYPTO 7&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Aquí muchos llegaron al «hojas de música», ya que es muy similar al cifrado utilizado para las notas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto7flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{SHARP}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-8&quot;&gt;CRYPTO 8&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No dan una contraseña, pero no obtenemos nada, debemos pensar un poco más allá.&lt;/p&gt;
+
+&lt;p&gt;Tenemos 25 que podría ser una fecha/día y ctfname que el nombre del evento es CTF Navidad y 25 que podríamos intuir 25 de diciembre (Navidad).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto8flag.png&quot; alt=&quot;crypto8 flag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{emoji_crypt}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-9&quot;&gt;CRYPTO 9&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto9flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{M0RS3_1S_EP1C}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-10&quot;&gt;CRYPTO 10&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto10.png&quot; alt=&quot;crypto10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto10flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{AMAZINGKOLA}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-11&quot;&gt;CRYPTO 11&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto11txt.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto11flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{amazing-cyberchef}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-12&quot;&gt;CRYPTO 12&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto12.png&quot; alt=&quot;Crypto 12&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;000000000000000000000000000000110010000010000000000010000000000000000000000010000000000000000000000000000000011011011011001111010010010100000000000000000000100010000000000000000000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000000000000100011000000000000000000000000000000000000000000000000000000000100010000000000000000000000000000000000000100001001001001001001001001001001001001001100010001001001001001001001001001100000000000000000000000100011001001100000000000000000000000100010001001001001100011001001001100000000000000000000000000100010000000000000000000000000100
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto12flag.png&quot; alt=&quot;crypto12&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{b1nary_fuck}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-13&quot;&gt;CRYPTO 13&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;----------]&amp;lt;-&amp;lt;---&amp;lt;-------&amp;lt;----------&amp;gt;&amp;gt;&amp;gt;&amp;gt;+[&amp;lt;&amp;lt;&amp;lt;,------,&amp;lt;-----------------------,+++++++++,&amp;gt;&amp;gt;---------------------,&amp;lt;&amp;lt;----,&amp;gt;&amp;gt;,&amp;lt;&amp;lt;++++,-,++++++++++++++,++++++,-------,---------------,++++++++++++++++++,--------,------------------,
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto13flag.png&quot; alt=&quot;cyrpto 13 flag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{b1nary_fuck}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-14&quot;&gt;CRYPTO 14&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;iisiiiisiiiiiioiiiiiioiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiodddddddddddodddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddoiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiodddddddddddddddddddddddddddoiiiiiiiiiiiiiioiiiiiiiioddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddoiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiioiioddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddoiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiio
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto14flag.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{p3z_mu3rt0}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;crypto-15&quot;&gt;CRYPTO 15&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook?  Ook. Ook?  Ook. Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook? Ook.  Ook? Ook.  Ook? Ook.  Ook? Ook.  Ook! Ook!  Ook? Ook!  Ook. Ook?  Ook. Ook?  Ook. Ook?  Ook! Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook? Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook? Ook.  Ook! Ook!  Ook! Ook.  Ook? Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook? Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook? Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook? Ook.  Ook? Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook? Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook! Ook.  Ook? Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook? Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook. Ook?  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook!  Ook! Ook.  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook? Ook.  Ook? Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.  Ook! Ook.  Ook. Ook?  Ook. Ook?  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook. Ook.  Ook! Ook.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto15flag.png&quot; alt=&quot;flag&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/crypto15realflag.png&quot; alt=&quot;flagreal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{Not_a_R3@l-Fl@g}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Estos han sido los retos de Crypto.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;stego&quot;&gt;STEGO&lt;/h1&gt;
+&lt;h4 id=&quot;stego-1&quot;&gt;Stego 1&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/stego1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/stego1flag.png&quot; alt=&quot;stego1&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;strings stego1.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;FLAG:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FL{hex_easy}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;scoreboard--stats&quot;&gt;ScoreBoard &amp;amp;&amp;amp; Stats&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/teams.png&quot; alt=&quot;teams&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/top10.png&quot; alt=&quot;top 10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/solves.png&quot; alt=&quot;solve&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;salón-de-la-fama&quot;&gt;Salón de la fama&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/ctfnavidad/top3.png&quot; alt=&quot;top3&quot; /&gt;
+Felicitaciones por el gran desempeño en este CTF challenge. 🔥
+Un gran saludo y felicitaciones de mi parte galoget y a Solitario porque participaron en solitario. 😎&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;gracias&quot;&gt;Gracias&lt;/h1&gt;
+&lt;p&gt;Muchas gracias a todos por participar y el buen recibimiento que tuvo este CTF.&lt;/p&gt;
+
+&lt;p&gt;También perdón por los errores que hubo.&lt;/p&gt;
+
+&lt;p&gt;Agregar que todos respetaron las reglas y no hicieron nada para afectar la competencia como cambiar credenciales, etc.&lt;/p&gt;
+
+&lt;p&gt;Muchas gracias a todos. ✌️😊&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+
+&lt;p&gt;Espero te haya gustado este artículo.&lt;/p&gt;
+
+&lt;p&gt;Recuerda que las reacciones y comentarios están más abajo, si deas realizar algún tipo de donación la puedes hacer en el siguiente botón:&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;¡Muchas gracias nos vemos en próximo post! ❤️&lt;/p&gt;
+</description>
+                <pubDate>Wed, 28 Dec 2022 12:20:00 -0300</pubDate>
+                <link>/ctf-navidad-2022</link>
+                <guid isPermaLink="true">/ctf-navidad-2022</guid>
+                
+                <category>Writeup</category>
+                
+                <category>CTF</category>
+                
+                <category>T3sla</category>
+                
+                <category>2022</category>
+                
+                
+            </item>
         
             <item>
                 <title>Ada Challenge 2022</title>
@@ -2052,208 +2832,6 @@ También puedes comunicarte a través de las siguientes vías;&lt;br /&gt;
                 
                 
                 <category>Tutorial</category>
-                
-            </item>
-        
-            <item>
-                <title>Recursos de Ciberseguridad</title>
-                <description>&lt;p&gt;Bienvenidos, este artículo es el primero de la serie que estoy pensando en hacer constara de compartir los mejores canales, apuntes, blogs, etc.; 
-relacionados con ciberseguridad.&lt;/p&gt;
-
-&lt;p&gt;Ninguno de los creadores de contenido que compartiré están ordenados de mejor a peor, todos tienen contenido de calidad y sus creadores sé esfuerzan.&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;thehackerway&quot;&gt;&lt;a href=&quot;https://thehackerway.com/&quot;&gt;TheHackerWay&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Quizás muchos conocen este blog.&lt;/li&gt;
-  &lt;li&gt;Cuenta con bastante post, para leer.&lt;/li&gt;
-  &lt;li&gt;En este blog encontrarás diferentes técnicas de Hacking. &lt;br /&gt;
-Desde Post explotación en sistemas operativos (SO) Windows y GNU/LINUX, diferentes- herramientas para Red Team y mucho más.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/Thehackerway.png&quot; alt=&quot;Thehacerway&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;
-¿Quién es el autor?&lt;br /&gt; &lt;a href=&quot;https://www.instagram.com/debiadastra/&quot;&gt;Daniel Echeverri (adastra).&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;s4vitar&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCNHWpNqiM8yOQcHXtsluD7Q&quot;&gt;S4vitar&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Muchos conocerán este canal.&lt;/li&gt;
-  &lt;li&gt;Encontrarás desde: 
-noticias de ciberseguridad, consejos, writeups de máquinas de plataformas como HackTheBox, scripting en Bash y mucho más.&lt;/li&gt;
-  &lt;li&gt;Demasiados videos para ver, disfruta. 😊&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/s4vitar.png&quot; alt=&quot;s4vitar&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;También s4vitar, cuenta con un blog donde sube artículos interesantes.&lt;br /&gt;
-Dale un vistazo ≥ &lt;a href=&quot;https://s4vitar.github.io/&quot;&gt;s4vitar-blog&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/s4vitar-blog.png&quot; alt=&quot;s4vitar Blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;víctor-garcía-takito1812&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/takito1812/featured&quot;&gt;Víctor García&lt;/a&gt; (takito1812)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Siento que este canal, debería ser más conocido, ya que su contenido es bueno, explica bastante bien y se nota el esfuerzo que hay detrás.&lt;/li&gt;
-  &lt;li&gt;Encontrarás, desde Writeups de máquinas de plataformas como &lt;a href=&quot;https://hackthebox.com/&quot;&gt;HackThebox&lt;/a&gt;, &lt;a href=&quot;https://tryhackme.com/&quot;&gt;TryHackMe&lt;/a&gt;. Una, guía de preparación para la certificación &lt;strong&gt;OSCP&lt;/strong&gt; de &lt;a href=&quot;https://www.offensive-security.com/&quot;&gt;Offensive Security&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Takito es una persona que admiro mucho y se nota que pilota del tema.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/takito.png&quot; alt=&quot;takito&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;También cuenta con un &lt;a href=&quot;https://cybexsec.es/&quot; title=&quot;cybex-blog&quot;&gt;blog&lt;/a&gt; y &lt;a href=&quot;https://discord.com/invite/WeS2Epy&quot; title=&quot;CybexSec-Discord&quot;&gt;comunidad&lt;/a&gt;, la cual es CybexSec.&lt;/p&gt;
-  &lt;p&gt;&lt;br /&gt;
-&lt;img src=&quot;/images/Images-Post-recursosciber/cybex-blog.png&quot; alt=&quot;CybexSec&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;securiters&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/Securiters/featured&quot;&gt;Securiters&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Comenzaron, hace relativamente poco.&lt;/li&gt;
-  &lt;li&gt;Encontrarás, desde Entrevistas, Resoluciones de máquinas de plataformas como HackTheBox, TryHackMe, diferentes paths de aprendizaje y mucho más.&lt;/li&gt;
-  &lt;li&gt;Buenos videos para ver 😊.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/Securiters.png&quot; alt=&quot;Securiters&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size: 12px;&quot;&gt;Se conforma por:&lt;br /&gt;&lt;a href=&quot;https://twitter.com/martrudix&quot;&gt;Marta&lt;/a&gt; y &lt;a href=&quot;https://twitter.com/Carol12Gory&quot;&gt;Carol&lt;/a&gt;&lt;br /&gt;Securiters, es más de usar &lt;a href=&quot;https://www.twitch.tv/securiters&quot;&gt;Twitch.&lt;/a&gt;&lt;br /&gt;Securiters, también cuenta con un &lt;a href=&quot;https://bitsdeciberseguridad.substack.com/&quot;&gt;Blog&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/Securiters-Blog.png&quot; alt=&quot;Blog Securiters&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;cronup&quot;&gt;&lt;a href=&quot;https://www.cronup.com/blog/&quot;&gt;CronUP&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Demasiados posts, para leer (Claro, yo no me he leído todo 😁).&lt;/li&gt;
-  &lt;li&gt;Los artículos que he leído, son bastante detallados y bien explicados. Claro no tan técnicos, para que personas que no están tan metidos en este mundo, sea fácil dé entender (algunos mas que otros).&lt;/li&gt;
-  &lt;li&gt;Encontrarás, investigaciones sobre malware, noticias y más.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/CronUp.png&quot; alt=&quot;CronUP&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;CronUP, es una empresa de Ciberseguridad Chilena.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;deephacking&quot;&gt;&lt;a href=&quot;https://deephacking.com/&quot;&gt;DeepHacking&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unos artículos guapísimos.&lt;/li&gt;
-  &lt;li&gt;Encontrarás, desde explicaciones detalladas sobre vulnerabilidades en aplicaciones web como SQLI (SQL injection). Writeups de laboratorios de PortSwigger, reviews de- certificaciones y más.&lt;/li&gt;
-  &lt;li&gt;Muy bueno este blog 😊.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/DeepHacking.png&quot; alt=&quot;DeepHacking&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;¿Quién es el autor?&lt;br /&gt;&lt;a href=&quot;https://twitter.com/sikumy&quot;&gt;Sikumy&lt;/a&gt;.&lt;br /&gt;También tiene estos fabulosos apuntes, dale una vuelta ≥ &lt;a href=&quot;https://www.notion.so/Hacking-Notes-40b8125e2c344f8482897fe9d7259935&quot;&gt;Hacking Notes&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/Sikumy-HackingNotes.png&quot; alt=&quot;Hacking Notes&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;sha-16&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/sha16&quot;&gt;Sha-16&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Encontrarás, desde Writeups de máquinas de plataformas como HackThebox y TryHackMe. Review de la certificación eJPT, diferentes tutoriales, explica técnicas y más.&lt;/li&gt;
-  &lt;li&gt;Síguelo en -&amp;gt; &lt;a href=&quot;https://www.twitch.tv/sha_16_&quot;&gt;Twitch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Descubrí su canal, hace un tiempo y me gusto su contenido. 😁&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/sha-16.png&quot; alt=&quot;sha16&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;También cuenta con un &lt;a href=&quot;https://sha-16.github.io/&quot;&gt;Blog&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/sha-16blog.png&quot; alt=&quot;Sha16 Blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;s1kr10s&quot;&gt;&lt;a href=&quot;https://www.youtube.com/user/dthhack&quot;&gt;s1kr10s&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Encontrarás, desde vulnerabilidades que ha encontrado, Writeups de retos de reversing y más.&lt;/li&gt;
-  &lt;li&gt;s1kr10s, es alguien que admiro demasiado y lo encuentro muy pro.&lt;/li&gt;
-  &lt;li&gt;Para los que le gusta el reversing y entender las cosas a bajo nivel.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/s1kr10s.png&quot; alt=&quot;s1kr10s&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;También, tiene un &lt;a href=&quot;https://s1kr10s.github.io/&quot;&gt;blog&lt;/a&gt;, con muy buen contenido.&lt;/p&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/s1kr10s-blog.png&quot; alt=&quot;blog&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;mario-guglia&quot;&gt;&lt;a href=&quot;https://guglia001.github.io/&quot;&gt;Mario Guglia&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Encontrarás, desde Writeups de máquinas de plataformas como HackTheBox y TryHackMe. AD (Active Directory) y mucho más.&lt;/li&gt;
-  &lt;li&gt;He tenido el placer de hablar con él, me ha ayudado y no dudará en echarte un cable.&lt;/li&gt;
-  &lt;li&gt;Es alguien que controla mucho del tema.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/guglia.png&quot; alt=&quot;mario blog&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;🔥💣.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;jotinero&quot;&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCW0lXMtKpBHI_OeGHzz8ONQ/videos&quot;&gt;Jotinero&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Un buen canal. 😊&lt;/li&gt;
-  &lt;li&gt;Encontrarás, desde OSINT, ataques a redes inalámbricas, consejos y más.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/joti.png&quot; alt=&quot;jotinero canal&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;Disfruten. 😊&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;paulo-colomés&quot;&gt;&lt;a href=&quot;https://www.youtube.com/c/pcolomes/videos&quot;&gt;Paulo Colomés&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Encontrarás, desde un curso donde enseña algunas técnicas de hacking a redes LAN, configuraciones, conceptos de networking y más.&lt;/li&gt;
-  &lt;li&gt;Sin duda un gran profesional y explica demasiado bien.&lt;/li&gt;
-  &lt;li&gt;Perfecto para los que le gusta networking, ¡Que esperas!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/paulo.png&quot; alt=&quot;paulo&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;También cuenta con un &lt;a href=&quot;https://netlayer.cl/&quot;&gt;blog&lt;/a&gt; con un fantástico contenido.&lt;/p&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/netlayer.png&quot; alt=&quot;netlayer&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;ironhackers&quot;&gt;&lt;a href=&quot;https://ironhackers.es/&quot;&gt;IronHackers&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Encontrarás, desde Writeups de plataformas como HackTheBox, Atenea, Vulnhub. Tutoriales, notas y más.&lt;/li&gt;
-  &lt;li&gt;Entra, que te gustara.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/ironhackers.png&quot; alt=&quot;IronHackers Image&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p style=&quot;font-size:12px;&quot;&gt;También, tienen canal de &lt;a href=&quot;https://www.youtube.com/channel/UCS76vOfm7dsfp91wIgh_X7w/videos&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/Images-Post-recursosciber/ironhackers-canal.png&quot; alt=&quot;canal IronHackers&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
-&lt;p&gt;Este ha sido el artículo de hoy, espero te haya gustado.&lt;/p&gt;
-
-&lt;p&gt;Cualquier error lo pueden comunicar a través de las siguientes vías, de igual manera la retroalimentación (Más abajo pueden reaccionar y comentar.);
-&lt;br /&gt;
-&lt;a href=&quot;https://twitter.com/T3_6_9&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9&quot;&gt;Telegram&lt;/a&gt;.
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Si deseas apoyarme de manera económica te dejo el siguiente enlace.
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;
-&lt;br /&gt;&lt;/p&gt;
-</description>
-                <pubDate>Sat, 29 Oct 2022 03:21:00 -0300</pubDate>
-                <link>/recursos-de-ciberseguridad</link>
-                <guid isPermaLink="true">/recursos-de-ciberseguridad</guid>
-                
-                <category>Ciberseguridad</category>
-                
-                <category>2022</category>
-                
-                <category>T3sla</category>
-                
-                
-                <category>Ciberseguridad</category>
                 
             </item>
         
