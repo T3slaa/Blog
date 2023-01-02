@@ -3,10 +3,10 @@
     <channel>
         <title>T3sla</title>
         <description>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</description>
-        <link>/</link>
-        <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 31 Dec 2022 23:44:55 -0300</pubDate>
-        <lastBuildDate>Sat, 31 Dec 2022 23:44:55 -0300</lastBuildDate>
+        <link>https://t3sla.tech/</link>
+        <atom:link href="https://t3sla.tech/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Mon, 02 Jan 2023 09:47:13 -0300</pubDate>
+        <lastBuildDate>Mon, 02 Jan 2023 09:47:13 -0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
             <item>
@@ -775,8 +775,8 @@ Un gran saludo y felicitaciones de mi parte galoget y a Solitario porque partici
 &lt;p&gt;¡Muchas gracias nos vemos en próximo post! ❤️&lt;/p&gt;
 </description>
                 <pubDate>Wed, 28 Dec 2022 12:20:00 -0300</pubDate>
-                <link>/ctf-navidad-2022</link>
-                <guid isPermaLink="true">/ctf-navidad-2022</guid>
+                <link>https://t3sla.tech/ctf-navidad-2022</link>
+                <guid isPermaLink="true">https://t3sla.tech/ctf-navidad-2022</guid>
                 
                 <category>Writeup</category>
                 
@@ -1248,8 +1248,8 @@ Un gran saludo y felicitaciones de mi parte galoget y a Solitario porque partici
 &lt;p&gt;Saludos. 👋&lt;/p&gt;
 </description>
                 <pubDate>Sat, 17 Dec 2022 20:09:00 -0300</pubDate>
-                <link>/ada-challenge</link>
-                <guid isPermaLink="true">/ada-challenge</guid>
+                <link>https://t3sla.tech/ada-challenge</link>
+                <guid isPermaLink="true">https://t3sla.tech/ada-challenge</guid>
                 
                 <category>Writeup</category>
                 
@@ -1658,8 +1658,8 @@ Luego muchos cibercriminales que se dedican a esto venden estos registros o simp
 &lt;p&gt;Muchas gracias por leer y nos vemos en el próximo artículo. 👋&lt;/p&gt;
 </description>
                 <pubDate>Sun, 04 Dec 2022 23:36:00 -0300</pubDate>
-                <link>/de-mec%C3%A1nica-a-software</link>
-                <guid isPermaLink="true">/de-mec%C3%A1nica-a-software</guid>
+                <link>https://t3sla.tech/de-mec%C3%A1nica-a-software</link>
+                <guid isPermaLink="true">https://t3sla.tech/de-mec%C3%A1nica-a-software</guid>
                 
                 <category>Ciberseguridad</category>
                 
@@ -1813,8 +1813,8 @@ También puedes comunicarte a través de las siguientes vías: &lt;a href=&quot;
 &lt;p&gt;Muchas gracias por leer nos vemos en el próximo artículo. 👋&lt;/p&gt;
 </description>
                 <pubDate>Sat, 03 Dec 2022 22:38:00 -0300</pubDate>
-                <link>/recursos-de-ciberseguridad-pt-2</link>
-                <guid isPermaLink="true">/recursos-de-ciberseguridad-pt-2</guid>
+                <link>https://t3sla.tech/recursos-de-ciberseguridad-pt-2</link>
+                <guid isPermaLink="true">https://t3sla.tech/recursos-de-ciberseguridad-pt-2</guid>
                 
                 <category>Ciberseguridad</category>
                 
@@ -1923,8 +1923,8 @@ Lo sé con seguridad porque los datos recopilados concuerdan al 100% con los dat
 
 </description>
                 <pubDate>Sat, 05 Nov 2022 02:34:00 -0300</pubDate>
-                <link>/qui%C3%A9n-ser%C3%A1</link>
-                <guid isPermaLink="true">/qui%C3%A9n-ser%C3%A1</guid>
+                <link>https://t3sla.tech/qui%C3%A9n-ser%C3%A1</link>
+                <guid isPermaLink="true">https://t3sla.tech/qui%C3%A9n-ser%C3%A1</guid>
                 
                 <category>Writeup</category>
                 
@@ -2097,8 +2097,8 @@ Ejemplo: Te envían una imagen a través de alguna aplicación de mensajería co
 &lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
 </description>
                 <pubDate>Fri, 04 Nov 2022 19:52:00 -0300</pubDate>
-                <link>/t%C3%A9rminos-ciberseguridad-pt-2</link>
-                <guid isPermaLink="true">/t%C3%A9rminos-ciberseguridad-pt-2</guid>
+                <link>https://t3sla.tech/t%C3%A9rminos-ciberseguridad-pt-2</link>
+                <guid isPermaLink="true">https://t3sla.tech/t%C3%A9rminos-ciberseguridad-pt-2</guid>
                 
                 <category>Ciberseguridad</category>
                 
@@ -2257,8 +2257,8 @@ Ejemplo: Te envían una imagen a través de alguna aplicación de mensajería co
 &lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
 </description>
                 <pubDate>Thu, 03 Nov 2022 15:40:00 -0300</pubDate>
-                <link>/t%C3%A9rminos-ciberseguridad</link>
-                <guid isPermaLink="true">/t%C3%A9rminos-ciberseguridad</guid>
+                <link>https://t3sla.tech/t%C3%A9rminos-ciberseguridad</link>
+                <guid isPermaLink="true">https://t3sla.tech/t%C3%A9rminos-ciberseguridad</guid>
                 
                 <category>Ciberseguridad</category>
                 
@@ -2450,8 +2450,8 @@ Perfecto agregamos al &lt;code&gt;/etc/hosts&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
 </description>
                 <pubDate>Wed, 02 Nov 2022 23:16:00 -0300</pubDate>
-                <link>/routerspace-hackthebox</link>
-                <guid isPermaLink="true">/routerspace-hackthebox</guid>
+                <link>https://t3sla.tech/routerspace-hackthebox</link>
+                <guid isPermaLink="true">https://t3sla.tech/routerspace-hackthebox</guid>
                 
                 <category>Writeup</category>
                 
@@ -2705,8 +2705,8 @@ Si yo quiero ejecutar el binario cat, ira recorriendo la asignación de la varia
 &lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
 </description>
                 <pubDate>Sun, 30 Oct 2022 03:53:00 -0300</pubDate>
-                <link>/pandora-hackthebox</link>
-                <guid isPermaLink="true">/pandora-hackthebox</guid>
+                <link>https://t3sla.tech/pandora-hackthebox</link>
+                <guid isPermaLink="true">https://t3sla.tech/pandora-hackthebox</guid>
                 
                 <category>Writeup</category>
                 
@@ -2821,8 +2821,8 @@ También puedes comunicarte a través de las siguientes vías;&lt;br /&gt;
 &lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
 </description>
                 <pubDate>Sat, 29 Oct 2022 21:59:00 -0300</pubDate>
-                <link>/descargar-videos-de-udemy</link>
-                <guid isPermaLink="true">/descargar-videos-de-udemy</guid>
+                <link>https://t3sla.tech/descargar-videos-de-udemy</link>
+                <guid isPermaLink="true">https://t3sla.tech/descargar-videos-de-udemy</guid>
                 
                 <category>Tutorial</category>
                 
