@@ -5,9 +5,116 @@
         <description>T3sla Blog, Cybersecurity enthusiast, Low-level enthusiast.</description>
         <link>https://t3sla.tech/</link>
         <atom:link href="https://t3sla.tech/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 02 Jan 2023 09:47:13 -0300</pubDate>
-        <lastBuildDate>Mon, 02 Jan 2023 09:47:13 -0300</lastBuildDate>
+        <pubDate>Tue, 03 Jan 2023 00:01:24 -0300</pubDate>
+        <lastBuildDate>Tue, 03 Jan 2023 00:01:24 -0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Recursos de Ciberseguridad (PT. 3)</title>
+                <description>&lt;p&gt;Bienvenidos a la tercera entrega recursos de ciberseguridad.&lt;/p&gt;
+
+&lt;p&gt;Gracias por el apoyo que ha recibido esta miniserie.&lt;/p&gt;
+
+&lt;p&gt;Recuerda que no está ordenado del mejor al peor, todos tienen contenido valioso y sus creadores se esfuerzan.&lt;/p&gt;
+
+&lt;p&gt;Sin más que agregar comencemos.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;nik0&quot;&gt;&lt;a href=&quot;https://nik0sec.github.io/&quot;&gt;Nik0&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Desde writeups de HackTheBox a OvertheWire hasta cifrar la conexión de &lt;code&gt;nc&lt;/code&gt; y así evadir IDS. 🔥&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/nik0.png&quot; alt=&quot;Nik0Sec&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;3xploit&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@3xploit666/&quot;&gt;3xploit&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Muchas pruebas de concepto sobre evasión de antivirus con diferentes proveedores, herramientas y algún que otro cursito.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/3xploit.png&quot; alt=&quot;exploit YouTube&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;spartan-cybersecurity&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@SpartanCybersecurity/&quot;&gt;Spartan-Cybersecurity&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Certificaciones, BoF, cursos, AWS CLI.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/spartan.png&quot; alt=&quot;spartan&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p style=&quot;font-size: 12px;&quot;&gt;También ofrecen &lt;a href=&quot;https://spartan-cybersec.com/&quot;&gt;cursos&lt;/a&gt; con certificado y por lo que he visto en LinkedIn tienen una muy buena retroalimentación y a futuro tengo pensando en tomar uno.&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;/images/recursosciber3/spartancybe.png&quot; alt=&quot;spartancybe&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;zeropio&quot;&gt;&lt;a href=&quot;https://zeropio.github.io/&quot;&gt;Zeropio&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Lo descubrí hace muy poco y me encanto su contenido. Encontrarás desde notas de Enumeración, Servicios, Web, Writeups hasta análisis de malware, sin duda muy buen contenido.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/zeropio.png&quot; alt=&quot;zeropio&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;lixah&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@LixaH&quot;&gt;LixaH&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Un VTuber en el mundo de la ciberseguridad. Trabaja como Analista de Ciberinteligencia en CronUP. Encontrarás consejos, investigaciones y algún que otro PoC &lt;a href=&quot;https://www.youtube.com/@lixah_cl/videos&quot;&gt;(canal secundario)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/lixah.png&quot; alt=&quot;lixah&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;txhaka&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@txhaka_/&quot;&gt;Txhaka&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;¿Te gusta el pentesting web? Si es así este canal es para ti, he aprendido muchas cosas con don Txhaka. Encontrarás desde Análisis de código hasta Inyecciones SQL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/txhaka.png&quot; alt=&quot;Txhaka&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;micro-joan&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@MicroJoan/&quot;&gt;Micro Joan&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Experiencias personales, certificaciones, herramientas y mucho más.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/microjoan.png&quot; alt=&quot;microjoan&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;xecure-labs&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@XecureLabs/&quot;&gt;Xecure Labs&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Entrevistas, herramientas y más.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/xecurelabs.png&quot; alt=&quot;xecurelabs YouTube&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;farah-hawa&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@FarahHawa/&quot;&gt;Farah Hawa&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Entrevistas, tutoriales, blogs, vulnerabilidades.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Canal en Inglés.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/farah.png&quot; alt=&quot;Farah YouTube&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;diplomados-en-ciberseguridad&quot;&gt;&lt;a href=&quot;https://www.youtube.com/@Diplomados.en.Ciberseguridad&quot;&gt;Diplomados en Ciberseguridad&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Diplomados de ciberseguridad impartidos por la USACH (Universidad de Santiago de Chile), en su canal de YouTube tienen muy buen contenido y también ofrecieron un bootcamp de RedTeam y BlueTeam bastante bueno. Agregar que los docentes controlan bastante y algunos son bastante conocidos.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/diplomados.png&quot; alt=&quot;Diplomados USACH YouTube&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/recursosciber3/webdiplomados.png&quot; alt=&quot;web Diplomados USACH&quot; /&gt;
+&lt;a href=&quot;https://diplomadociberseguridad.com/&quot;&gt;Link&lt;/a&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+&lt;p&gt;Espero te haya gustado esta tercera entrega.&lt;/p&gt;
+
+&lt;p&gt;Recuerda que los comentarios y reacciones están más abajo.&lt;/p&gt;
+
+&lt;p&gt;Si deseas hacer una donación la puedes hacer a través del siguiente botón:&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;¡Muchas gracias nos vemos en próximo post! ❤️&lt;/p&gt;
+</description>
+                <pubDate>Mon, 02 Jan 2023 21:41:00 -0300</pubDate>
+                <link>https://t3sla.tech/recursos-de-ciberseguridad-pt-3</link>
+                <guid isPermaLink="true">https://t3sla.tech/recursos-de-ciberseguridad-pt-3</guid>
+                
+                <category>Ciberseguridad</category>
+                
+                <category>T3sla</category>
+                
+                <category>2023</category>
+                
+                
+            </item>
         
             <item>
                 <title>CTF Navidad 2022</title>
@@ -2718,120 +2825,6 @@ Si yo quiero ejecutar el binario cat, ira recorriendo la asignación de la varia
                 
                 
                 <category>HackTheBox</category>
-                
-            </item>
-        
-            <item>
-                <title>Descargar videos de Udemy</title>
-                <description>&lt;p&gt;Bienvenidos a este artículo, el cual como su nombre indica, vamos a descargar los videos de Udemy de manera gratis y sin instalar nada.&lt;/p&gt;
-
-&lt;p&gt;Sin más que agregar comencemos.&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;herramientas&quot;&gt;Herramientas&lt;/h2&gt;
-&lt;p&gt;Que vamos a utilizar.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Navegador Web.&lt;/li&gt;
-  &lt;li&gt;DevTools (Inspector de elementos).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;wget&lt;/strong&gt; o alguna otra utilidad basada en &lt;strong&gt;CLI&lt;/strong&gt; como &lt;strong&gt;curl&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;abrir-las-devtools&quot;&gt;Abrir las DevTools&lt;/h2&gt;
-&lt;p&gt;Tenemos cuatro formas de abrir las DevTools, las cuales son:&lt;/p&gt;
-
-&lt;h3 id=&quot;1&quot;&gt;1.&lt;/h3&gt;
-&lt;p&gt;La más normal es presionando los tres puntos que hay en la esquina superior derecha.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/puntitos.png&quot; /&gt;&lt;/center&gt;
-
-&lt;p&gt;Luego se despliega el siguiente menú.&lt;br /&gt;
-Presionamos en &lt;strong&gt;más&lt;/strong&gt; herramientas y luego en &lt;strong&gt;«herramientas de desarrollador»&lt;/strong&gt;.&lt;/p&gt;
-&lt;center&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/menu.png&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;2&quot;&gt;2.&lt;/h3&gt;
-&lt;p&gt;Presionando la tecla &lt;strong&gt;F12&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;3&quot;&gt;3.&lt;/h3&gt;
-&lt;p&gt;Utilizamos la siguiente combinación de teclas; &lt;strong&gt;CTRl + SHIFT + I&lt;/strong&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;4&quot;&gt;4.&lt;/h3&gt;
-&lt;p&gt;Hacemos clic derecho en cualquier área de la web.&lt;/p&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/DevTools.png&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;
-Luego de esto nada útil, pasemos a la acción. 💣&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Lo primero es seleccionar un curso de interés, para este ejemplo estaré mostrando un curso gratis y otro de pago y así demostrar que no influye el precio del curso.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/cursovim.png&quot; alt=&quot;Curso VIM&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Es &lt;a href=&quot;https://www.udemy.com/course/vim-aumenta-tu-velocidad-de-desarrollo/&quot;&gt;gratis&lt;/a&gt; y está inhabilitada la opción de descargar la clase.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/nosepuede.png&quot; alt=&quot;no se puede&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hacemos clic en la siguiente zona.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/clickaqui.png&quot; alt=&quot;clic&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nos abrirá el inspector de elemento y podremos visualizar todo el &lt;strong&gt;HTML5&lt;/strong&gt;.&lt;br /&gt;
-Tendremos que buscar la etiqueta &lt;strong&gt;«video»&lt;/strong&gt; y obtener el valor del atributo &lt;strong&gt;“src”&lt;/strong&gt; (source).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/source.png&quot; alt=&quot;source&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Genial obtuvimos la URL absoluta del video, procedemos a abrir el video en una nueva pestaña.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/tenemoselvideo.png&quot; alt=&quot;video&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ahora a copiar la URL y descargar a través de wget.
-&lt;img src=&quot;/images/Images-Post-downloadudemy/wgeturl.png&quot; alt=&quot;wget&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Validamos que realmente se trata de un fichero MP4.
-&lt;img src=&quot;/images/Images-Post-downloadudemy/videodescargado.png&quot; alt=&quot;video&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Aquí cambio el nombre y habilito un servidor HTTP por el puerto 8080 para visualizar el video de una manera más cómoda.
-&lt;img src=&quot;/images/Images-Post-downloadudemy/vervideo.png&quot; alt=&quot;http&quot; /&gt;
-&lt;img src=&quot;/images/Images-Post-downloadudemy/viendoelvideo.png&quot; alt=&quot;viendo el video&quot; /&gt;
-Listo hemos descargado una clase del curso, ahora debemos repetir los pasos.&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;Ahora mostraré que con un curso de &lt;a href=&quot;https://www.udemy.com/course/curso-de-metasploit-framework/&quot;&gt;pago&lt;/a&gt; se puede hacer.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/Images-Post-downloadudemy/cursodepago.png&quot; alt=&quot;curso de pago&quot; /&gt;
-Genial.&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
-&lt;p&gt;Este ha sido el tutorial de hoy bastante simple, el método, pero efectivo, no he visto este método para descargar los videos, aunque de seguro alguien lo sabe.&lt;/p&gt;
-
-&lt;p&gt;Espero te haya gustado, recuerda que más abajo están las reacciones y puedes dejar un comentario.&lt;br /&gt;
-También puedes comunicarte a través de las siguientes vías;&lt;br /&gt;
-&lt;a href=&quot;https://twitter.com/T3_6_9&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://t.me/T3_6_9&quot;&gt;Telegram&lt;/a&gt;, &lt;a href=&quot;mailto:t3sla@t3sla.tk&quot;&gt;E-mail&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Agregar que si quieres realizar alguna donación lo puedes hacer a través del siguiente botón:
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot; data-name=&quot;bmc-button&quot; data-slug=&quot;T3sla&quot; data-color=&quot;#BD5FFF&quot; data-emoji=&quot;🍕&quot; data-font=&quot;Lato&quot; data-text=&quot;Buy me a pizza&quot; data-outline-color=&quot;#000000&quot; data-font-color=&quot;#ffffff&quot; data-coffee-color=&quot;#FFDD00&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Y obtén “beneficios”.&lt;/p&gt;
-</description>
-                <pubDate>Sat, 29 Oct 2022 21:59:00 -0300</pubDate>
-                <link>https://t3sla.tech/descargar-videos-de-udemy</link>
-                <guid isPermaLink="true">https://t3sla.tech/descargar-videos-de-udemy</guid>
-                
-                <category>Tutorial</category>
-                
-                <category>T3sla</category>
-                
-                <category>2022</category>
-                
-                
-                <category>Tutorial</category>
                 
             </item>
         
